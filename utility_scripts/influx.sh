@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 CONTAINER_NAME="influxdb"
 DATA_DIR="$HOME/docker-data/influxdb"  # for the volume
@@ -20,12 +20,13 @@ fi
 docker pull influxdb:$INFLUX_VERSION
 
 docker run -d \
-    --name: $CONTAINER_NAME \
+    --name $CONTAINER_NAME \
     -p $INFLUX_PORT:8086 \
     -v $DATA_DIR:/var/lib/influxdb \
-    -e INFLUX_DB:$DB_NAME \
+    -e INFLUX_DB=$DB_NAME \
     -e INFLUXDB_ADMIN_USER=$ADMIN_USER \
     -e INFLUXDB_ADMIN_PASSWORD=$ADMIN_PASS \
+    influxdb:$INFLUX_VERSION
 
 
 if [ $? -eq 0 ]; then
