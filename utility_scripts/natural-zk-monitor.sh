@@ -6,7 +6,6 @@ echo "building zookeeper first"
 
 cd "${BASE_DIR}/zookeeper"
 mvn clean install -DskipTests -Dmaven.test.skip=true
-sleep 20
 
 echo "starting zookeeper monitoring..."
 ZK_HOME="${BASE_DIR}/zookeeper"
