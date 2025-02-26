@@ -18,7 +18,7 @@ if [ -z "$ZK_PID" ]; then
     cd "${ZK_HOME}/bin"
     ./zkServer.sh start
     sleep 5
-    ZK_PID=$(pgrep -f QuorumPeerMain)
+    ZK_PID=$(pgrep -f QuorumPeerMain) 
     if [ -z "$ZK_PID" ]; then
         echo "ERROR: Failed to start ZooKeeper. Check logs."
         exit 1
@@ -28,6 +28,7 @@ else
     echo "ZooKeeper already running with PID: $ZK_PID"
 fi
 
+#TODO insert more statistics and influx db data sending
 
 PERF_OUTPUT=$(perf stat -p $ZK_PID sleep 10)
 TIMESTAMP=$(date +%s%N)
