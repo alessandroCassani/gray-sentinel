@@ -12,3 +12,4 @@ cp /home/alessandro/PGFDS/zookeeper/zookeeper-server/target/classes/org/apache/z
 cp /home/alessandro/PGFDS/zookeeper/zookeeper-server/target/classes/org/apache/zookeeper/audit/AuditLogger.class /home/alessandro/PGFDS/legolas/sootOutput/org/apache/zookeeper/audit/
 
 echo "Files copied successfully!"
+
