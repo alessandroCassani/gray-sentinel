@@ -1,18 +1,18 @@
 #!/bin/bash
 
-echo "starting zookeeper monitoring..."
-
 BASE_DIR=$(pwd)/..
-ZK_HOME="${BASE_DIR}/zookeeper"
-DATA_DIR="${ZK_HOME}/monitoring/data"
-METRICS_DIR="${ZK_HOME}//monitoring/metrics"
-LOG_DIR="${ZK_HOME}/monitoring/logs"
 
-mkdir -p "${DATA_DIR}"
-mkdir -p "${METRICS_DIR}"
-mkdir -p "${LOG_DIR}"
+echo "building zookeeper first"
+
+cd "${BASE_DIR}/zookeeper"
+mvn clean install -DskipTests -Dmaven.test.skip=true
+sleep 20
+
+echo "starting zookeeper monitoring..."
+ZK_HOME="${BASE_DIR}/zookeeper"
 
 ZK_PID=$(pgrep -f QuorumPeerMain)
+
 if [ -z "$ZK_PID" ]; then
     echo "ZooKeeper is not running. Starting ZooKeeper..."
     cd "${ZK_HOME}/bin"
