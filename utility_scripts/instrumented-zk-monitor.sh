@@ -17,5 +17,10 @@ cd "${BASE_DIR}/legolas
 
 
 
+# TODO understand the ralationship between this command and the one on github, to make good choice
+
+
+
+
 echo "starting instrumented zookeeper monitoring..."
 
