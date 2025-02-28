@@ -18,4 +18,3 @@ if [ -z "$ZK_PID" ]; then
 fi
 
 echo "$ZK_PID" > "$PID_FILE"
-
