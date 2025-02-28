@@ -27,9 +27,4 @@ else
     echo "ZooKeeper already running with PID: $ZK_PID"
 fi
 
-#TODO insert more statistics and influx db data sending
-
-PERF_OUTPUT=$(perf stat -p $ZK_PID sleep 10)
-TIMESTAMP=$(date +%s%N)
-
-echo "$PERF_OUTPUT"
+export ZK_PID
