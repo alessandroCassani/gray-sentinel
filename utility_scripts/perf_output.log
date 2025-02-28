@@ -1,0 +1,27 @@
+
+ Performance counter stats for process id '54631':
+
+             11.91 msec task-clock                       #    0.002 CPUs utilized             
+               115      context-switches                 #    9.653 K/sec                     
+                 4      cpu-migrations                   #  335.753 /sec                      
+                 0      page-faults                      #    0.000 /sec                      
+         7,402,879      cpu_atom/cycles/                 #    0.621 GHz                         (62.59%)
+            41,619      cpu_core/cycles/                 #    0.003 GHz                         (0.75%)
+         1,545,114      cpu_atom/instructions/           #    0.21  insn per cycle              (68.79%)
+            10,558      cpu_core/instructions/           #    0.00  insn per cycle              (0.75%)
+           263,364      cpu_atom/branches/               #   22.106 M/sec                       (96.73%)
+             1,886      cpu_core/branches/               #  158.308 K/sec                       (0.75%)
+            30,523      cpu_atom/branch-misses/          #   11.59% of all branches             (94.37%)
+               210      cpu_core/branch-misses/          #    0.08% of all branches             (0.75%)
+             TopdownL1 (cpu_core)                 #     15.7 %  tma_backend_bound      
+                                                  #      6.0 %  tma_bad_speculation    
+                                                  #     73.6 %  tma_frontend_bound     
+                                                  #      4.7 %  tma_retiring             (0.75%)
+             TopdownL1 (cpu_atom)                 #     30.5 %  tma_bad_speculation    
+                                                  #      5.2 %  tma_retiring             (86.73%)
+                                                  #     11.7 %  tma_backend_bound      
+                                                  #     11.7 %  tma_backend_bound_aux  
+                                                  #     52.6 %  tma_frontend_bound       (85.42%)
+
+       5.008009612 seconds time elapsed
+
