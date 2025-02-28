@@ -7,24 +7,18 @@ echo "building zookeeper first"
 cd "${BASE_DIR}/zookeeper"
 mvn clean install -DskipTests -Dmaven.test.skip=true
 
-echo "starting zookeeper monitoring..."
 ZK_HOME="${BASE_DIR}/zookeeper"
 
 ZK_PID=$(pgrep -f QuorumPeerMain)
 
+
+./zkServer.sh start
+sleep 5
+ZK_PID=$(pgrep -f QuorumPeerMain) 
 if [ -z "$ZK_PID" ]; then
-    echo "ZooKeeper is not running. Starting ZooKeeper..."
-    cd "${ZK_HOME}/bin"
-    ./zkServer.sh start
-    sleep 5
-    ZK_PID=$(pgrep -f QuorumPeerMain) 
-    if [ -z "$ZK_PID" ]; then
-        echo "ERROR: Failed to start ZooKeeper. Check logs."
-        exit 1
-    fi
-    echo "ZooKeeper started with PID: $ZK_PID"
-else
-    echo "ZooKeeper already running with PID: $ZK_PID"
+    echo "ERROR: Failed to start ZooKeeper. Check logs."
+    exit 1
 fi
+echo "ZooKeeper started with PID: $ZK_PID"
 
 echo "$ZK_PID"
