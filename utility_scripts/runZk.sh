@@ -27,4 +27,4 @@ else
     echo "ZooKeeper already running with PID: $ZK_PID"
 fi
 
-export ZK_PID
+echo "$ZK_PID"
