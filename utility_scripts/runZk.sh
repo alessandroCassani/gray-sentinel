@@ -1,18 +1,16 @@
 #!/bin/bash
 
 BASE_DIR=$(pwd)/..
+ZK_HOME="${BASE_DIR}/zookeeper"
 
 echo "building zookeeper first"
 
-cd "${BASE_DIR}/zookeeper"
+cd "${ZK_HOME}"
 mvn clean install -DskipTests -Dmaven.test.skip=true
 
-ZK_HOME="${BASE_DIR}/zookeeper"
+cd "bin"
 
-ZK_PID=$(pgrep -f QuorumPeerMain)
-
-
-./zkServer.sh start
+./zkServer.sh restart
 sleep 5
 ZK_PID=$(pgrep -f QuorumPeerMain) 
 if [ -z "$ZK_PID" ]; then
