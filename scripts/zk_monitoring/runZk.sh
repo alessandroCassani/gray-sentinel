@@ -1,10 +1,10 @@
 #!/bin/bash
 
-BASE_DIR=$(pwd)/..
-ZK_HOME="${BASE_DIR}/zookeeper"
+ROOT_DIR=$(pwd)/../..
 PID_FILE="/tmp/zookeeper.pid"
 
-cd "${ZK_HOME}"
+cd "$ROOT_DIR"
+cd "zookeeper"
 mvn clean install -DskipTests -Dmaven.test.skip=true
 
 cd "bin"
