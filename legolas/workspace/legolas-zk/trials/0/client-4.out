@@ -1,0 +1,71 @@
+2025-02-28 21:13:27,498 [myid:] - INFO  [main:ZooKeeperGrayClientMain@163] - My client id is 4
+2025-02-28 21:13:27,518 [myid:] - INFO  [main:ZooKeeperGrayClientMain@166] - My process's pid is 164915
+2025-02-28 21:13:27,754 [myid:] - INFO  [main:ZooKeeperGrayClientMain@49] - running command [read, 10713, 2, 10, 40]
+2025-02-28 21:13:27,780 [myid:] - INFO  [main:Environment@98] - Client environment:zookeeper.version=3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
+2025-02-28 21:13:27,781 [myid:] - INFO  [main:Environment@98] - Client environment:host.name=alessandro-HP-Pavilion-Laptop-15-eg2xxx
+2025-02-28 21:13:27,781 [myid:] - INFO  [main:Environment@98] - Client environment:java.version=1.8.0_442
+2025-02-28 21:13:27,781 [myid:] - INFO  [main:Environment@98] - Client environment:java.vendor=Private Build
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:java.class.path=/home/alessandro/PGFDS/legolas/workspace/legolas-zk/conf-1:/home/alessandro/PGFDS/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:java.io.tmpdir=/tmp
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:java.compiler=<NA>
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:os.name=Linux
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:os.arch=amd64
+2025-02-28 21:13:27,782 [myid:] - INFO  [main:Environment@98] - Client environment:os.version=6.8.0-52-generic
+2025-02-28 21:13:27,783 [myid:] - INFO  [main:Environment@98] - Client environment:user.name=alessandro
+2025-02-28 21:13:27,784 [myid:] - INFO  [main:Environment@98] - Client environment:user.home=/home/alessandro
+2025-02-28 21:13:27,784 [myid:] - INFO  [main:Environment@98] - Client environment:user.dir=/home/alessandro/PGFDS/legolas/scripts/experiment
+2025-02-28 21:13:27,784 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.free=230MB
+2025-02-28 21:13:27,784 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.max=3481MB
+2025-02-28 21:13:27,784 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.total=236MB
+2025-02-28 21:13:27,789 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10713 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/116211441@3caeaf62
+2025-02-28 21:13:27,796 [myid:] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-02-28 21:13:27,805 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2025-02-28 21:13:27,820 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2025-02-28 21:13:27,836 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10713.
+2025-02-28 21:13:27,837 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-02-28 21:13:27,842 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@999] - Socket connection established, initiating session, client: /127.0.0.1:39092, server: localhost/127.0.0.1:10713
+2025-02-28 21:13:27,905 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1433] - Session establishment complete on server localhost/127.0.0.1:10713, session id = 0x200011484430002, negotiated timeout = 7000
+2025-02-28 21:13:27,939 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 1, time = 443795293
+2025-02-28 21:13:27,962 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 2, time = 466887292
+2025-02-28 21:13:27,981 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 3, time = 486324687
+2025-02-28 21:13:28,001 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 4, time = 506311800
+2025-02-28 21:13:28,016 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 5, time = 520998694
+2025-02-28 21:13:28,037 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 6, time = 542710001
+2025-02-28 21:13:28,051 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 7, time = 556663987
+2025-02-28 21:13:28,064 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 8, time = 569511508
+2025-02-28 21:13:28,084 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 9, time = 589287543
+2025-02-28 21:13:28,100 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 10, time = 605201459
+2025-02-28 21:13:28,115 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 11, time = 619926181
+2025-02-28 21:13:28,131 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 12, time = 636739652
+2025-02-28 21:13:28,153 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 13, time = 658245396
+2025-02-28 21:13:28,178 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 14, time = 683246059
+2025-02-28 21:13:28,199 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 15, time = 704242029
+2025-02-28 21:13:28,220 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 16, time = 725567399
+2025-02-28 21:13:28,241 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 17, time = 746073518
+2025-02-28 21:13:28,258 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 18, time = 762505808
+2025-02-28 21:13:28,270 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 19, time = 775144694
+2025-02-28 21:13:28,278 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 20, time = 783733224
+2025-02-28 21:13:28,290 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 21, time = 794852421
+2025-02-28 21:13:28,299 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 22, time = 804427589
+2025-02-28 21:13:28,312 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 23, time = 817251507
+2025-02-28 21:13:28,341 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 24, time = 846486280
+2025-02-28 21:13:28,361 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 25, time = 865847802
+2025-02-28 21:13:28,376 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 26, time = 880893555
+2025-02-28 21:13:28,405 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 27, time = 910448959
+2025-02-28 21:13:28,426 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 28, time = 930822089
+2025-02-28 21:13:28,448 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 29, time = 953572767
+2025-02-28 21:13:28,475 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 30, time = 979759167
+2025-02-28 21:13:28,508 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 31, time = 1013556157
+2025-02-28 21:13:28,533 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 32, time = 1038425989
+2025-02-28 21:13:28,542 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 33, time = 1046977151
+2025-02-28 21:13:28,557 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 34, time = 1062284967
+2025-02-28 21:13:28,569 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 35, time = 1074370672
+2025-02-28 21:13:28,594 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 36, time = 1099255815
+2025-02-28 21:13:28,611 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 37, time = 1116238401
+2025-02-28 21:13:28,641 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 38, time = 1146174535
+2025-02-28 21:13:28,654 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 39, time = 1159725898
+2025-02-28 21:13:28,673 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 40, time = 1178435733
+2025-02-28 21:13:28,806 [myid:] - INFO  [main:ZooKeeper@1619] - Session: 0x200011484430002 closed
+2025-02-28 21:13:28,806 [myid:] - INFO  [main-EventThread:ClientCnxn$EventThread@577] - EventThread shut down for session: 0x200011484430002

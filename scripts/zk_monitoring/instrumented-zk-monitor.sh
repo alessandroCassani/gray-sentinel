@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BASE_DIR=$(pwd)/..
+ROOT_DIR=$(pwd)/../..
+cd "$ROOT_DIR"
 
 echo "building zookeeper first"
 
@@ -8,7 +9,7 @@ cd "${BASE_DIR}/zookeeper"
 mvn clean install -DskipTests -Dmaven.test.skip=true
 
 echo "Building and setting up Legolas"
-cd "${BASE_DIR}/legolas"
+cd "legolas"
 mvn clean install -DskipTests
 
 echo "instrumenting zookeeper with Legolas..."
