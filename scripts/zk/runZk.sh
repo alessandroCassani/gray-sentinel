@@ -4,10 +4,7 @@ ROOT_DIR=$(pwd)/../..
 PID_FILE="/tmp/zookeeper.pid"
 
 cd "$ROOT_DIR"
-cd "zookeeper"
-mvn clean install -DskipTests -Dmaven.test.skip=true
-
-cd "bin"
+cd "zookeeper/bin"
 
 ./zkServer.sh restart
 sleep 5

@@ -1,39 +1,34 @@
-2025-02-28 21:13:43,389 [myid:] - INFO  [main:ZooKeeperGrayClientMain@163] - My client id is 1
-2025-02-28 21:13:43,399 [myid:] - INFO  [main:ZooKeeperGrayClientMain@166] - My process's pid is 165899
-2025-02-28 21:13:43,556 [myid:] - INFO  [main:ZooKeeperGrayClientMain@49] - running command [create, 10713, 2, 10, 3]
-2025-02-28 21:13:43,565 [myid:] - INFO  [main:Environment@98] - Client environment:zookeeper.version=3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
-2025-02-28 21:13:43,565 [myid:] - INFO  [main:Environment@98] - Client environment:host.name=alessandro-HP-Pavilion-Laptop-15-eg2xxx
-2025-02-28 21:13:43,565 [myid:] - INFO  [main:Environment@98] - Client environment:java.version=1.8.0_442
-2025-02-28 21:13:43,565 [myid:] - INFO  [main:Environment@98] - Client environment:java.vendor=Private Build
-2025-02-28 21:13:43,565 [myid:] - INFO  [main:Environment@98] - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:java.class.path=/home/alessandro/PGFDS/legolas/workspace/legolas-zk/conf-1:/home/alessandro/PGFDS/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:java.io.tmpdir=/tmp
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:java.compiler=<NA>
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:os.name=Linux
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:os.arch=amd64
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:os.version=6.8.0-52-generic
-2025-02-28 21:13:43,566 [myid:] - INFO  [main:Environment@98] - Client environment:user.name=alessandro
-2025-02-28 21:13:43,568 [myid:] - INFO  [main:Environment@98] - Client environment:user.home=/home/alessandro
-2025-02-28 21:13:43,568 [myid:] - INFO  [main:Environment@98] - Client environment:user.dir=/home/alessandro/PGFDS/legolas/scripts/experiment
-2025-02-28 21:13:43,568 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.free=230MB
-2025-02-28 21:13:43,568 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.max=3481MB
-2025-02-28 21:13:43,568 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.total=236MB
-2025-02-28 21:13:43,574 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10713 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/116211441@3caeaf62
-2025-02-28 21:13:43,582 [myid:] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
-2025-02-28 21:13:43,589 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
-2025-02-28 21:13:43,601 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
-2025-02-28 21:13:43,609 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10713.
-2025-02-28 21:13:43,609 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
-2025-02-28 21:13:43,615 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@999] - Socket connection established, initiating session, client: /127.0.0.1:37652, server: localhost/127.0.0.1:10713
-2025-02-28 21:13:43,684 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1433] - Session establishment complete on server localhost/127.0.0.1:10713, session id = 0x2000114c6f40000, negotiated timeout = 7000
-2025-02-28 21:13:43,753 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 1, time = 365156996
-2025-02-28 21:13:43,786 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 2, time = 398545461
-2025-02-28 21:13:43,830 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 3, time = 441896080
-2025-02-28 21:13:43,869 [myid:localhost:10713] - WARN  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1279] - An exception was thrown while closing send thread for session 0x2000114c6f40000.
-EndOfStreamException: Unable to read additional data from server sessionid 0x2000114c6f40000, likely server has closed socket
-	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
-	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
-	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
-2025-02-28 21:13:43,974 [myid:] - INFO  [main:ZooKeeper@1619] - Session: 0x2000114c6f40000 closed
-2025-02-28 21:13:43,974 [myid:] - INFO  [main-EventThread:ClientCnxn$EventThread@577] - EventThread shut down for session: 0x2000114c6f40000
+2025-02-28 22:21:06,307 [myid:] - INFO  [main:ZooKeeperGrayClientMain@163] - My client id is 1
+2025-02-28 22:21:06,317 [myid:] - INFO  [main:ZooKeeperGrayClientMain@166] - My process's pid is 217931
+2025-02-28 22:21:06,424 [myid:] - INFO  [main:ZooKeeperGrayClientMain@49] - running command [create, 10713, 2, 10, 3]
+2025-02-28 22:21:06,432 [myid:] - INFO  [main:Environment@98] - Client environment:zookeeper.version=3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
+2025-02-28 22:21:06,432 [myid:] - INFO  [main:Environment@98] - Client environment:host.name=alessandro-HP-Pavilion-Laptop-15-eg2xxx
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.version=1.8.0_442
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.vendor=Private Build
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.home=/usr/lib/jvm/java-8-openjdk-amd64/jre
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.class.path=/home/alessandro/PGFDS/legolas/workspace/legolas-zk/conf-1:/home/alessandro/PGFDS/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.io.tmpdir=/tmp
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:java.compiler=<NA>
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:os.name=Linux
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:os.arch=amd64
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:os.version=6.8.0-52-generic
+2025-02-28 22:21:06,433 [myid:] - INFO  [main:Environment@98] - Client environment:user.name=alessandro
+2025-02-28 22:21:06,434 [myid:] - INFO  [main:Environment@98] - Client environment:user.home=/home/alessandro
+2025-02-28 22:21:06,434 [myid:] - INFO  [main:Environment@98] - Client environment:user.dir=/home/alessandro/PGFDS/legolas/scripts/experiment
+2025-02-28 22:21:06,434 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.free=230MB
+2025-02-28 22:21:06,434 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.max=3481MB
+2025-02-28 22:21:06,434 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.total=236MB
+2025-02-28 22:21:06,436 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10713 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/116211441@3caeaf62
+2025-02-28 22:21:06,438 [myid:] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2025-02-28 22:21:06,442 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2025-02-28 22:21:06,448 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2025-02-28 22:21:06,455 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10713.
+2025-02-28 22:21:06,455 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2025-02-28 22:21:06,459 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@999] - Socket connection established, initiating session, client: /127.0.0.1:53166, server: localhost/127.0.0.1:10713
+2025-02-28 22:21:06,508 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1433] - Session establishment complete on server localhost/127.0.0.1:10713, session id = 0x200015278480000, negotiated timeout = 7000
+2025-02-28 22:21:06,542 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 1, time = 236453438
+2025-02-28 22:21:06,575 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 2, time = 269639657
+2025-02-28 22:21:06,597 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 3, time = 292044168
+2025-02-28 22:21:06,719 [myid:] - INFO  [main:ZooKeeper@1619] - Session: 0x200015278480000 closed
+2025-02-28 22:21:06,719 [myid:] - INFO  [main-EventThread:ClientCnxn$EventThread@577] - EventThread shut down for session: 0x200015278480000
