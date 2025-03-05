@@ -12,5 +12,38 @@ services:
     networks:
       - pgfd-network
   
-  
+  kafka:
+    image: confluentinc/cp-kafka:7.3.0
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      -"9092:9092"
+    environment:
+      - KAFKA_BROKER_ID: 1
+      - KAFKA_ZOOKEEPER:CONNECT: zookeeper :2181
+      - KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://kafka:9092
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      - KAFKA_INTER_BROKER_COMMUNICATION: PLAINTEXT
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - ./data/kafka/data:var/lib/kafka/data
+    networks:
+      - pgfds-network
+    
+  influxdb:
+    image: influxdb:1.8
+    container_name: influxdb
+    ports:
+      -"8086:8086"
+    environment:
+      - INFLUX_DB=metrics
+      - INFLUXDB_ADMIN_USER=admin
+      - INFLUXDB_ADMIN_PASSWORD=admin
+      - INFLUXDB_HTTP_AUTH_ENABLED=true
+    volumes:
+      - ./data/influxdb:var/lib/influxdb
+    networks:
+      - pgfds-network
+
 
