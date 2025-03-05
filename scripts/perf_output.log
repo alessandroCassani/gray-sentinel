@@ -1,27 +1,6 @@
+Problems finding threads of monitor
 
- Performance counter stats for process id '161577':
+ Usage: perf stat [<options>] [<command>]
 
-             12.92 msec task-clock                       #    0.003 CPUs utilized             
-               113      context-switches                 #    8.744 K/sec                     
-                 3      cpu-migrations                   #  232.129 /sec                      
-                 0      page-faults                      #    0.000 /sec                      
-         6,118,958      cpu_atom/cycles/                 #    0.473 GHz                         (57.77%)
-         6,179,334      cpu_core/cycles/                 #    0.478 GHz                         (19.45%)
-         1,385,186      cpu_atom/instructions/           #    0.23  insn per cycle              (65.93%)
-         1,556,195      cpu_core/instructions/           #    0.25  insn per cycle              (19.45%)
-           246,937      cpu_atom/branches/               #   19.107 M/sec                       (65.80%)
-           279,802      cpu_core/branches/               #   21.650 M/sec                       (19.45%)
-            28,815      cpu_atom/branch-misses/          #   11.67% of all branches             (65.26%)
-            28,983      cpu_core/branch-misses/          #   11.74% of all branches             (19.45%)
-             TopdownL1 (cpu_core)                 #     13.2 %  tma_backend_bound      
-                                                  #      6.7 %  tma_bad_speculation    
-                                                  #     74.8 %  tma_frontend_bound     
-                                                  #      5.4 %  tma_retiring             (19.45%)
-             TopdownL1 (cpu_atom)                 #     31.3 %  tma_bad_speculation    
-                                                  #      5.3 %  tma_retiring             (75.24%)
-                                                  #     12.8 %  tma_backend_bound      
-                                                  #     12.8 %  tma_backend_bound_aux  
-                                                  #     50.6 %  tma_frontend_bound       (75.01%)
-
-       5.020750853 seconds time elapsed
-
+    -p, --pid <pid>       stat events on existing process id
+    -t, --tid <tid>       stat events on existing thread id
