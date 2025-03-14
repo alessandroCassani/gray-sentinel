@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if docker ps -q -f name=fabian_client; then
+if docker ps -q -f name=faban_client; then
     echo " faban_client already running."
     exit 1
 fi
