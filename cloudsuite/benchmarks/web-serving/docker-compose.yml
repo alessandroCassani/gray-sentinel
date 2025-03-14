@@ -21,3 +21,4 @@ services:
       - memcache_server
     ports:
       - 8080:80
+    command: /etc/bootstrap.sh http 127.0.0.1 127.0.0.1 127.0.0.1 4 auto
