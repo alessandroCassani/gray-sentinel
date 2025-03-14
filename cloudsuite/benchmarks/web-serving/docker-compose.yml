@@ -6,12 +6,16 @@ services:
     container_name: database_server
     ports:
       - 3306:3306
-  
+    networks:
+      - webnet
+
   memcache_server:
     image: cloudsuite/web-serving:memcached_server
     container_name: memcache_server
     ports:
       - 11211:11211
+    networks:
+      - webnet
 
   web_server:
     image: cloudsuite/web-serving:web_server
@@ -21,4 +25,12 @@ services:
       - memcache_server
     ports:
       - 8080:80
-    command: /etc/bootstrap.sh http 127.0.0.1 127.0.0.1 127.0.0.1 4 auto
+    command: /etc/bootstrap.sh http database_server memcache_server web_server 4 auto
+    stdin_open: true
+    tty: true
+    networks:
+      - webnet
+
+networks:
+  webnet:
+    driver: bridge
