@@ -61,6 +61,15 @@ services:
       - influxdb
     networks:
       - pgfds-network
+  
+  telegraf:
+    image: telegraf:latest
+    container_name: telegraf
+    depends_on:
+      - kafka
+      - influxdb
+    networks:
+      - pgfds-network
     
 networks:
   pgfds-network:
@@ -72,4 +81,6 @@ volumes:
   influxdb-data:
     driver: local
   grafana-data:
+    driver: local
+  telegraf-data:
     driver: local
