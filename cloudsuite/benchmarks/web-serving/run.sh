@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 PROTCOL="http"
 MAX_PM_CHILDREN=16
