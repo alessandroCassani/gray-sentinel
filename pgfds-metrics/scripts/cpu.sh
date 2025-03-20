@@ -12,7 +12,9 @@
      echo "  percent: CPU percentage (1-100)"
      echo "  duration: Duration in seconds"
      exit 1
- fi
+fi
+
+#
  
  TARGET=$1
  PERCENT=$2
