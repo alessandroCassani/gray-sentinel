@@ -14,7 +14,6 @@
      exit 1
 fi
 
-#
  
  TARGET=$1
  PERCENT=$2

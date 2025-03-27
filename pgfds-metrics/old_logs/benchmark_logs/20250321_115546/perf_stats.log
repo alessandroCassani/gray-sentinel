@@ -1,0 +1,605 @@
+# Performance Statistics for Benchmark
+# Events: cycles,instructions,cache-references,cache-misses,branches,branch-misses
+# Interval: 10 seconds
+# Start time: Fri 21 Mar 2025 11:56:37 AM CET
+# ----------------------------------------
+2025-03-21 11:56:37 - Collection #1
+
+ Performance counter stats for 'system wide':
+
+    91,471,361,389      cpu_atom/cycles/                                                      
+    71,322,890,286      cpu_core/cycles/                                                      
+   155,187,602,864      cpu_atom/instructions/           #    1.70  insn per cycle            
+   124,325,477,573      cpu_core/instructions/           #    1.74  insn per cycle            
+       745,444,995      cpu_atom/cache-references/                                            
+       265,036,339      cpu_core/cache-references/                                            
+       369,947,213      cpu_atom/cache-misses/           #   49.63% of all cache refs         
+       117,701,188      cpu_core/cache-misses/           #   44.41% of all cache refs         
+    27,400,941,138      cpu_atom/branches/                                                    
+    19,875,042,068      cpu_core/branches/                                                    
+       144,563,961      cpu_atom/branch-misses/          #    0.53% of all branches           
+        50,212,474      cpu_core/branch-misses/          #    0.25% of all branches           
+
+      10.008218477 seconds time elapsed
+
+2025-03-21 11:56:47 - ----------------------------------------
+2025-03-21 11:56:47 - Collection #2
+
+ Performance counter stats for 'system wide':
+
+   111,067,029,183      cpu_atom/cycles/                                                      
+    75,401,636,174      cpu_core/cycles/                                                      
+   186,298,498,480      cpu_atom/instructions/           #    1.68  insn per cycle            
+   125,852,124,691      cpu_core/instructions/           #    1.67  insn per cycle            
+       722,531,326      cpu_atom/cache-references/                                            
+       244,369,497      cpu_core/cache-references/                                            
+       354,099,453      cpu_atom/cache-misses/           #   49.01% of all cache refs         
+       110,841,160      cpu_core/cache-misses/           #   45.36% of all cache refs         
+    31,058,135,605      cpu_atom/branches/                                                    
+    21,075,748,858      cpu_core/branches/                                                    
+       162,241,701      cpu_atom/branch-misses/          #    0.52% of all branches           
+        42,935,241      cpu_core/branch-misses/          #    0.20% of all branches           
+
+      10.002873153 seconds time elapsed
+
+2025-03-21 11:56:57 - ----------------------------------------
+2025-03-21 11:56:57 - Collection #3
+
+ Performance counter stats for 'system wide':
+
+   119,929,674,765      cpu_atom/cycles/                                                      
+    74,515,154,978      cpu_core/cycles/                                                      
+   204,725,181,276      cpu_atom/instructions/           #    1.71  insn per cycle            
+   131,926,151,975      cpu_core/instructions/           #    1.77  insn per cycle            
+       480,667,592      cpu_atom/cache-references/                                            
+       237,043,390      cpu_core/cache-references/                                            
+       235,029,388      cpu_atom/cache-misses/           #   48.90% of all cache refs         
+       100,534,467      cpu_core/cache-misses/           #   42.41% of all cache refs         
+    34,481,299,100      cpu_atom/branches/                                                    
+    21,397,729,364      cpu_core/branches/                                                    
+       148,353,832      cpu_atom/branch-misses/          #    0.43% of all branches           
+        49,939,418      cpu_core/branch-misses/          #    0.23% of all branches           
+
+      10.006545890 seconds time elapsed
+
+2025-03-21 11:57:07 - ----------------------------------------
+2025-03-21 11:57:07 - Collection #4
+
+ Performance counter stats for 'system wide':
+
+   126,005,319,914      cpu_atom/cycles/                                                      
+    72,844,029,941      cpu_core/cycles/                                                      
+   210,059,697,234      cpu_atom/instructions/           #    1.67  insn per cycle            
+   130,016,958,934      cpu_core/instructions/           #    1.78  insn per cycle            
+       400,911,565      cpu_atom/cache-references/                                            
+       245,199,483      cpu_core/cache-references/                                            
+       193,336,982      cpu_atom/cache-misses/           #   48.22% of all cache refs         
+       103,880,447      cpu_core/cache-misses/           #   42.37% of all cache refs         
+    34,312,282,146      cpu_atom/branches/                                                    
+    21,485,805,975      cpu_core/branches/                                                    
+       135,705,411      cpu_atom/branch-misses/          #    0.40% of all branches           
+        51,509,601      cpu_core/branch-misses/          #    0.24% of all branches           
+
+      10.005063830 seconds time elapsed
+
+2025-03-21 11:57:17 - ----------------------------------------
+2025-03-21 11:57:17 - Collection #5
+
+ Performance counter stats for 'system wide':
+
+   126,725,198,800      cpu_atom/cycles/                                                      
+    73,930,764,088      cpu_core/cycles/                                                      
+   211,975,900,244      cpu_atom/instructions/           #    1.67  insn per cycle            
+   130,754,729,279      cpu_core/instructions/           #    1.77  insn per cycle            
+       424,844,311      cpu_atom/cache-references/                                            
+       268,680,776      cpu_core/cache-references/                                            
+       203,695,063      cpu_atom/cache-misses/           #   47.95% of all cache refs         
+       117,728,101      cpu_core/cache-misses/           #   43.82% of all cache refs         
+    34,978,901,564      cpu_atom/branches/                                                    
+    21,647,444,806      cpu_core/branches/                                                    
+       178,228,747      cpu_atom/branch-misses/          #    0.51% of all branches           
+        55,518,905      cpu_core/branch-misses/          #    0.26% of all branches           
+
+      10.004849764 seconds time elapsed
+
+2025-03-21 11:57:27 - ----------------------------------------
+2025-03-21 11:57:27 - Collection #6
+
+ Performance counter stats for 'system wide':
+
+   125,298,196,621      cpu_atom/cycles/                                                      
+    73,328,427,565      cpu_core/cycles/                                                      
+   218,092,035,736      cpu_atom/instructions/           #    1.74  insn per cycle            
+   128,026,914,592      cpu_core/instructions/           #    1.75  insn per cycle            
+       464,807,362      cpu_atom/cache-references/                                            
+       259,122,109      cpu_core/cache-references/                                            
+       232,659,459      cpu_atom/cache-misses/           #   50.06% of all cache refs         
+       106,566,506      cpu_core/cache-misses/           #   41.13% of all cache refs         
+    35,540,216,748      cpu_atom/branches/                                                    
+    22,241,798,823      cpu_core/branches/                                                    
+       144,237,482      cpu_atom/branch-misses/          #    0.41% of all branches           
+        50,226,153      cpu_core/branch-misses/          #    0.23% of all branches           
+
+      10.008630705 seconds time elapsed
+
+2025-03-21 11:57:37 - ----------------------------------------
+2025-03-21 11:57:37 - Collection #7
+
+ Performance counter stats for 'system wide':
+
+   123,849,483,900      cpu_atom/cycles/                                                      
+    73,016,689,129      cpu_core/cycles/                                                      
+   213,809,245,536      cpu_atom/instructions/           #    1.73  insn per cycle            
+   127,872,832,880      cpu_core/instructions/           #    1.75  insn per cycle            
+       432,572,180      cpu_atom/cache-references/                                            
+       243,899,344      cpu_core/cache-references/                                            
+       212,017,245      cpu_atom/cache-misses/           #   49.01% of all cache refs         
+       102,038,869      cpu_core/cache-misses/           #   41.84% of all cache refs         
+    34,553,575,617      cpu_atom/branches/                                                    
+    22,050,436,438      cpu_core/branches/                                                    
+       124,817,105      cpu_atom/branch-misses/          #    0.36% of all branches           
+        46,026,181      cpu_core/branch-misses/          #    0.21% of all branches           
+
+      10.004216787 seconds time elapsed
+
+2025-03-21 11:57:47 - ----------------------------------------
+2025-03-21 11:57:47 - Collection #8
+
+ Performance counter stats for 'system wide':
+
+   125,906,893,538      cpu_atom/cycles/                                                      
+    72,141,948,246      cpu_core/cycles/                                                      
+   211,951,187,190      cpu_atom/instructions/           #    1.68  insn per cycle            
+   126,874,352,998      cpu_core/instructions/           #    1.76  insn per cycle            
+       396,630,383      cpu_atom/cache-references/                                            
+       262,392,257      cpu_core/cache-references/                                            
+       194,177,433      cpu_atom/cache-misses/           #   48.96% of all cache refs         
+       109,117,960      cpu_core/cache-misses/           #   41.59% of all cache refs         
+    33,597,294,646      cpu_atom/branches/                                                    
+    22,339,811,824      cpu_core/branches/                                                    
+       197,560,074      cpu_atom/branch-misses/          #    0.59% of all branches           
+        50,705,857      cpu_core/branch-misses/          #    0.23% of all branches           
+
+      10.005296534 seconds time elapsed
+
+2025-03-21 11:57:58 - ----------------------------------------
+2025-03-21 11:57:58 - Collection #9
+
+ Performance counter stats for 'system wide':
+
+   123,829,517,863      cpu_atom/cycles/                                                      
+    73,356,527,683      cpu_core/cycles/                                                      
+   212,180,448,853      cpu_atom/instructions/           #    1.71  insn per cycle            
+   129,026,171,987      cpu_core/instructions/           #    1.76  insn per cycle            
+       454,724,268      cpu_atom/cache-references/                                            
+       219,003,658      cpu_core/cache-references/                                            
+       223,146,806      cpu_atom/cache-misses/           #   49.07% of all cache refs         
+        91,662,067      cpu_core/cache-misses/           #   41.85% of all cache refs         
+    34,343,991,623      cpu_atom/branches/                                                    
+    22,250,275,753      cpu_core/branches/                                                    
+       170,071,208      cpu_atom/branch-misses/          #    0.50% of all branches           
+        43,088,571      cpu_core/branch-misses/          #    0.19% of all branches           
+
+      10.003228380 seconds time elapsed
+
+2025-03-21 11:58:08 - ----------------------------------------
+2025-03-21 11:58:08 - Collection #10
+
+ Performance counter stats for 'system wide':
+
+   125,720,594,360      cpu_atom/cycles/                                                      
+    75,765,252,997      cpu_core/cycles/                                                      
+   216,367,762,797      cpu_atom/instructions/           #    1.72  insn per cycle            
+   134,488,471,321      cpu_core/instructions/           #    1.78  insn per cycle            
+       470,362,831      cpu_atom/cache-references/                                            
+       232,533,233      cpu_core/cache-references/                                            
+       232,869,265      cpu_atom/cache-misses/           #   49.51% of all cache refs         
+        97,017,870      cpu_core/cache-misses/           #   41.72% of all cache refs         
+    36,461,159,520      cpu_atom/branches/                                                    
+    22,083,263,452      cpu_core/branches/                                                    
+       166,840,662      cpu_atom/branch-misses/          #    0.46% of all branches           
+        51,471,555      cpu_core/branch-misses/          #    0.23% of all branches           
+
+      10.007003898 seconds time elapsed
+
+2025-03-21 11:58:18 - ----------------------------------------
+2025-03-21 11:58:18 - Collection #11
+
+ Performance counter stats for 'system wide':
+
+   121,867,703,089      cpu_atom/cycles/                                                      
+    73,395,141,293      cpu_core/cycles/                                                      
+   207,631,183,513      cpu_atom/instructions/           #    1.70  insn per cycle            
+   131,577,878,263      cpu_core/instructions/           #    1.79  insn per cycle            
+       443,862,440      cpu_atom/cache-references/                                            
+       239,520,158      cpu_core/cache-references/                                            
+       212,472,813      cpu_atom/cache-misses/           #   47.87% of all cache refs         
+       104,778,878      cpu_core/cache-misses/           #   43.75% of all cache refs         
+    34,638,181,143      cpu_atom/branches/                                                    
+    21,685,080,349      cpu_core/branches/                                                    
+       130,838,393      cpu_atom/branch-misses/          #    0.38% of all branches           
+        49,670,504      cpu_core/branch-misses/          #    0.23% of all branches           
+
+      10.012710555 seconds time elapsed
+
+2025-03-21 11:58:28 - ----------------------------------------
+2025-03-21 11:58:28 - Collection #12
+
+ Performance counter stats for 'system wide':
+
+   126,741,797,873      cpu_atom/cycles/                                                      
+    74,648,770,257      cpu_core/cycles/                                                      
+   214,117,191,209      cpu_atom/instructions/           #    1.69  insn per cycle            
+   132,400,168,850      cpu_core/instructions/           #    1.77  insn per cycle            
+       394,842,897      cpu_atom/cache-references/                                            
+       270,625,468      cpu_core/cache-references/                                            
+       192,932,637      cpu_atom/cache-misses/           #   48.86% of all cache refs         
+       118,981,990      cpu_core/cache-misses/           #   43.97% of all cache refs         
+    34,676,468,004      cpu_atom/branches/                                                    
+    22,879,707,861      cpu_core/branches/                                                    
+       167,867,157      cpu_atom/branch-misses/          #    0.48% of all branches           
+        51,565,965      cpu_core/branch-misses/          #    0.23% of all branches           
+
+      10.006605643 seconds time elapsed
+
+2025-03-21 11:58:38 - ----------------------------------------
+2025-03-21 11:58:38 - Collection #13
+
+ Performance counter stats for 'system wide':
+
+    44,686,904,292      cpu_atom/cycles/                                                      
+    27,401,055,815      cpu_core/cycles/                                                      
+    82,202,909,397      cpu_atom/instructions/           #    1.84  insn per cycle            
+    49,085,769,093      cpu_core/instructions/           #    1.79  insn per cycle            
+       756,786,527      cpu_atom/cache-references/                                            
+       353,402,880      cpu_core/cache-references/                                            
+       343,147,187      cpu_atom/cache-misses/           #   45.34% of all cache refs         
+       139,058,431      cpu_core/cache-misses/           #   39.35% of all cache refs         
+    17,242,522,272      cpu_atom/branches/                                                    
+     9,124,794,345      cpu_core/branches/                                                    
+       117,843,439      cpu_atom/branch-misses/          #    0.68% of all branches           
+        62,547,899      cpu_core/branch-misses/          #    0.69% of all branches           
+
+      10.003441566 seconds time elapsed
+
+2025-03-21 11:58:48 - ----------------------------------------
+2025-03-21 11:58:48 - Collection #14
+
+ Performance counter stats for 'system wide':
+
+    50,517,627,660      cpu_atom/cycles/                                                      
+    30,938,913,930      cpu_core/cycles/                                                      
+    85,809,276,741      cpu_atom/instructions/           #    1.70  insn per cycle            
+    50,088,112,449      cpu_core/instructions/           #    1.62  insn per cycle            
+       974,607,890      cpu_atom/cache-references/                                            
+       454,616,812      cpu_core/cache-references/                                            
+       458,185,691      cpu_atom/cache-misses/           #   47.01% of all cache refs         
+       193,741,610      cpu_core/cache-misses/           #   42.62% of all cache refs         
+    17,982,490,077      cpu_atom/branches/                                                    
+     9,326,867,125      cpu_core/branches/                                                    
+       143,295,985      cpu_atom/branch-misses/          #    0.80% of all branches           
+        67,463,988      cpu_core/branch-misses/          #    0.72% of all branches           
+
+      10.006341103 seconds time elapsed
+
+2025-03-21 11:58:58 - ----------------------------------------
+2025-03-21 11:58:58 - Collection #15
+
+ Performance counter stats for 'system wide':
+
+    51,086,643,964      cpu_atom/cycles/                                                      
+    32,950,712,604      cpu_core/cycles/                                                      
+    82,669,405,778      cpu_atom/instructions/           #    1.62  insn per cycle            
+    52,836,965,478      cpu_core/instructions/           #    1.60  insn per cycle            
+     1,044,037,945      cpu_atom/cache-references/                                            
+       495,021,167      cpu_core/cache-references/                                            
+       515,066,712      cpu_atom/cache-misses/           #   49.33% of all cache refs         
+       223,299,934      cpu_core/cache-misses/           #   45.11% of all cache refs         
+    17,066,155,201      cpu_atom/branches/                                                    
+     9,749,556,320      cpu_core/branches/                                                    
+       140,165,867      cpu_atom/branch-misses/          #    0.82% of all branches           
+        72,033,313      cpu_core/branch-misses/          #    0.74% of all branches           
+
+      10.004573443 seconds time elapsed
+
+2025-03-21 11:59:08 - ----------------------------------------
+2025-03-21 11:59:08 - Collection #16
+
+ Performance counter stats for 'system wide':
+
+    45,679,939,159      cpu_atom/cycles/                                                      
+    28,481,522,680      cpu_core/cycles/                                                      
+    75,260,609,427      cpu_atom/instructions/           #    1.65  insn per cycle            
+    47,594,173,461      cpu_core/instructions/           #    1.67  insn per cycle            
+       901,878,964      cpu_atom/cache-references/                                            
+       423,356,602      cpu_core/cache-references/                                            
+       418,238,318      cpu_atom/cache-misses/           #   46.37% of all cache refs         
+       177,386,815      cpu_core/cache-misses/           #   41.90% of all cache refs         
+    15,863,570,477      cpu_atom/branches/                                                    
+     8,623,324,790      cpu_core/branches/                                                    
+       128,842,142      cpu_atom/branch-misses/          #    0.81% of all branches           
+        65,117,924      cpu_core/branch-misses/          #    0.76% of all branches           
+
+      10.005164587 seconds time elapsed
+
+2025-03-21 11:59:18 - ----------------------------------------
+2025-03-21 11:59:18 - Collection #17
+
+ Performance counter stats for 'system wide':
+
+    43,353,803,140      cpu_atom/cycles/                                                      
+    26,828,742,079      cpu_core/cycles/                                                      
+    72,988,131,720      cpu_atom/instructions/           #    1.68  insn per cycle            
+    44,507,281,603      cpu_core/instructions/           #    1.66  insn per cycle            
+       838,640,133      cpu_atom/cache-references/                                            
+       413,451,028      cpu_core/cache-references/                                            
+       380,862,960      cpu_atom/cache-misses/           #   45.41% of all cache refs         
+       167,508,250      cpu_core/cache-misses/           #   40.51% of all cache refs         
+    15,219,841,269      cpu_atom/branches/                                                    
+     8,271,155,346      cpu_core/branches/                                                    
+       122,366,836      cpu_atom/branch-misses/          #    0.80% of all branches           
+        65,742,427      cpu_core/branch-misses/          #    0.79% of all branches           
+
+      10.004747546 seconds time elapsed
+
+2025-03-21 11:59:28 - ----------------------------------------
+2025-03-21 11:59:28 - Collection #18
+
+ Performance counter stats for 'system wide':
+
+    43,987,639,945      cpu_atom/cycles/                                                      
+    27,418,329,700      cpu_core/cycles/                                                      
+    76,271,981,649      cpu_atom/instructions/           #    1.73  insn per cycle            
+    45,716,348,068      cpu_core/instructions/           #    1.67  insn per cycle            
+       843,668,239      cpu_atom/cache-references/                                            
+       400,658,952      cpu_core/cache-references/                                            
+       397,866,895      cpu_atom/cache-misses/           #   47.16% of all cache refs         
+       165,567,401      cpu_core/cache-misses/           #   41.32% of all cache refs         
+    15,768,077,785      cpu_atom/branches/                                                    
+     8,743,858,894      cpu_core/branches/                                                    
+       121,353,953      cpu_atom/branch-misses/          #    0.77% of all branches           
+        62,307,295      cpu_core/branch-misses/          #    0.71% of all branches           
+
+      10.006493257 seconds time elapsed
+
+2025-03-21 11:59:38 - ----------------------------------------
+2025-03-21 11:59:38 - Collection #19
+
+ Performance counter stats for 'system wide':
+
+    41,588,575,825      cpu_atom/cycles/                                                      
+    25,930,756,754      cpu_core/cycles/                                                      
+    73,636,167,915      cpu_atom/instructions/           #    1.77  insn per cycle            
+    44,132,952,568      cpu_core/instructions/           #    1.70  insn per cycle            
+       770,757,761      cpu_atom/cache-references/                                            
+       368,405,285      cpu_core/cache-references/                                            
+       350,282,659      cpu_atom/cache-misses/           #   45.45% of all cache refs         
+       149,391,937      cpu_core/cache-misses/           #   40.55% of all cache refs         
+    15,452,037,769      cpu_atom/branches/                                                    
+     8,311,769,059      cpu_core/branches/                                                    
+       114,009,792      cpu_atom/branch-misses/          #    0.74% of all branches           
+        58,409,081      cpu_core/branch-misses/          #    0.70% of all branches           
+
+      10.005202155 seconds time elapsed
+
+2025-03-21 11:59:48 - ----------------------------------------
+2025-03-21 11:59:48 - Collection #20
+
+ Performance counter stats for 'system wide':
+
+    41,750,097,238      cpu_atom/cycles/                                                      
+    25,938,160,952      cpu_core/cycles/                                                      
+    70,161,005,406      cpu_atom/instructions/           #    1.68  insn per cycle            
+    43,274,104,210      cpu_core/instructions/           #    1.67  insn per cycle            
+       813,323,990      cpu_atom/cache-references/                                            
+       398,635,758      cpu_core/cache-references/                                            
+       382,568,222      cpu_atom/cache-misses/           #   47.04% of all cache refs         
+       170,384,195      cpu_core/cache-misses/           #   42.74% of all cache refs         
+    14,812,555,237      cpu_atom/branches/                                                    
+     7,643,067,282      cpu_core/branches/                                                    
+       121,643,735      cpu_atom/branch-misses/          #    0.82% of all branches           
+        63,089,083      cpu_core/branch-misses/          #    0.83% of all branches           
+
+      10.006980581 seconds time elapsed
+
+2025-03-21 11:59:58 - ----------------------------------------
+2025-03-21 11:59:58 - Collection #21
+
+ Performance counter stats for 'system wide':
+
+    36,762,797,299      cpu_atom/cycles/                                                      
+    22,361,942,226      cpu_core/cycles/                                                      
+    73,691,206,488      cpu_atom/instructions/           #    2.00  insn per cycle            
+    41,362,242,989      cpu_core/instructions/           #    1.85  insn per cycle            
+       618,953,374      cpu_atom/cache-references/                                            
+       270,427,230      cpu_core/cache-references/                                            
+       274,099,065      cpu_atom/cache-misses/           #   44.28% of all cache refs         
+       104,072,762      cpu_core/cache-misses/           #   38.48% of all cache refs         
+    15,650,883,838      cpu_atom/branches/                                                    
+     7,985,863,328      cpu_core/branches/                                                    
+        97,792,429      cpu_atom/branch-misses/          #    0.62% of all branches           
+        46,018,227      cpu_core/branch-misses/          #    0.58% of all branches           
+
+      10.006088721 seconds time elapsed
+
+2025-03-21 12:00:08 - ----------------------------------------
+2025-03-21 12:00:08 - Collection #22
+
+ Performance counter stats for 'system wide':
+
+    36,768,085,795      cpu_atom/cycles/                                                      
+    22,220,510,195      cpu_core/cycles/                                                      
+    72,791,972,444      cpu_atom/instructions/           #    1.98  insn per cycle            
+    41,723,335,100      cpu_core/instructions/           #    1.88  insn per cycle            
+       627,465,140      cpu_atom/cache-references/                                            
+       267,924,532      cpu_core/cache-references/                                            
+       277,773,121      cpu_atom/cache-misses/           #   44.27% of all cache refs         
+       102,685,749      cpu_core/cache-misses/           #   38.33% of all cache refs         
+    15,579,108,623      cpu_atom/branches/                                                    
+     7,960,685,859      cpu_core/branches/                                                    
+        97,190,153      cpu_atom/branch-misses/          #    0.62% of all branches           
+        47,418,229      cpu_core/branch-misses/          #    0.60% of all branches           
+
+      10.006303425 seconds time elapsed
+
+2025-03-21 12:00:18 - ----------------------------------------
+2025-03-21 12:00:18 - Collection #23
+
+ Performance counter stats for 'system wide':
+
+    37,934,414,821      cpu_atom/cycles/                                                      
+    22,974,150,163      cpu_core/cycles/                                                      
+    76,475,162,071      cpu_atom/instructions/           #    2.02  insn per cycle            
+    42,950,642,280      cpu_core/instructions/           #    1.87  insn per cycle            
+       627,433,738      cpu_atom/cache-references/                                            
+       275,287,124      cpu_core/cache-references/                                            
+       277,546,448      cpu_atom/cache-misses/           #   44.24% of all cache refs         
+       107,949,166      cpu_core/cache-misses/           #   39.21% of all cache refs         
+    16,553,589,812      cpu_atom/branches/                                                    
+     8,016,998,745      cpu_core/branches/                                                    
+        97,751,089      cpu_atom/branch-misses/          #    0.59% of all branches           
+        47,573,600      cpu_core/branch-misses/          #    0.59% of all branches           
+
+      10.006465352 seconds time elapsed
+
+2025-03-21 12:00:28 - ----------------------------------------
+2025-03-21 12:00:28 - Collection #24
+
+ Performance counter stats for 'system wide':
+
+    37,716,016,168      cpu_atom/cycles/                                                      
+    23,046,216,157      cpu_core/cycles/                                                      
+    76,680,665,109      cpu_atom/instructions/           #    2.03  insn per cycle            
+    43,007,749,974      cpu_core/instructions/           #    1.87  insn per cycle            
+       613,152,071      cpu_atom/cache-references/                                            
+       284,803,443      cpu_core/cache-references/                                            
+       272,731,782      cpu_atom/cache-misses/           #   44.48% of all cache refs         
+       112,210,749      cpu_core/cache-misses/           #   39.40% of all cache refs         
+    16,474,116,798      cpu_atom/branches/                                                    
+     8,146,468,792      cpu_core/branches/                                                    
+        96,888,210      cpu_atom/branch-misses/          #    0.59% of all branches           
+        48,061,869      cpu_core/branch-misses/          #    0.59% of all branches           
+
+      10.005586223 seconds time elapsed
+
+2025-03-21 12:00:38 - ----------------------------------------
+2025-03-21 12:00:38 - Collection #25
+
+ Performance counter stats for 'system wide':
+
+    33,119,578,106      cpu_atom/cycles/                                                      
+    20,352,872,704      cpu_core/cycles/                                                      
+    64,107,857,507      cpu_atom/instructions/           #    1.94  insn per cycle            
+    37,915,685,142      cpu_core/instructions/           #    1.86  insn per cycle            
+       572,499,877      cpu_atom/cache-references/                                            
+       260,718,755      cpu_core/cache-references/                                            
+       248,773,825      cpu_atom/cache-misses/           #   43.45% of all cache refs         
+       101,013,824      cpu_core/cache-misses/           #   38.74% of all cache refs         
+    13,792,509,353      cpu_atom/branches/                                                    
+     6,992,561,155      cpu_core/branches/                                                    
+        93,211,849      cpu_atom/branch-misses/          #    0.68% of all branches           
+        45,413,524      cpu_core/branch-misses/          #    0.65% of all branches           
+
+      10.016020575 seconds time elapsed
+
+2025-03-21 12:00:48 - ----------------------------------------
+2025-03-21 12:00:48 - Collection #26
+
+ Performance counter stats for 'system wide':
+
+    35,850,184,484      cpu_atom/cycles/                                                      
+    22,088,884,787      cpu_core/cycles/                                                      
+    71,891,649,941      cpu_atom/instructions/           #    2.01  insn per cycle            
+    41,621,670,798      cpu_core/instructions/           #    1.88  insn per cycle            
+       604,598,403      cpu_atom/cache-references/                                            
+       271,633,537      cpu_core/cache-references/                                            
+       269,670,730      cpu_atom/cache-misses/           #   44.60% of all cache refs         
+       106,269,058      cpu_core/cache-misses/           #   39.12% of all cache refs         
+    15,678,268,727      cpu_atom/branches/                                                    
+     7,676,100,461      cpu_core/branches/                                                    
+        93,665,370      cpu_atom/branch-misses/          #    0.60% of all branches           
+        48,774,563      cpu_core/branch-misses/          #    0.64% of all branches           
+
+      10.012224335 seconds time elapsed
+
+2025-03-21 12:00:58 - ----------------------------------------
+2025-03-21 12:00:58 - Collection #27
+
+ Performance counter stats for 'system wide':
+
+    37,036,713,302      cpu_atom/cycles/                                                      
+    23,097,910,962      cpu_core/cycles/                                                      
+    74,733,426,684      cpu_atom/instructions/           #    2.02  insn per cycle            
+    43,777,324,674      cpu_core/instructions/           #    1.90  insn per cycle            
+       612,558,443      cpu_atom/cache-references/                                            
+       278,593,147      cpu_core/cache-references/                                            
+       265,441,869      cpu_atom/cache-misses/           #   43.33% of all cache refs         
+       109,819,159      cpu_core/cache-misses/           #   39.42% of all cache refs         
+    16,291,282,907      cpu_atom/branches/                                                    
+     8,125,104,262      cpu_core/branches/                                                    
+        97,333,168      cpu_atom/branch-misses/          #    0.60% of all branches           
+        47,759,279      cpu_core/branch-misses/          #    0.59% of all branches           
+
+      10.005837709 seconds time elapsed
+
+2025-03-21 12:01:08 - ----------------------------------------
+2025-03-21 12:01:08 - Collection #28
+
+ Performance counter stats for 'system wide':
+
+    38,249,670,761      cpu_atom/cycles/                                                      
+    23,682,830,062      cpu_core/cycles/                                                      
+    77,175,828,453      cpu_atom/instructions/           #    2.02  insn per cycle            
+    44,607,992,329      cpu_core/instructions/           #    1.88  insn per cycle            
+       634,764,722      cpu_atom/cache-references/                                            
+       286,901,520      cpu_core/cache-references/                                            
+       278,249,338      cpu_atom/cache-misses/           #   43.84% of all cache refs         
+       110,461,657      cpu_core/cache-misses/           #   38.50% of all cache refs         
+    16,826,301,990      cpu_atom/branches/                                                    
+     8,294,819,221      cpu_core/branches/                                                    
+        99,857,473      cpu_atom/branch-misses/          #    0.59% of all branches           
+        50,140,871      cpu_core/branch-misses/          #    0.60% of all branches           
+
+      10.005750769 seconds time elapsed
+
+2025-03-21 12:01:19 - ----------------------------------------
+2025-03-21 12:01:19 - Collection #29
+
+ Performance counter stats for 'system wide':
+
+    38,057,440,661      cpu_atom/cycles/                                                      
+    23,652,234,741      cpu_core/cycles/                                                      
+    76,788,374,375      cpu_atom/instructions/           #    2.02  insn per cycle            
+    44,987,989,632      cpu_core/instructions/           #    1.90  insn per cycle            
+       634,240,000      cpu_atom/cache-references/                                            
+       284,041,887      cpu_core/cache-references/                                            
+       276,155,407      cpu_atom/cache-misses/           #   43.54% of all cache refs         
+       109,239,028      cpu_core/cache-misses/           #   38.46% of all cache refs         
+    16,736,727,928      cpu_atom/branches/                                                    
+     8,384,412,311      cpu_core/branches/                                                    
+        98,411,857      cpu_atom/branch-misses/          #    0.59% of all branches           
+        50,289,131      cpu_core/branch-misses/          #    0.60% of all branches           
+
+      10.002815458 seconds time elapsed
+
+2025-03-21 12:01:29 - ----------------------------------------
+2025-03-21 12:01:29 - Collection #30
+
+ Performance counter stats for 'system wide':
+
+    32,249,793,264      cpu_atom/cycles/                                                      
+    20,139,608,022      cpu_core/cycles/                                                      
+    62,963,891,327      cpu_atom/instructions/           #    1.95  insn per cycle            
+    38,771,979,818      cpu_core/instructions/           #    1.93  insn per cycle            
+       545,651,973      cpu_atom/cache-references/                                            
+       264,174,956      cpu_core/cache-references/                                            
+       237,465,944      cpu_atom/cache-misses/           #   43.52% of all cache refs         
+        99,072,812      cpu_core/cache-misses/           #   37.50% of all cache refs         
+    13,424,445,192      cpu_atom/branches/                                                    
+     6,902,244,573      cpu_core/branches/                                                    
+        86,708,946      cpu_atom/branch-misses/          #    0.65% of all branches           
+        45,331,783      cpu_core/branch-misses/          #    0.66% of all branches           
+
+      10.007991368 seconds time elapsed
+
+2025-03-21 12:01:39 - ----------------------------------------
