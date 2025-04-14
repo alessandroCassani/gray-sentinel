@@ -40,10 +40,18 @@ enable_probe $API_URL_PROC '{"cmd": {"probe": ["proc_syscall", "proc_io", "proc_
 
 enable_probe $API_URL_THREAD '{"cmd": {"probe": ["oncpu", "syscall_file", "syscall_net", "syscall_lock", "syscall_sched"]},"state": "running"}'
 
-echo "=== Configuration complete ==="
-echo "To make changes persistent, restart gala-gopher with:"
-echo "systemctl restart gala-gopher.service"
+systemctl restart gala-gopher.service
+
+echo "=== gala gopher configuration complete ==="
+
+cd ..
+cd "external/prometheus"
+ ./prometheus --config.file=prometheus.yml
+
+echo "starting grafana..."
+docker run -d --network="host" --name=grafana grafana/grafana-oss
+echo "grafana is running!"
 
 # Check if metrics are collected
-echo "Checking if metrics are now available..."
-curl -s http://localhost:8888/metrics | grep -E '(cpu|mem|tcp|disk|io)' | head -10
+# echo "Checking if metrics are now available..."
+# curl -s http://localhost:8888/metrics | grep -E '(cpu|mem|tcp|disk|io)' | head -10
