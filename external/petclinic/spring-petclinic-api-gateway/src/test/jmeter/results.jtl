@@ -1,0 +1,4019 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1744798131942,320,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,314,0,13
+1744798132534,26,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,26,0,0
+1744798132999,11,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,11,0,0
+1744798133273,8,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,8,0,0
+1744798133385,10,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,10,0,0
+1744798133817,12,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,12,0,0
+1744798134047,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798134236,42,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,41,0,0
+1744798134455,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798134913,26,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,26,0,0
+1744798135388,13,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,13,0,1
+1744798135767,12,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,12,0,0
+1744798136219,12,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,12,0,0
+1744798136554,9,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,9,0,0
+1744798136831,10,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,10,0,0
+1744798137217,12,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,12,0,0
+1744798137397,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798137603,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798137738,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798138042,9,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,9,0,0
+1744798138487,8,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,8,0,1
+1744798138900,10,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,10,0,0
+1744798139461,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798139866,7,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,7,0,0
+1744798140164,11,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,11,0,0
+1744798140293,12,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,12,0,0
+1744798140656,18,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,18,0,0
+1744798140811,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798141237,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798141573,9,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,9,0,0
+1744798141853,11,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,11,0,1
+1744798142171,9,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,9,0,0
+1744798142581,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798142861,8,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,8,0,0
+1744798143291,11,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,11,0,0
+1744798143518,9,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,9,0,0
+1744798143745,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798143949,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798144320,10,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798144581,9,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,9,0,0
+1744798145010,8,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,8,0,1
+1744798145282,9,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,9,0,0
+1744798145496,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798145827,7,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,7,0,0
+1744798146182,12,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,12,0,0
+1744798146436,10,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,9,0,0
+1744798146642,7,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,7,0,0
+1744798146955,10,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798147181,12,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,12,0,0
+1744798147675,8,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,8,0,0
+1744798148152,10,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,10,0,1
+1744798148492,9,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,9,0,0
+1744798148925,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798149316,10,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,10,0,0
+1744798149802,13,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,13,0,0
+1744798149907,12,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,12,0,0
+1744798150167,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798150417,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798150579,10,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798150819,8,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,8,0,0
+1744798151099,8,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,8,0,0
+1744798151424,10,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,10,0,0
+1744798151523,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798151892,9,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,9,0,0
+1744798152147,8,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,8,0,0
+1744798152391,10,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,10,0,0
+1744798152699,7,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,7,0,0
+1744798152930,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798153330,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798153702,7,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,7,0,0
+1744798153898,11,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,10,0,1
+1744798154075,11,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,11,0,0
+1744798154499,6,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,6,0,0
+1744798154975,7,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,7,0,0
+1744798155262,9,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,9,0,0
+1744798155538,8,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,8,0,0
+1744798155891,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798156303,10,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798156722,8,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,8,0,0
+1744798157032,6,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,6,0,0
+1744798157236,7,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,7,0,0
+1744798157606,10,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,10,0,0
+1744798157954,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798158414,8,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,8,0,0
+1744798158736,12,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,12,0,0
+1744798158924,10,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,10,0,0
+1744798159311,9,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,9,0,0
+1744798159623,10,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798159974,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,11,0,0
+1744798160163,9,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,9,0,0
+1744798160430,8,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,8,0,0
+1744798160596,12,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,12,0,0
+1744798160802,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798161067,8,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,8,0,0
+1744798161358,9,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,9,0,0
+1744798161818,11,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,11,0,0
+1744798162159,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798162562,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798162891,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798163197,12,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,12,0,0
+1744798163566,9,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,9,0,2
+1744798163870,10,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,10,0,0
+1744798164293,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798164555,9,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,9,0,0
+1744798164898,10,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,10,0,0
+1744798165184,8,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,8,0,0
+1744798165644,7,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,7,0,0
+1744798165781,8,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,8,0,0
+1744798166150,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798166493,7,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,7,0,0
+1744798166712,11,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,11,0,1
+1744798167026,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798167269,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798167564,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798167970,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798168382,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798168689,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798169070,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798169267,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798169684,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798169952,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,1
+1744798170168,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798170576,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798170772,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798171008,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798171329,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798171586,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798171934,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798172299,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798172622,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798172953,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798173095,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798173284,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798173582,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798173974,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798174397,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798174572,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798174845,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798175224,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798175528,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798175815,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,1
+1744798176168,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798176492,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798176740,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798177019,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798177118,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798177354,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798177699,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798178037,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798178345,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798178590,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798178902,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798179127,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798179601,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798179994,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798180166,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798180287,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798180699,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798181160,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798181523,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798181629,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798181640,5,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798182146,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798182633,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798182870,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798183165,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798183606,6,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,6,0,0
+1744798183878,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798184274,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798184744,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798185060,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,0
+1744798185255,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798185516,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798185756,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798186136,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798186398,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798186733,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798187075,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798187404,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798187781,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798188022,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,1
+1744798188414,7,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,7,0,0
+1744798188759,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798189246,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798189509,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798189802,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798190188,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798190536,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798191028,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798191327,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798191582,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798191952,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798192324,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798192666,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798192985,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798193268,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798193394,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798193662,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798193906,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798194222,5,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,5,0,0
+1744798194661,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798194939,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798195295,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798195502,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798195791,7,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,6,0,0
+1744798195979,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798196378,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798196567,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798196765,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798197065,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798197352,10,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,10,0,0
+1744798197553,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798197882,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798198146,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798198498,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798198767,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798198991,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798199221,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798199655,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798200046,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798200369,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798200676,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798201091,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798201280,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798201364,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798201702,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798202082,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798202444,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798202905,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798203137,5,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,5,0,0
+1744798203368,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798203680,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798203918,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798204163,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798204550,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798204897,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798205131,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798205430,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798205727,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798206156,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798206386,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798206702,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798206803,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798207124,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798207388,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798207711,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798207935,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798208265,6,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,6,0,0
+1744798208530,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798208708,5,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,5,0,0
+1744798208880,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798209047,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798209472,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798209917,6,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,6,0,0
+1744798210086,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798210307,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798210439,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798210749,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798211093,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798211487,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798211821,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798212248,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798212597,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798212983,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798213306,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798213553,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798213838,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798214245,8,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,8,0,0
+1744798214569,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798214796,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798215108,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798215269,8,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,8,0,0
+1744798215534,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798215856,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798216177,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798216455,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798216859,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798217039,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798217248,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798217626,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798217797,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798218150,5,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798218497,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798218660,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798218843,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798219342,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798219574,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798219837,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798220232,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798220578,5,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,5,0,0
+1744798220892,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,1
+1744798221294,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798221670,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798221892,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798222155,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798222516,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798222914,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798223029,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798223337,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798223756,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798224271,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,1
+1744798224440,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798224606,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798224878,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798225069,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798225442,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798225837,6,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,6,0,0
+1744798226178,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798226475,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798226622,13,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,13,0,0
+1744798227054,20,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,20,0,1
+1744798227338,8,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,8,0,0
+1744798227668,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798228122,7,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,7,0,0
+1744798228392,7,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,7,0,0
+1744798228772,9,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,9,0,0
+1744798228921,7,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,7,0,0
+1744798229121,10,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798229372,8,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,8,0,0
+1744798229571,8,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,8,0,0
+1744798229828,8,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,8,0,0
+1744798230231,7,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,7,0,0
+1744798230652,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798230931,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798231187,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798231462,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798231757,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798232074,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798232414,2,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,2,0,0
+1744798232768,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798232982,3,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798233292,2,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,2,0,0
+1744798233648,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798234011,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798234434,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798234662,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798235053,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798235385,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798235712,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798235900,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798236350,3,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798236701,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798237132,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798237494,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798237742,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798237931,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798238154,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798238569,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798239029,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798239198,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798239347,7,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,7,0,1
+1744798239651,5,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798239936,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798240159,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798240653,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798241038,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798241556,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798241933,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798242191,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798242447,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798242722,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798243097,6,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,6,0,0
+1744798243340,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798243626,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798244042,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798244397,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798244725,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798245094,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798245249,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798245362,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798245546,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798245894,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798246111,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798246343,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798246547,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798246835,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798247165,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798247649,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798247744,2,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,2,0,0
+1744798248102,6,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,6,0,0
+1744798248230,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798248593,5,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798248878,6,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,6,0,0
+1744798249254,6,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,6,0,0
+1744798249457,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798249614,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798249881,5,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,5,0,0
+1744798250242,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798250467,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798250705,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798251048,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798251335,5,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798251690,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798251991,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798252177,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798252306,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798252707,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798252983,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798253201,6,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,6,0,0
+1744798253516,6,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,6,0,0
+1744798254009,7,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,7,0,1
+1744798254279,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798254639,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798254936,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798255200,6,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,6,0,0
+1744798255416,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798255611,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798255937,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798256313,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798256528,5,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,5,0,0
+1744798256776,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798257112,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798257420,6,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,6,0,0
+1744798257690,7,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,7,0,0
+1744798257887,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798258231,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798258585,3,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798258945,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798259289,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798259591,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798259903,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798260285,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798260529,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798260853,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798261064,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798261394,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798261618,3,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798261715,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798262024,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798262353,5,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,5,0,0
+1744798262621,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798263023,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798263671,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798264111,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798264559,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798264790,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798265150,3,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798265509,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798265894,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798266214,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798266427,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798266680,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798267033,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798267372,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798267545,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798267766,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798268075,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798268364,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798268727,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798269065,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798269242,3,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798269417,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798269689,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798270044,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798270398,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798270661,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798271187,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798271604,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798271967,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798272227,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798272512,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,0
+1744798272533,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798272820,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798273269,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798273646,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798273902,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798274292,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798274596,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798274862,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798275032,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798275382,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798275653,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798276043,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798276166,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798276397,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798276488,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798276956,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798277137,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798277479,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798277847,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798278197,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,0
+1744798278409,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798278798,5,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,5,0,0
+1744798278998,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798279268,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798279501,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798279896,6,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,6,0,0
+1744798279955,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798280119,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798280303,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798280488,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798280699,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798281026,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798281294,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798281565,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798282038,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798282280,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798282493,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798282955,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798283178,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798283280,7,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,7,0,0
+1744798283702,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798283958,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798284213,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798284468,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798284688,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798285038,3,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798285387,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798285889,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798286078,6,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,6,0,0
+1744798286505,6,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,6,0,1
+1744798286785,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798287169,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798287533,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798287853,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798288171,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798288494,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798288926,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798289129,5,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,5,0,0
+1744798289566,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798289994,11,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,11,0,1
+1744798290344,10,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,10,0,0
+1744798290634,6,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,6,0,0
+1744798290935,8,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,8,0,0
+1744798291145,9,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,9,0,0
+1744798291359,11,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,11,0,0
+1744798291727,8,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,8,0,0
+1744798291928,11,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,10,0,0
+1744798292290,9,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,9,0,0
+1744798292486,8,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,8,0,0
+1744798292902,9,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,9,0,1
+1744798293221,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798293515,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798293812,5,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,5,0,0
+1744798294026,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798294291,5,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,5,0,0
+1744798294543,3,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798294866,7,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,7,0,0
+1744798295255,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798295564,10,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,9,0,0
+1744798296026,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798296432,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798296774,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798297075,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0
+1744798297253,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798297590,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798297935,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798298328,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798298410,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798298599,3,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,3,0,0
+1744798298853,5,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,5,0,1
+1744798299229,4,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,4,0,0
+1744798299346,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798299612,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798299875,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798299980,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798300346,4,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,4,0,0
+1744798300670,2,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,2,0,0
+1744798300904,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798301010,8,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,8,0,0
+1744798301242,3,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798301507,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798301840,4,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,4,0,0
+1744798302249,4,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,4,0,0
+1744798302589,4,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,4,0,0
+1744798302851,3,Add Pet,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,372,1,1,http://localhost:8080/api/customer/owners//pets,3,0,0
+1744798303165,3,Update Pet,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",238,384,1,1,http://localhost:8080/api/customer/owners//pets/,3,0,0
+1744798303699,3,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,3,0,0
+1744798303924,4,Add Visit,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,343,1,1,http://localhost:8080/api/visit/owners//pets//visits,4,0,0
+1744798304247,4,All Vets,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",225,254,1,1,http://localhost:8080/api/vet/vets,4,0,0
+1744798304633,4,All Owners,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[200]]]
+
+/",232,261,1,1,http://localhost:8080/api/customer/owners,4,0,1
+1744798304967,3,Add Owner,503,Service Unavailable,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[503]]]
+
+****** comparison: [[[201]]]
+
+/",156,417,1,1,http://localhost:8080/api/customer/owners,3,0,0
+1744798305048,3,Owner Details,404,Not Found,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[404]]]
+
+****** comparison: [[[200]]]
+
+/",214,261,1,1,http://localhost:8080/api/gateway/owners/,3,0,0
+1744798305231,3,Update Owner,405,Method Not Allowed,jp@gc - Ultimate Thread Group 1-1,text,false,"Test failed: code expected to equal /
+
+****** received  : [[[405]]]
+
+****** comparison: [[[204]]]
+
+/",233,430,1,1,http://localhost:8080/api/customer/owners/,3,0,0

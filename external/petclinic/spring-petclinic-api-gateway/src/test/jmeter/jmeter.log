@@ -1,0 +1,125 @@
+2025-04-16 18:08:50,972 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-04-16 18:08:50,986 INFO o.a.j.JMeter: Loading user properties from: /opt/apache-jmeter-5.6.3/bin/user.properties
+2025-04-16 18:08:50,987 INFO o.a.j.JMeter: Loading system properties from: /opt/apache-jmeter-5.6.3/bin/system.properties
+2025-04-16 18:08:50,990 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: Version 5.6.3
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: java.version=17.0.13
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: os.name=Linux
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: os.arch=amd64
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: os.version=6.6.0-84.0.0.89.oe2403sp1.x86_64
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: java.awt.headless=true
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-04-16 18:08:50,991 INFO o.a.j.JMeter: Available Processors =8
+2025-04-16 18:08:51,001 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-04-16 18:08:51,001 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-04-16 18:08:51,002 INFO o.a.j.JMeter: JMeterHome=/opt/apache-jmeter-5.6.3
+2025-04-16 18:08:51,002 INFO o.a.j.JMeter: user.dir  =/home/ale/Documents/PGDFS/gray-sentinel/external/petclinic/spring-petclinic-api-gateway/src/test/jmeter
+2025-04-16 18:08:51,002 INFO o.a.j.JMeter: PWD       =/home/ale/Documents/PGDFS/gray-sentinel/external/petclinic/spring-petclinic-api-gateway/src/test/jmeter
+2025-04-16 18:08:51,080 INFO o.a.j.JMeter: IP: 10.0.2.15 Name: vbox FullName: vbox
+2025-04-16 18:08:51,088 INFO o.a.j.s.FileServer: Default base='/home/ale/Documents/PGDFS/gray-sentinel/external/petclinic/spring-petclinic-api-gateway/src/test/jmeter'
+2025-04-16 18:08:51,089 INFO o.a.j.s.FileServer: Set new base='/home/ale/Documents/PGDFS/gray-sentinel/external/petclinic/spring-petclinic-api-gateway/src/test/jmeter'
+2025-04-16 18:08:51,254 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-04-16 18:08:51,282 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-04-16 18:08:51,284 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-04-16 18:08:51,286 INFO o.a.j.s.SaveService: Loading file: petclinic_test_plan.jmx
+2025-04-16 18:08:51,339 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-16 18:08:51,339 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-16 18:08:51,339 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-16 18:08:51,339 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-16 18:08:51,339 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-04-16 18:08:51,339 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-04-16 18:08:51,380 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-04-16 18:08:51,389 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-04-16 18:08:51,390 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-04-16 18:08:51,390 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-04-16 18:08:51,394 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-04-16 18:08:51,395 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-04-16 18:08:51,456 WARN o.a.j.r.ClassFinder: Can not open the jar /opt/apache-jmeter-5.6.3/lib/ext/JMeterPlugins-Manager.jar, message: zip file is empty
+java.util.zip.ZipException: zip file is empty
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1776) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1560) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1655) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1493) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1455) ~[?:?]
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:727) ~[?:?]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:253) ~[?:?]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:181) ~[?:?]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:346) ~[?:?]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:317) ~[?:?]
+	at java.base/java.util.jar.JarFile.<init>(JarFile.java:283) ~[?:?]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesInOnePath(ClassFinder.java:478) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClasses(ClassFinder.java:443) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:413) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:336) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:315) [jorphan.jar:5.6.3]
+	at org.apache.jmeter.util.JMeterUtils.findClassesThatExtend(JMeterUtils.java:402) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.util.JMeterUtils.loadServicesAndScanJars(JMeterUtils.java:349) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.util.CompoundVariable.<clinit>(CompoundVariable.java:73) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.util.ValueReplacer.<init>(ValueReplacer.java:43) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.PreCompiler.<init>(PreCompiler.java:54) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:412) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2025-04-16 18:08:51,462 WARN o.a.j.r.ClassFinder: Can not open the jar /opt/apache-jmeter-5.6.3/lib/ext/JMeterPlugins-Manager.jar, message: zip file is empty
+java.util.zip.ZipException: zip file is empty
+	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1776) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1560) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.initCEN(ZipFile.java:1655) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.<init>(ZipFile.java:1493) ~[?:?]
+	at java.base/java.util.zip.ZipFile$Source.get(ZipFile.java:1455) ~[?:?]
+	at java.base/java.util.zip.ZipFile$CleanableResource.<init>(ZipFile.java:727) ~[?:?]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:253) ~[?:?]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:181) ~[?:?]
+	at java.base/java.util.zip.ZipFile.<init>(ZipFile.java:195) ~[?:?]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesInOnePath(ClassFinder.java:496) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClasses(ClassFinder.java:443) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:413) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:336) [jorphan.jar:5.6.3]
+	at org.apache.jorphan.reflect.ClassFinder.findClassesThatExtend(ClassFinder.java:315) [jorphan.jar:5.6.3]
+	at org.apache.jmeter.util.JMeterUtils.findClassesThatExtend(JMeterUtils.java:402) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.util.JMeterUtils.loadServicesAndScanJars(JMeterUtils.java:349) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.util.CompoundVariable.<clinit>(CompoundVariable.java:73) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.util.ValueReplacer.<init>(ValueReplacer.java:43) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.PreCompiler.<init>(PreCompiler.java:54) [ApacheJMeter_core.jar:5.6.3]
+	at org.apache.jmeter.engine.StandardJMeterEngine.run(StandardJMeterEngine.java:412) [ApacheJMeter_core.jar:5.6.3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) [?:?]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2025-04-16 18:08:51,463 INFO o.a.j.r.ClassFinder: Will scan jar /opt/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-04-16 18:08:51,471 INFO o.a.j.r.ClassFinder: Will scan jar /opt/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-04-16 18:08:51,552 INFO o.a.j.JMeter: Running test (1744798131552)
+2025-04-16 18:08:51,576 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : jp@gc - Ultimate Thread Group
+2025-04-16 18:08:51,577 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group jp@gc - Ultimate Thread Group.
+2025-04-16 18:08:51,577 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-04-16 18:08:51,577 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 1
+2025-04-16 18:08:51,580 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2025-04-16 18:08:51,580 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-04-16 18:08:51,601 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-1
+2025-04-16 18:08:51,895 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = vbox
+2025-04-16 18:08:51,906 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-04-16 18:08:51,907 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-04-16 18:08:51,907 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-04-16 18:08:51,907 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-04-16 18:08:51,907 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-04-16 18:08:55,384 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-04-16 18:08:55,384 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-04-16 18:09:00,176 INFO o.a.j.r.Summariser: summary +     25 in 00:00:09 =    2.9/s Avg:    24 Min:     4 Max:   320 Err:    25 (100.00%) Active: 1 Started: 1 Finished: 0
+2025-04-16 18:09:30,174 INFO o.a.j.r.Summariser: summary +     97 in 00:00:30 =    3.2/s Avg:     8 Min:     3 Max:    18 Err:    97 (100.00%) Active: 1 Started: 1 Finished: 0
+2025-04-16 18:09:30,174 INFO o.a.j.r.Summariser: summary =    122 in 00:00:39 =    3.2/s Avg:    11 Min:     3 Max:   320 Err:   122 (100.00%)
+2025-04-16 18:10:00,050 INFO o.a.j.r.Summariser: summary +     98 in 00:00:30 =    3.3/s Avg:     4 Min:     3 Max:    10 Err:    98 (100.00%) Active: 1 Started: 1 Finished: 0
+2025-04-16 18:10:00,051 INFO o.a.j.r.Summariser: summary =    220 in 00:01:08 =    3.2/s Avg:     8 Min:     3 Max:   320 Err:   220 (100.00%)
+2025-04-16 18:10:30,239 INFO o.a.j.r.Summariser: summary +    102 in 00:00:30 =    3.4/s Avg:     4 Min:     3 Max:    20 Err:   102 (100.00%) Active: 1 Started: 1 Finished: 0
+2025-04-16 18:10:30,240 INFO o.a.j.r.Summariser: summary =    322 in 00:01:39 =    3.3/s Avg:     7 Min:     3 Max:   320 Err:   322 (100.00%)
+2025-04-16 18:11:00,289 INFO o.a.j.r.Summariser: summary +    100 in 00:00:30 =    3.3/s Avg:     4 Min:     2 Max:     8 Err:   100 (100.00%) Active: 1 Started: 1 Finished: 0
+2025-04-16 18:11:00,290 INFO o.a.j.r.Summariser: summary =    422 in 00:02:09 =    3.3/s Avg:     6 Min:     2 Max:   320 Err:   422 (100.00%)
+2025-04-16 18:11:30,005 INFO o.a.j.r.Summariser: summary +     99 in 00:00:30 =    3.3/s Avg:     3 Min:     3 Max:    11 Err:    99 (100.00%) Active: 1 Started: 1 Finished: 0
+2025-04-16 18:11:30,005 INFO o.a.j.r.Summariser: summary =    521 in 00:02:38 =    3.3/s Avg:     6 Min:     2 Max:   320 Err:   521 (100.00%)
+2025-04-16 18:11:45,699 INFO o.a.j.r.ResultCollector: Shutdown hook started
+2025-04-16 18:11:45,700 INFO o.a.j.r.ResultCollector: Shutdown hook ended
