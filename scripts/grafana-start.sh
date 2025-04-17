@@ -1,6 +1,12 @@
 #!/bin/bash
+echo "Creating Grafana volume..."
+docker volume create grafana-storage
 
+echo "Starting Grafana with persistent storage..."
+docker run -d \
+  --network="host" \
+  --name=grafana \
+  -v grafana-storage:/var/lib/grafana \
+  grafana/grafana-oss
 
-echo "starting grafana..."
-docker run -d --network="host" --name=grafana grafana/grafana-oss
-echo "grafana is running!"
+echo "Grafana is running!"
