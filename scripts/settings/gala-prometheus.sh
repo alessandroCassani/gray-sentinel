@@ -48,9 +48,7 @@ cd ..
 cd "external/prometheus"
  ./prometheus --config.file=prometheus.yml
 
-echo "starting grafana..."
-docker run -d --network="host" --name=grafana grafana/grafana-oss
-echo "grafana is running!"
+
 
 # Check if metrics are collected
 # echo "Checking if metrics are now available..."
