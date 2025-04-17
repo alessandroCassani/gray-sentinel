@@ -1,0 +1,10 @@
+=== Manual Process Selection for Gala-Gopher Log ===
+Started at: Thu Apr 17 06:28:20 PM CST 2025
+[2025-04-17 18:28:20] === Manual Process Selection for Gala-Gopher Started ===
+[2025-04-17 18:28:20] Checking if gala-gopher REST API is accessible at http://localhost:9999
+[2025-04-17 18:28:20] gala-gopher REST API is accessible
+[2025-04-17 18:28:20] Searching for all Java processes...
+[DEBUG] Full Java processes (ps -ef | grep java):
+ale        42291    7392 99 18:25 pts/0    00:06:32 java -jar renaissance.jar --run-seconds 240 dec-tree
+42291  243   13.9    java
+[2025-04-17 18:28:20] Showing more details about potential Renaissance/Spark processes:
