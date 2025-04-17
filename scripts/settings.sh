@@ -44,13 +44,15 @@ systemctl restart gala-gopher.service
 
 echo "=== gala gopher configuration complete ==="
 
+echo "starting grafana..."
+docker run -d --network="host" --name=grafana grafana/grafana-oss
+echo "grafana is running!"
+
 cd ..
 cd "external/prometheus"
  ./prometheus --config.file=prometheus.yml
 
-echo "starting grafana..."
-docker run -d --network="host" --name=grafana grafana/grafana-oss
-echo "grafana is running!"
+
 
 # Check if metrics are collected
 # echo "Checking if metrics are now available..."
