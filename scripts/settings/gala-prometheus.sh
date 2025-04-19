@@ -44,7 +44,7 @@ systemctl restart gala-gopher.service
 
 echo "=== gala gopher configuration complete ==="
 
-cd ..
+cd ../..
 cd "external/prometheus"
  ./prometheus --config.file=prometheus.yml
 
