@@ -52,4 +52,4 @@ cd "external/prometheus"
 
 # Check if metrics are collected
 # echo "Checking if metrics are now available..."
-# curl -s http://localhost:8888/metrics | grep -E '(cpu|mem|tcp|disk|io)' | head -10
+curl -s http://localhost:9888/metrics | grep -E '(cpu|mem|tcp|disk|io)' | head -10
