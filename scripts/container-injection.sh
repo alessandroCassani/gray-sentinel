@@ -19,7 +19,7 @@ function show_help(){
 }
 
 DURATION=300
-TYPE=""
+ACTION=""
 SERVICE=""
 TYPE=""
 
@@ -63,14 +63,14 @@ if [[ "$ACTION" == "list" ]]; then
     exit 0
 fi
 
-if [["$ACTION" == "clean"]]; then
+if [[ "$ACTION" == "clean" ]]; then
     echo "cleaning previous chaosblade experiments"
-    blase destroy
+    blade destroy
     exit 0
 fi
 
-CONTAINER_ID=$(docker ps | grep $SERVICE | 'awk {print $1}')
-if [ -z $CONTAINER_ID ]; then
+CONTAINER_ID=$(docker ps | grep $SERVICE | awk '{print $1}')
+if [ -z "$CONTAINER_ID" ]; then
     echo "no container found for injecting failures"
     exit 1
 fi
@@ -79,31 +79,31 @@ echo "target container found: $CONTAINER_ID"
 echo "Injecting $TYPE failure for $DURATION seconds..."
 
 case $TYPE in
-
- cpu)
- blade create docker cpu fullload --container-id $CONTAINER_ID --cpu-percent 80 --timeout $DURATION
- ;;
-
- memory)
-  blade create docker mem load --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
+  cpu)
+    blade create docker cpu fullload --container-id $CONTAINER_ID --cpu-percent 80 --timeout $DURATION
+  ;;
+  
+  memory)
+    blade create docker mem load --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
   ;;
 
-# TODO separate network loss to network delay
- network) 
+  # TODO separate network loss to network delay
+  network)
     blade create docker network delay --container-id $CONTAINER_ID --interface eth0 --time 200 --timeout $DURATION
     blade create docker network loss --container-id $CONTAINER_ID --interface eth0 --percent 20 --timeout $DURATION
   ;;
-
- latency)
+  
+  latency)
     blade create docker network delay --container-id $CONTAINER_ID --interface eth0 --time 1000 --timeout $DURATION
+  ;;
+  
+  *)
+    echo "Error: Unsupported failure type: $TYPE"
+    echo "Supported types: cpu, memory, network, latency, kill"
+    exit 1
   ;;
 esac
 
 echo "Chaos experiment started. It will run for $DURATION seconds."
 echo "To monitor: blade status"
 echo "To stop early: blade destroy <experiment_id>"
-
-
-
-
-
