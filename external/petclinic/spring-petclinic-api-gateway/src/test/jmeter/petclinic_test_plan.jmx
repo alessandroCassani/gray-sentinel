@@ -57,10 +57,10 @@
       <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="true">
         <collectionProp name="ultimatethreadgroupdata">
           <collectionProp name="-111815413">
-            <stringProp name="49">30</stringProp>    <!-- Number of threads (users) -->
-            <stringProp name="0">0</stringProp>     <!-- Initial delay (seconds) -->
-            <stringProp name="48">0</stringProp>    <!-- Startup time (seconds) -->
-            <stringProp name="50547">300</stringProp> <!-- Hold load for (seconds) -->
+            <stringProp name="49">20</stringProp>    <!-- Number of threads (users) -->
+            <stringProp name="0">10</stringProp>     <!-- Initial delay (seconds) -->
+            <stringProp name="48">60</stringProp>    <!-- Startup time (seconds) -->
+            <stringProp name="50547">900</stringProp> <!-- Hold load for (seconds) -->
             <stringProp name="1629">30</stringProp>   <!-- Shutdown time (seconds) -->
           </collectionProp>
         </collectionProp>
@@ -81,8 +81,8 @@
         </RandomVariableConfig>
         <hashTree/>
         <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="Gaussian Random Timer" enabled="true">
-          <stringProp name="ConstantTimer.delay">300</stringProp>
-          <stringProp name="RandomTimer.range">100.0</stringProp>
+          <stringProp name="ConstantTimer.delay">400</stringProp>
+          <stringProp name="RandomTimer.range">150.0</stringProp>
         </GaussianRandomTimer>
         <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="All Owners" enabled="true">
