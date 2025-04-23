@@ -93,11 +93,11 @@ echo "Injecting container failure: $TYPE for $DURATION seconds..."
 
 case $TYPE in
   cpu)
-    blade create docker cpu fullload --container-id $CONTAINER_ID --cpu-percent 30 --timeout $DURATION
+    blade create cri cpu fullload --container-id 57d7406d0b4e --cpu-percent 50 --timeout 300
   ;;
   
-  memory)
-    # Consume 80% of container memory
+  memory) 
+    # Consume 80% of container memory TODO change to new chaos cmd like cpus
     blade create docker mem load --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
   ;;
 
