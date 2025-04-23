@@ -93,8 +93,7 @@ echo "Injecting container failure: $TYPE for $DURATION seconds..."
 
 case $TYPE in
   cpu)
-    # High CPU load (80%)
-    blade create docker cpu fullload --container-id $CONTAINER_ID --cpu-percent 80 --timeout $DURATION
+    blade create docker cpu fullload --container-id $CONTAINER_ID --cpu-percent 30 --timeout $DURATION
   ;;
   
   memory)
