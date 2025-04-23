@@ -44,10 +44,6 @@ systemctl restart gala-gopher.service
 
 echo "=== gala gopher configuration complete ==="
 
-cd ../..
-cd "external/prometheus"
- ./prometheus --config.file=prometheus.yml --web.listen-address=:8989
-
 
 
 # Check if metrics are collected

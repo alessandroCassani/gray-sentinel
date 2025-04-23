@@ -2,6 +2,10 @@ services:
   config-server:
     image: springcommunity/spring-petclinic-config-server
     container_name: config-server
+    deploy:
+      resources:
+        limits:
+          memory: 1G
     healthcheck:
       test: ["CMD", "curl", "-I", "http://config-server:8888"]
       interval: 5s
@@ -13,6 +17,10 @@ services:
   discovery-server:
     image: springcommunity/spring-petclinic-discovery-server
     container_name: discovery-server
+    deploy:
+      resources:
+        limits:
+          memory: 1G
     healthcheck:
       test: ["CMD", "curl", "-f", "http://discovery-server:8761"]
       interval: 5s
@@ -27,6 +35,10 @@ services:
   customers-service:
     image: springcommunity/spring-petclinic-customers-service
     container_name: customers-service
+    deploy:
+      resources:
+        limits:
+          memory: 3.5G
     depends_on:
       config-server:
         condition: service_healthy
@@ -38,6 +50,10 @@ services:
   visits-service:
     image: springcommunity/spring-petclinic-visits-service
     container_name: visits-service
+    deploy:
+      resources:
+        limits:
+          memory: 2.5G
     depends_on:
       config-server:
         condition: service_healthy
@@ -49,6 +65,10 @@ services:
   vets-service:
     image: springcommunity/spring-petclinic-vets-service
     container_name: vets-service
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
     depends_on:
       config-server:
         condition: service_healthy
@@ -65,6 +85,10 @@ services:
       - OPENAI_API_KEY=demo
       - AZURE_OPENAI_KEY=${AZURE_OPENAI_KEY}
       - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+    deploy:
+      resources:
+        limits:
+          memory: 512M
     depends_on:
       config-server:
         condition: service_healthy
@@ -77,6 +101,10 @@ services:
   api-gateway:
     image: springcommunity/spring-petclinic-api-gateway
     container_name: api-gateway
+    deploy:
+      resources:
+        limits:
+          memory: 2.5G
     depends_on:
       config-server:
         condition: service_healthy
@@ -101,6 +129,10 @@ services:
   admin-server:
     image: springcommunity/spring-petclinic-admin-server
     container_name: admin-server
+    deploy:
+      resources:
+        limits:
+          memory: 1G
     depends_on:
       config-server:
         condition: service_healthy
