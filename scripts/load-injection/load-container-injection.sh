@@ -10,7 +10,7 @@ CHAOS_SCRIPT="../failure-injection/container-injection.sh"
 TARGET_SERVICE="api-gateway" # Service to inject failure
 CHAOS_TYPE="cpu" # Type of failure (cpu, memory, network, latency)
 DELAY_SECONDS=60 # Wait time before injecting failure
-CHAOS_DURATION=300 # Duration of the chaos experiment in seconds
+CHAOS_DURATION=420 # Duration of the chaos experiment in seconds
 
 if [ $# -ge 1 ]; then
     JMX_FILE=$1
