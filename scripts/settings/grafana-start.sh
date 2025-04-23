@@ -1,4 +1,5 @@
 #!/bin/bash
+
 echo "Creating Grafana volume..."
 docker volume create grafana-storage
 
