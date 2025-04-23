@@ -5,16 +5,17 @@ function show_help() {
     echo "Inject container-wide JVM failures using ChaosBlade"
     echo ""
     echo "Options:"
-    echo "  -h, --help                 Show this help message"
-    echo "  -s, --service SERVICE      Target specific service (required)"
-    echo "  -t, --type TYPE            JVM failure type (oom|cpufull|gc|codecache)"
-    echo "  -d, --duration SECONDS     Experiment duration (default: 300s)"
-    echo "  -l, --list                 List running experiments"
-    echo "  -c, --clean                Clean all experiments"
+    echo "  -h, --help           Show this help message"
+    echo "  -s, --service SERVICE Target specific service (required)"
+    echo "  -t, --type TYPE      JVM failure type (oom|cpufull|gc|codecache|exception|return|delay|method|mysql)"
+    echo "  -d, --duration SECONDS Experiment duration (default: 300s)"
+    echo "  -l, --list           List running experiments"
+    echo "  -c, --clean          Clean all experiments"
     echo ""
     echo "Examples:"
     echo "  $0 -s customers-service -t oom"
     echo "  $0 -s api-gateway -t gc -d 120"
+    echo "  $0 -s order-service -t exception"
     echo "  $0 -c"
     exit 0
 }
@@ -25,37 +26,36 @@ SERVICE=""
 TYPE=""
 
 while [[ $# -gt 0 ]]; do
-  key="$1"
-  
-  case $key in
-    -h|--help)
-      show_help
-      ;;
-    -s|--service)
-      SERVICE="$2"
-      shift 2
-      ;;
-    -t|--type)
-      TYPE="$2"
-      shift 2
-      ;;
-    -d|--duration)
-      DURATION="$2"
-      shift 2
-      ;;
-    -l|--list)
-      ACTION="list"
-      shift
-      ;;
-    -c|--clean)
-      ACTION="clean"
-      shift
-      ;;
-    *)
-      echo "Unknown option: $1"
-      show_help
-      ;;
-  esac
+    key="$1"
+    case $key in
+        -h|--help)
+            show_help
+            ;;
+        -s|--service)
+            SERVICE="$2"
+            shift 2
+            ;;
+        -t|--type)
+            TYPE="$2"
+            shift 2
+            ;;
+        -d|--duration)
+            DURATION="$2"
+            shift 2
+            ;;
+        -l|--list)
+            ACTION="list"
+            shift
+            ;;
+        -c|--clean)
+            ACTION="clean"
+            shift
+            ;;
+        *)
+            echo "Unknown option: $1"
+            show_help
+            ;;
+    esac
 done
 
 if [[ "$ACTION" == "list" ]]; then
@@ -92,35 +92,64 @@ echo "Target container found: $CONTAINER_ID for service: $SERVICE"
 echo "Injecting container-wide JVM failure: $TYPE for $DURATION seconds..."
 
 case $TYPE in
-  oom)
-    # Trigger OutOfMemoryError
-    echo "Injecting OutOfMemoryError..."
-    blade create docker jvm oom --container-id $CONTAINER_ID --timeout $DURATION
-  ;;
-  
-  cpufull)
-    # Create high CPU load within the JVM
-    echo "Injecting high CPU load in JVM..."
-    blade create docker jvm cpufull --container-id $CONTAINER_ID --timeout $DURATION
-  ;;
-  
-  gc)
-    # Trigger frequent garbage collection
-    echo "Triggering frequent garbage collection..."
-    blade create docker jvm frequent-gc --container-id $CONTAINER_ID --timeout $DURATION
-  ;;
-  
-  codecache)
-    # Fill code cache to cause JIT compilation issues
-    echo "Filling code cache in JVM..."
-    blade create docker jvm CodeCacheFilling --container-id $CONTAINER_ID --timeout $DURATION
-  ;;
-  
-  *)
-    echo "Error: Unsupported JVM failure type: $TYPE"
-    echo "Supported JVM failure types: oom, cpufull, gc, codecache"
-    exit 1
-  ;;
+    oom)
+        # Trigger OutOfMemoryError
+        echo "Injecting OutOfMemoryError..."
+        blade create cri jvm oom --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    cpufull)
+        # Create high CPU load within the JVM
+        echo "Injecting high CPU load in JVM..."
+        blade create cri jvm cpufull --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    gc)
+        # Trigger frequent garbage collection
+        echo "Triggering frequent garbage collection..."
+        blade create cri jvm frequent-gc --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    codecache)
+        # Fill code cache to cause JIT compilation issues
+        echo "Filling code cache in JVM..."
+        blade create cri jvm CodeCacheFilling --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    exception)
+        # Throw custom exception in a specific class/method
+        echo "Injecting custom exception..."
+        CLASS="org.springframework.web.servlet.DispatcherServlet"
+        METHOD="doDispatch"
+        blade create cri jvm throwCustomException --container-id $CONTAINER_ID --class $CLASS --method $METHOD --exception java.lang.RuntimeException --timeout $DURATION
+        ;;
+    return)
+        # Force a method to return a specific value
+        echo "Forcing method to return value..."
+        CLASS="org.springframework.jdbc.core.JdbcTemplate"
+        METHOD="queryForList"
+        blade create cri jvm return --container-id $CONTAINER_ID --class $CLASS --method $METHOD --value "[]" --timeout $DURATION
+        ;;
+    delay)
+        # Introduce latency in method execution
+        echo "Injecting method execution delay..."
+        CLASS="org.springframework.web.servlet.DispatcherServlet"
+        METHOD="doDispatch"
+        blade create cri jvm delay --container-id $CONTAINER_ID --class $CLASS --method $METHOD --time 3000 --timeout $DURATION
+        ;;
+    method)
+        # Modify a method behavior
+        echo "Modifying method behavior..."
+        CLASS="org.springframework.security.authentication.AuthenticationManager"
+        METHOD="authenticate"
+        blade create cri jvm method --container-id $CONTAINER_ID --class $CLASS --method $METHOD --effect 'return null' --timeout $DURATION
+        ;;
+    mysql)
+        # JDBC connection failure
+        echo "Injecting JDBC connection issues..."
+        blade create cri jvm mysql --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    *)
+        echo "Error: Unsupported JVM failure type: $TYPE"
+        echo "Supported JVM failure types: oom, cpufull, gc, codecache, exception, return, delay, method, mysql"
+        exit 1
+        ;;
 esac
 
 echo "JVM chaos experiment started. It will run for $DURATION seconds."
