@@ -1,42 +1,42 @@
-2025-04-23 17:58:08,033 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2025-04-23 17:58:08,072 INFO o.a.j.JMeter: Loading user properties from: /opt/apache-jmeter-5.6.3/bin/user.properties
-2025-04-23 17:58:08,074 INFO o.a.j.JMeter: Loading system properties from: /opt/apache-jmeter-5.6.3/bin/system.properties
-2025-04-23 17:58:08,090 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
-2025-04-23 17:58:08,090 INFO o.a.j.JMeter: Version 5.6.3
-2025-04-23 17:58:08,091 INFO o.a.j.JMeter: java.version=17.0.13
-2025-04-23 17:58:08,091 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2025-04-23 17:58:08,091 INFO o.a.j.JMeter: os.name=Linux
-2025-04-23 17:58:08,091 INFO o.a.j.JMeter: os.arch=amd64
-2025-04-23 17:58:08,091 INFO o.a.j.JMeter: os.version=6.6.0-84.0.0.89.oe2403sp1.x86_64
-2025-04-23 17:58:08,092 INFO o.a.j.JMeter: file.encoding=UTF-8
-2025-04-23 17:58:08,092 INFO o.a.j.JMeter: java.awt.headless=true
-2025-04-23 17:58:08,092 INFO o.a.j.JMeter: Max memory     =1073741824
-2025-04-23 17:58:08,093 INFO o.a.j.JMeter: Available Processors =10
-2025-04-23 17:58:08,115 INFO o.a.j.JMeter: Default Locale=English (EN)
-2025-04-23 17:58:08,116 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2025-04-23 17:58:08,116 INFO o.a.j.JMeter: JMeterHome=/opt/apache-jmeter-5.6.3
-2025-04-23 17:58:08,117 INFO o.a.j.JMeter: user.dir  =/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection
-2025-04-23 17:58:08,117 INFO o.a.j.JMeter: PWD       =/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection
-2025-04-23 17:58:08,233 INFO o.a.j.JMeter: IP: 10.0.2.15 Name: vbox FullName: vbox
-2025-04-23 17:58:08,293 INFO o.a.j.s.FileServer: Default base='/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection'
-2025-04-23 17:58:08,298 INFO o.a.j.s.FileServer: Set new base='/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection/../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter'
-2025-04-23 17:58:08,540 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2025-04-23 17:58:08,572 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2025-04-23 17:58:08,577 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2025-04-23 17:58:08,582 INFO o.a.j.s.SaveService: Loading file: ../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter/petclinic_test_plan.jmx
-2025-04-23 17:58:08,667 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-04-23 17:58:08,667 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-04-23 17:58:08,667 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-04-23 17:58:08,667 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2025-04-23 17:58:08,667 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2025-04-23 17:58:08,667 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2025-04-23 17:58:08,732 INFO o.a.j.JMeter: Creating summariser <summary>
-2025-04-23 17:58:08,747 INFO o.a.j.e.StandardJMeterEngine: Running the test!
-2025-04-23 17:58:08,749 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2025-04-23 17:58:08,749 INFO o.a.j.s.SampleEvent: List of sample_variables: []
-2025-04-23 17:58:08,764 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
-2025-04-23 17:58:08,764 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
-2025-04-23 17:58:08,897 WARN o.a.j.r.ClassFinder: Can not open the jar /opt/apache-jmeter-5.6.3/lib/ext/JMeterPlugins-Manager.jar, message: zip file is empty
+2025-04-23 21:43:09,128 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-04-23 21:43:09,151 INFO o.a.j.JMeter: Loading user properties from: /opt/apache-jmeter-5.6.3/bin/user.properties
+2025-04-23 21:43:09,152 INFO o.a.j.JMeter: Loading system properties from: /opt/apache-jmeter-5.6.3/bin/system.properties
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: Version 5.6.3
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: java.version=17.0.13
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: os.name=Linux
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: os.arch=amd64
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: os.version=6.6.0-84.0.0.89.oe2403sp1.x86_64
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: java.awt.headless=true
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-04-23 21:43:09,159 INFO o.a.j.JMeter: Available Processors =10
+2025-04-23 21:43:09,167 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-04-23 21:43:09,167 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-04-23 21:43:09,168 INFO o.a.j.JMeter: JMeterHome=/opt/apache-jmeter-5.6.3
+2025-04-23 21:43:09,168 INFO o.a.j.JMeter: user.dir  =/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection
+2025-04-23 21:43:09,168 INFO o.a.j.JMeter: PWD       =/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection
+2025-04-23 21:43:09,168 INFO o.a.j.JMeter: IP: 127.0.0.1 Name: vbox FullName: localhost
+2025-04-23 21:43:09,189 INFO o.a.j.s.FileServer: Default base='/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection'
+2025-04-23 21:43:09,193 INFO o.a.j.s.FileServer: Set new base='/home/ale/Documents/PGDFS/gray-sentinel/scripts/load-injection/../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter'
+2025-04-23 21:43:09,365 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-04-23 21:43:09,401 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-04-23 21:43:09,403 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-04-23 21:43:09,405 INFO o.a.j.s.SaveService: Loading file: ../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter/petclinic_test_plan.jmx
+2025-04-23 21:43:09,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-23 21:43:09,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-23 21:43:09,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-23 21:43:09,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-04-23 21:43:09,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-04-23 21:43:09,463 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-04-23 21:43:09,507 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-04-23 21:43:09,528 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-04-23 21:43:09,529 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-04-23 21:43:09,529 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-04-23 21:43:09,533 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-04-23 21:43:09,533 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-04-23 21:43:09,609 WARN o.a.j.r.ClassFinder: Can not open the jar /opt/apache-jmeter-5.6.3/lib/ext/JMeterPlugins-Manager.jar, message: zip file is empty
 java.util.zip.ZipException: zip file is empty
 	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1776) ~[?:?]
 	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1560) ~[?:?]
@@ -65,7 +65,7 @@ java.util.zip.ZipException: zip file is empty
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
 	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
-2025-04-23 17:58:08,909 WARN o.a.j.r.ClassFinder: Can not open the jar /opt/apache-jmeter-5.6.3/lib/ext/JMeterPlugins-Manager.jar, message: zip file is empty
+2025-04-23 21:43:09,617 WARN o.a.j.r.ClassFinder: Can not open the jar /opt/apache-jmeter-5.6.3/lib/ext/JMeterPlugins-Manager.jar, message: zip file is empty
 java.util.zip.ZipException: zip file is empty
 	at java.base/java.util.zip.ZipFile$Source.zerror(ZipFile.java:1776) ~[?:?]
 	at java.base/java.util.zip.ZipFile$Source.findEND(ZipFile.java:1560) ~[?:?]
@@ -92,77 +92,93 @@ java.util.zip.ZipException: zip file is empty
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
 	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
-2025-04-23 17:58:08,912 INFO o.a.j.r.ClassFinder: Will scan jar /opt/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2025-04-23 17:58:08,934 INFO o.a.j.r.ClassFinder: Will scan jar /opt/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
-2025-04-23 17:58:09,050 INFO o.a.j.JMeter: Running test (1745402289050)
-2025-04-23 17:58:09,110 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : jp@gc - Ultimate Thread Group
-2025-04-23 17:58:09,110 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group jp@gc - Ultimate Thread Group.
-2025-04-23 17:58:09,110 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
-2025-04-23 17:58:09,110 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 50
-2025-04-23 17:58:09,207 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
-2025-04-23 17:58:09,207 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
-2025-04-23 17:58:20,310 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-50
-2025-04-23 17:58:20,672 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = vbox
-2025-04-23 17:58:20,683 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
-2025-04-23 17:58:20,684 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
-2025-04-23 17:58:20,684 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
-2025-04-23 17:58:20,684 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
-2025-04-23 17:58:20,684 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
-2025-04-23 17:58:21,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-49
-2025-04-23 17:58:22,710 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-48
-2025-04-23 17:58:23,910 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-47
-2025-04-23 17:58:25,111 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-46
-2025-04-23 17:58:25,894 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
-2025-04-23 17:58:25,895 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
-2025-04-23 17:58:26,312 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-45
-2025-04-23 17:58:27,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-44
-2025-04-23 17:58:28,711 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-43
-2025-04-23 17:58:29,910 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-42
-2025-04-23 17:58:30,071 INFO o.a.j.r.Summariser: summary +     72 in 00:00:21 =    3.4/s Avg:   163 Min:     4 Max:  1617 Err:     0 (0.00%) Active: 9 Started: 9 Finished: 0
-2025-04-23 17:58:31,111 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-41
-2025-04-23 17:58:32,310 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-40
-2025-04-23 17:58:33,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-39
-2025-04-23 17:58:34,710 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-38
-2025-04-23 17:58:35,910 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-37
-2025-04-23 17:58:37,110 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-36
-2025-04-23 17:58:38,310 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-35
-2025-04-23 17:58:39,512 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-34
-2025-04-23 17:58:40,710 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-33
-2025-04-23 17:58:41,911 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-32
-2025-04-23 17:58:43,112 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-31
-2025-04-23 17:58:44,310 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-30
-2025-04-23 17:58:45,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-29
-2025-04-23 17:58:46,710 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-28
-2025-04-23 17:58:47,910 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-27
-2025-04-23 17:58:49,110 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-26
-2025-04-23 17:58:50,311 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-25
-2025-04-23 17:58:51,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-24
-2025-04-23 17:58:52,713 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-23
-2025-04-23 17:58:53,912 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-22
-2025-04-23 17:58:55,111 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-21
-2025-04-23 17:58:56,310 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-20
-2025-04-23 17:58:57,510 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-19
-2025-04-23 17:58:58,710 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-18
-2025-04-23 17:58:59,911 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-17
-2025-04-23 17:59:00,109 INFO o.a.j.r.Summariser: summary +    707 in 00:00:30 =   23.5/s Avg:   454 Min:     5 Max:  4909 Err:     0 (0.00%) Active: 34 Started: 34 Finished: 0
-2025-04-23 17:59:00,111 INFO o.a.j.r.Summariser: summary =    779 in 00:00:51 =   15.3/s Avg:   427 Min:     4 Max:  4909 Err:     0 (0.00%)
-2025-04-23 17:59:01,111 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-16
-2025-04-23 17:59:02,311 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-15
-2025-04-23 17:59:03,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-14
-2025-04-23 17:59:04,711 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-13
-2025-04-23 17:59:05,911 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-12
-2025-04-23 17:59:07,110 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-11
-2025-04-23 17:59:08,310 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-10
-2025-04-23 17:59:09,513 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-9
-2025-04-23 17:59:10,713 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-8
-2025-04-23 17:59:11,913 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-7
-2025-04-23 17:59:13,119 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-6
-2025-04-23 17:59:14,311 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-5
-2025-04-23 17:59:15,511 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-4
-2025-04-23 17:59:16,711 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-3
-2025-04-23 17:59:17,911 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-2
-2025-04-23 17:59:19,111 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-1
-2025-04-23 17:59:30,372 INFO o.a.j.r.Summariser: summary +    563 in 00:00:30 =   18.6/s Avg:  1867 Min:     4 Max: 10024 Err:    38 (6.75%) Active: 50 Started: 50 Finished: 0
-2025-04-23 17:59:30,377 INFO o.a.j.r.Summariser: summary =   1342 in 00:01:21 =   16.5/s Avg:  1031 Min:     4 Max: 10024 Err:    38 (2.83%)
-2025-04-23 17:59:51,385 INFO o.a.j.r.ResultCollector: Shutdown hook started
-2025-04-23 17:59:51,387 INFO o.a.j.r.ResultCollector: Shutdown hook ended
+2025-04-23 21:43:09,618 INFO o.a.j.r.ClassFinder: Will scan jar /opt/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-casutg-3.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-04-23 21:43:09,626 INFO o.a.j.r.ClassFinder: Will scan jar /opt/apache-jmeter-5.6.3/lib/ext/jmeter-plugins-manager.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-04-23 21:43:09,704 INFO o.a.j.JMeter: Running test (1745415789704)
+2025-04-23 21:43:09,745 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : jp@gc - Ultimate Thread Group
+2025-04-23 21:43:09,745 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group jp@gc - Ultimate Thread Group.
+2025-04-23 21:43:09,745 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-04-23 21:43:09,745 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 50
+2025-04-23 21:43:09,789 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
+2025-04-23 21:43:09,789 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-04-23 21:43:20,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-50
+2025-04-23 21:43:21,612 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = vbox
+2025-04-23 21:43:21,620 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-04-23 21:43:21,621 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-04-23 21:43:21,621 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-04-23 21:43:21,621 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-04-23 21:43:21,621 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-04-23 21:43:22,145 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-49
+2025-04-23 21:43:23,346 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-48
+2025-04-23 21:43:24,546 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-47
+2025-04-23 21:43:25,745 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-46
+2025-04-23 21:43:26,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-45
+2025-04-23 21:43:27,514 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-04-23 21:43:27,515 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-04-23 21:43:28,146 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-44
+2025-04-23 21:43:29,347 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-43
+2025-04-23 21:43:30,067 INFO o.a.j.r.Summariser: summary +     84 in 00:00:20 =    4.1/s Avg:    52 Min:    15 Max:   488 Err:     0 (0.00%) Active: 8 Started: 8 Finished: 0
+2025-04-23 21:43:30,546 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-42
+2025-04-23 21:43:31,746 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-41
+2025-04-23 21:43:32,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-40
+2025-04-23 21:43:34,145 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-39
+2025-04-23 21:43:35,345 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-38
+2025-04-23 21:43:36,546 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-37
+2025-04-23 21:43:37,745 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-36
+2025-04-23 21:43:38,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-35
+2025-04-23 21:43:40,145 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-34
+2025-04-23 21:43:41,345 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-33
+2025-04-23 21:43:42,546 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-32
+2025-04-23 21:43:43,746 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-31
+2025-04-23 21:43:44,946 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-30
+2025-04-23 21:43:46,145 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-29
+2025-04-23 21:43:47,346 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-28
+2025-04-23 21:43:48,546 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-27
+2025-04-23 21:43:49,749 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-26
+2025-04-23 21:43:50,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-25
+2025-04-23 21:43:52,146 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-24
+2025-04-23 21:43:53,345 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-23
+2025-04-23 21:43:54,545 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-22
+2025-04-23 21:43:55,747 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-21
+2025-04-23 21:43:56,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-20
+2025-04-23 21:43:58,145 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-19
+2025-04-23 21:43:59,345 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-18
+2025-04-23 21:44:00,014 INFO o.a.j.r.Summariser: summary +   1446 in 00:00:30 =   48.3/s Avg:    23 Min:     7 Max:   154 Err:     0 (0.00%) Active: 33 Started: 33 Finished: 0
+2025-04-23 21:44:00,015 INFO o.a.j.r.Summariser: summary =   1530 in 00:00:50 =   30.4/s Avg:    25 Min:     7 Max:   488 Err:     0 (0.00%)
+2025-04-23 21:44:00,546 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-17
+2025-04-23 21:44:01,746 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-16
+2025-04-23 21:44:02,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-15
+2025-04-23 21:44:04,146 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-14
+2025-04-23 21:44:05,346 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-13
+2025-04-23 21:44:06,545 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-12
+2025-04-23 21:44:07,746 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-11
+2025-04-23 21:44:08,946 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-10
+2025-04-23 21:44:10,148 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-9
+2025-04-23 21:44:11,345 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-8
+2025-04-23 21:44:12,545 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-7
+2025-04-23 21:44:13,746 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-6
+2025-04-23 21:44:14,945 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-5
+2025-04-23 21:44:16,146 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-4
+2025-04-23 21:44:17,347 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-3
+2025-04-23 21:44:18,545 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-2
+2025-04-23 21:44:19,746 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-1
+2025-04-23 21:44:30,004 INFO o.a.j.r.Summariser: summary +   3115 in 00:00:30 =  103.9/s Avg:    23 Min:     4 Max:   235 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:44:30,005 INFO o.a.j.r.Summariser: summary =   4645 in 00:01:20 =   57.8/s Avg:    23 Min:     4 Max:   488 Err:     0 (0.00%)
+2025-04-23 21:45:00,007 INFO o.a.j.r.Summariser: summary +   3526 in 00:00:30 =  117.5/s Avg:    24 Min:     3 Max:   671 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:45:00,008 INFO o.a.j.r.Summariser: summary =   8171 in 00:01:50 =   74.1/s Avg:    24 Min:     3 Max:   671 Err:     0 (0.00%)
+2025-04-23 21:45:30,012 INFO o.a.j.r.Summariser: summary +   3452 in 00:00:30 =  115.1/s Avg:    32 Min:     3 Max:   715 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:45:30,013 INFO o.a.j.r.Summariser: summary =  11623 in 00:02:20 =   82.8/s Avg:    26 Min:     3 Max:   715 Err:     0 (0.00%)
+2025-04-23 21:46:00,003 INFO o.a.j.r.Summariser: summary +   3401 in 00:00:30 =  113.4/s Avg:    37 Min:     3 Max:   939 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:46:00,003 INFO o.a.j.r.Summariser: summary =  15024 in 00:02:50 =   88.2/s Avg:    28 Min:     3 Max:   939 Err:     0 (0.00%)
+2025-04-23 21:46:30,026 INFO o.a.j.r.Summariser: summary +   3405 in 00:00:30 =  113.4/s Avg:    38 Min:     3 Max:   615 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:46:30,027 INFO o.a.j.r.Summariser: summary =  18429 in 00:03:20 =   92.0/s Avg:    30 Min:     3 Max:   939 Err:     0 (0.00%)
+2025-04-23 21:47:00,017 INFO o.a.j.r.Summariser: summary +   2981 in 00:00:30 =   99.4/s Avg:   102 Min:     3 Max:  2525 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:47:00,021 INFO o.a.j.r.Summariser: summary =  21410 in 00:03:50 =   93.0/s Avg:    40 Min:     3 Max:  2525 Err:     0 (0.00%)
+2025-04-23 21:47:30,006 INFO o.a.j.r.Summariser: summary +   2308 in 00:00:30 =   77.0/s Avg:   251 Min:     3 Max:  4643 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:47:30,007 INFO o.a.j.r.Summariser: summary =  23718 in 00:04:20 =   91.1/s Avg:    61 Min:     3 Max:  4643 Err:     0 (0.00%)
+2025-04-23 21:48:00,010 INFO o.a.j.r.Summariser: summary +   2452 in 00:00:30 =   81.7/s Avg:   209 Min:     2 Max:  3469 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:48:00,011 INFO o.a.j.r.Summariser: summary =  26170 in 00:04:50 =   90.1/s Avg:    75 Min:     2 Max:  4643 Err:     0 (0.00%)
+2025-04-23 21:48:30,001 INFO o.a.j.r.Summariser: summary +   2378 in 00:00:30 =   79.3/s Avg:   229 Min:     2 Max:  4092 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2025-04-23 21:48:30,001 INFO o.a.j.r.Summariser: summary =  28548 in 00:05:20 =   89.1/s Avg:    88 Min:     2 Max:  4643 Err:     0 (0.00%)
+2025-04-23 21:48:37,167 INFO o.a.j.r.ResultCollector: Shutdown hook started
+2025-04-23 21:48:37,168 INFO o.a.j.r.ResultCollector: Shutdown hook ended
