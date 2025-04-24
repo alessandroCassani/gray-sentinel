@@ -94,15 +94,35 @@ case $TYPE in
     cpu)
         blade create cri cpu fullload --container-id $CONTAINER_ID --cpu-percent 50 --timeout $DURATION
         ;;
-    memory)
-        blade create cri mem load --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
+    mem)
+        blade create cri mem --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
         ;;
-    network)
-        blade create cri network delay --container-id $CONTAINER_ID --interface eth0 --time 200 --timeout $DURATION
-        blade create cri network loss --container-id $CONTAINER_ID --interface eth0 --percent 20 --timeout $DURATION
+    network-loss)
+        # Drop 30% of all packets
+        blade create cri network loss --container-id $CONTAINER_ID --percent 30 --timeout $DURATION
         ;;
-    latency)
-        blade create cri network delay --container-id $CONTAINER_ID --interface eth0 --time 1000 --timeout $DURATION
+    network-delay)
+        # Add 200ms network delay with 10ms jitter
+        blade create cri network delay --container-id $CONTAINER_ID --time 200 --offset 10 --timeout $DURATION
+        ;;
+    network-corrupted)
+        # Corrupt 30% of packets
+        blade create cri network corrupt --container-id $CONTAINER_ID --percent 30 --timeout $DURATION
+        ;;
+    disk-read)
+        # Read-only disk IO burn in the root directory
+        # ATTENTION --size flag refers to block size
+        blade create cri disk burn --read --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    disk-write)
+        # write-only disk IO burn in the root directory
+        # ATTENTION --size flag refers to block size
+        blade create cri disk burn --write --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
+        ;;
+    disk-read-write)
+        # Read and write disk IO burn in the root directory
+        # ATTENTION --size flag refers to block size
+        blade create cri disk burn --read --write --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
         ;;
     *)
         echo "Error: Unsupported failure type: $TYPE"
