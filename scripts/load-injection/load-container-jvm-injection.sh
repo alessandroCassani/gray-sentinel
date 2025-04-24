@@ -1,18 +1,17 @@
 #!/bin/bash
-# Script to run JMeter load test and then call chaos injection script after a delay
+# Script to run JMeter load test and then call chaos JVM injection script after a delay
 
-# Use the full absolute path with leading slash
 JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter" 
 JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter"
-JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
-RESULTS_FILE="results.jtl" # JMeter results file
-CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="api-gateway" # Service to inject failure into
-# Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
-# disk-read, disk-write, disk-read-write)
-CHAOS_TYPE="cpu" 
-DELAY_SECONDS=60 # Wait time before injecting failure
-CHAOS_DURATION=420 # Duration of the chaos experiment in seconds
+JMX_FILE="petclinic_test_plan.jmx"            # JMeter test plan file
+RESULTS_FILE="results.jtl"                    # JMeter results file
+CHAOS_SCRIPT="../failure-injection/container-jvm-injection.sh"
+TARGET_SERVICE="api-gateway"                  # Service to inject failure into
+# Type of failure (cpufulload, oom, codecachefilling, delay, full-gc, 
+# throwCustomException, throwDeclaredException,tfl-running, tfl-wait)
+CHAOS_TYPE="cpufulload"                        
+DELAY_SECONDS=60                              # Wait time before injecting failure
+CHAOS_DURATION=420                            # Duration of the chaos experiment in seconds
 
 if [ $# -ge 1 ]; then
     JMX_FILE=$1
@@ -40,19 +39,19 @@ echo "Chaos Duration: $CHAOS_DURATION seconds"
 echo "=============================="
 
 if [ ! -f "$CHAOS_SCRIPT" ]; then
-    echo "Error: Chaos script not found at $CHAOS_SCRIPT"
+    echo "Chaos script not found at $CHAOS_SCRIPT"
     exit 1
 fi
 
-echo "Starting JMeter load test..."
+echo "starting jmeter load test..."
 "$JMETER_BIN" -n -t "$JMETER_TEST_DIR/$JMX_FILE" -l $RESULTS_FILE &
 JMETER_PID=$!
-echo "JMeter started with PID: $JMETER_PID"
+echo "Jmeter started with PID $JMETER_PID"
 
-echo "Waiting $DELAY_SECONDS seconds before injecting failure..."
+echo "injection delay of $DELAY_SECONDS"
 sleep $DELAY_SECONDS
 
-echo "Executing chaos injection script..."
+echo "It is time for failure injection"
 "$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
 
 # Wait for JMeter to finish 
