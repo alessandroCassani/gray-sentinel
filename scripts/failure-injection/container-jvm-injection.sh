@@ -7,7 +7,7 @@ function show_help() {
     echo "Options:"
     echo "  -h, --help           Show this help message"
     echo "  -s, --service SERVICE Target specific service (required)"
-    echo "  -t, --type TYPE      JVM failure type (oom|cpufull|gc|codecache|exception|return|delay|method|mysql)"
+    echo "  -t, --type TYPE      JVM failure type"
     echo "  -d, --duration SECONDS Experiment duration (default: 300s)"
     echo "  -l, --list           List running experiments"
     echo "  -c, --clean          Clean all experiments"
@@ -93,11 +93,12 @@ echo "Injecting container-wide JVM failure: $TYPE for $DURATION seconds..."
 
 case $TYPE in
     oom)
-        # Trigger OutOfMemoryError
+        # Trigger OutOfMemoryError   TODO choose among HEAP NOHEAP OFFHEAP
         echo "Injecting OutOfMemoryError..."
-        blade create cri jvm oom --container-id $CONTAINER_ID --timeout $DURATION
+
+        blade create cri jvm oom --container-id $CONTAINER_ID --area HEAP --timeout $DURATION
         ;;
-    cpufull)
+    cpufulload)
         # Create high CPU load within the JVM
         echo "Injecting high CPU load in JVM..."
         blade create cri jvm cpufull --container-id $CONTAINER_ID --timeout $DURATION
@@ -107,7 +108,7 @@ case $TYPE in
         echo "Triggering frequent garbage collection..."
         blade create cri jvm frequent-gc --container-id $CONTAINER_ID --timeout $DURATION
         ;;
-    codecache)
+    codecachefilling)
         # Fill code cache to cause JIT compilation issues
         echo "Filling code cache in JVM..."
         blade create cri jvm CodeCacheFilling --container-id $CONTAINER_ID --timeout $DURATION

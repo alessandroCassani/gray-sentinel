@@ -7,7 +7,8 @@ JMX_FILE="petclinic_test_plan.jmx"            # JMeter test plan file
 RESULTS_FILE="results.jtl"                    # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-jvm-injection.sh"
 TARGET_SERVICE="api-gateway"                  # Service to inject failure
-CHAOS_TYPE="cpu"                              # Type of failure (cpu, memory, network, latency)
+# Type of failure (cpufulload, oom, codecachefilling, delay, full-gc, throwCustomException throwDeclaredException)
+CHAOS_TYPE="cpufulload"                        
 DELAY_SECONDS=60                              # Wait time before injecting failure
 CHAOS_DURATION=420                            # Duration of the chaos experiment in seconds
 
