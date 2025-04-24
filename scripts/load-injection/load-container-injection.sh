@@ -53,7 +53,7 @@ sleep $DELAY_SECONDS
 echo "Executing chaos injection script..."
 "$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
 
-# Wait for JMeter to finish (optional)
+# Wait for JMeter to finish 
 echo "Waiting for JMeter test to complete..."
 wait $JMETER_PID
 echo "JMeter test completed."
