@@ -7,7 +7,7 @@ function show_help() {
     echo "Options:"
     echo "  -h, --help           Show this help message"
     echo "  -s, --service SERVICE Target specific service (required)"
-    echo "  -t, --type TYPE      JVM failure type (oom|cpufull|gc|codecache|exception|return|delay|method|mysql)"
+    echo "  -t, --type TYPE      JVM failure type"
     echo "  -d, --duration SECONDS Experiment duration (default: 300s)"
     echo "  -l, --list           List running experiments"
     echo "  -c, --clean          Clean all experiments"
@@ -89,66 +89,63 @@ if [ -z "$CONTAINER_ID" ]; then
 fi
 
 echo "Target container found: $CONTAINER_ID for service: $SERVICE"
-echo "Injecting container-wide JVM failure: $TYPE for $DURATION seconds..."
+echo "Injecting container JVM failure: $TYPE for $DURATION seconds..."
 
 case $TYPE in
     oom)
-        # Trigger OutOfMemoryError
+        # Trigger OutOfMemoryError   TODO choose among HEAP NOHEAP OFFHEAP
         echo "Injecting OutOfMemoryError..."
-        blade create cri jvm oom --container-id $CONTAINER_ID --timeout $DURATION
+
+        blade create cri jvm oom --container-id $CONTAINER_ID --area HEAP --timeout $DURATION
         ;;
-    cpufull)
+    cpufulload)
         # Create high CPU load within the JVM
         echo "Injecting high CPU load in JVM..."
         blade create cri jvm cpufull --container-id $CONTAINER_ID --timeout $DURATION
         ;;
     gc)
         # Trigger frequent garbage collection
+        # 100 full garbage collection cycles with a 1-second interval 
         echo "Triggering frequent garbage collection..."
-        blade create cri jvm frequent-gc --container-id $CONTAINER_ID --timeout $DURATION
+        blade create cri jvm full-gc --container-id $CONTAINER_ID --effect-count 100 --interval 1000 --timeout $DURATION
         ;;
-    codecache)
+    codecachefilling)
         # Fill code cache to cause JIT compilation issues
         echo "Filling code cache in JVM..."
         blade create cri jvm CodeCacheFilling --container-id $CONTAINER_ID --timeout $DURATION
         ;;
-    exception)
-        # Throw custom exception in a specific class/method
+    throwCustomException)
+        # Throw custom exception in a specific class and method
         echo "Injecting custom exception..."
         CLASS="org.springframework.web.servlet.DispatcherServlet"
         METHOD="doDispatch"
         blade create cri jvm throwCustomException --container-id $CONTAINER_ID --class $CLASS --method $METHOD --exception java.lang.RuntimeException --timeout $DURATION
         ;;
-    return)
-        # Force a method to return a specific value
-        echo "Forcing method to return value..."
-        CLASS="org.springframework.jdbc.core.JdbcTemplate"
-        METHOD="queryForList"
-        blade create cri jvm return --container-id $CONTAINER_ID --class $CLASS --method $METHOD --value "[]" --timeout $DURATION
+    tde|throwDeclaredException)
+        # Throw the first declared exception of a method
+        # ATTENTION u need to specify target method class
+        echo "Injecting declared exception..."
+        CLASS="org.springframework.web.servlet.DispatcherServlet"
+        METHOD="doDispatch"
+        blade create cri jvm throwDeclaredException --container-id $CONTAINER_ID --classname $CLASS --methodname $METHOD --timeout $DURATION
+        ;;
+    threadfull-wait|tfl-wait)
+        # Create many threads in WAIT state
+        echo "Creating threads in WAIT state..."
+        blade create cri jvm threadfull --container-id $CONTAINER_ID --wait --thread-count 50 --timeout $DURATION
+        ;;
+    threadfull-running|tfl-running)
+        # Create many CPU-consuming threads   
+        echo "Creating CPU-consuming threads..."
+        blade create cri jvm threadfull --container-id $CONTAINER_ID --running --thread-count 20 --timeout $DURATION
         ;;
     delay)
         # Introduce latency in method execution
+        #ATTENTION u need to specify target class/method, he will interpetc method calls at runtime
         echo "Injecting method execution delay..."
         CLASS="org.springframework.web.servlet.DispatcherServlet"
         METHOD="doDispatch"
         blade create cri jvm delay --container-id $CONTAINER_ID --class $CLASS --method $METHOD --time 3000 --timeout $DURATION
-        ;;
-    method)
-        # Modify a method behavior
-        echo "Modifying method behavior..."
-        CLASS="org.springframework.security.authentication.AuthenticationManager"
-        METHOD="authenticate"
-        blade create cri jvm method --container-id $CONTAINER_ID --class $CLASS --method $METHOD --effect 'return null' --timeout $DURATION
-        ;;
-    mysql)
-        # JDBC connection failure
-        echo "Injecting JDBC connection issues..."
-        blade create cri jvm mysql --container-id $CONTAINER_ID --timeout $DURATION
-        ;;
-    *)
-        echo "Error: Unsupported JVM failure type: $TYPE"
-        echo "Supported JVM failure types: oom, cpufull, gc, codecache, exception, return, delay, method, mysql"
-        exit 1
         ;;
 esac
 
