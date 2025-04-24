@@ -6,8 +6,9 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx"            # JMeter test plan file
 RESULTS_FILE="results.jtl"                    # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-jvm-injection.sh"
-TARGET_SERVICE="api-gateway"                  # Service to inject failure
-# Type of failure (cpufulload, oom, codecachefilling, delay, full-gc, throwCustomException throwDeclaredException)
+TARGET_SERVICE="api-gateway"                  # Service to inject failure into
+# Type of failure (cpufulload, oom, codecachefilling, delay, full-gc, 
+# throwCustomException, throwDeclaredException,tfl-running, tfl-wait)
 CHAOS_TYPE="cpufulload"                        
 DELAY_SECONDS=60                              # Wait time before injecting failure
 CHAOS_DURATION=420                            # Duration of the chaos experiment in seconds
