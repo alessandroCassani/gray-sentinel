@@ -147,13 +147,6 @@ case $TYPE in
         METHOD="doDispatch"
         blade create cri jvm delay --container-id $CONTAINER_ID --class $CLASS --method $METHOD --time 3000 --timeout $DURATION
         ;;
-    method)
-        # Modify a method behavior
-        echo "Modifying method behavior..."
-        CLASS="org.springframework.security.authentication.AuthenticationManager"
-        METHOD="authenticate"
-        blade create cri jvm method --container-id $CONTAINER_ID --class $CLASS --method $METHOD --effect 'return null' --timeout $DURATION
-        ;;
 esac
 
 echo "JVM chaos experiment started. It will run for $DURATION seconds."
