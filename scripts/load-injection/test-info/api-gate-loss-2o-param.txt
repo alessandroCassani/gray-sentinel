@@ -1,0 +1,4 @@
+test started 00:16 25 april
+delay: 240s
+failure duration :600s
+test finished: 00:38.24s

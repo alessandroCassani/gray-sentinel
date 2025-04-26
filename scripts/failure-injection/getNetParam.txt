@@ -1,0 +1,14 @@
+FINDING BRIDGE interface
+# First, find which network your container is connected to
+docker inspect api-gateway | grep NetworkMode
+
+# Now list all network interfaces to find the bridge
+ip link show | grep "br-"
+
+# To confirm this is the right bridge, inspect the Docker network
+docker network inspect petclinic_default
+# Look at the "Id" field - the first 12 characters should match your bridge interface
+
+
+FINDING CONTAINER IP
+docker inspect api-gateway | grep IPAddress
