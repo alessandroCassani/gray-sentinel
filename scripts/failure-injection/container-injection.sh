@@ -98,8 +98,8 @@ case $TYPE in
         blade create cri mem --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
         ;;
     network-loss)
-        # Drop 20% of all packets 
-        sudo blade create network loss --percent 20 --interface br-100158a32bb3 --destination-ip 172.22.0.4 --local-port 8080
+        # Drop 50% of all packets 
+        sudo blade create network loss --percent 20 --interface vethf30b8ed 
         # ATTENTION u need to specify running container ports to attach network loss
         # blade create cri network loss --percent 20 --interface eth0@if31 --local-port 8080 --container-id $CONTAINER_ID  --timeout $DURATION
         ;;
