@@ -1,0 +1,15 @@
+API Gateway container 
+entry point for all requests
+Injecting packet loss here tests how the system handles degraded frontend communicationss
+
+Customer Service container
+Handles owner and pet management 
+Critical for most user operations
+
+Visit Service container
+Manages appointments/visits 
+Important for business functionality
+
+
+Vet Service container
+Provides veterinarian information 
