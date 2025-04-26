@@ -1,4 +1,7 @@
-test started 00:16 25 april
+Starting standalone test @ 2025 Apr 26 17:28:59 CST (1745659739650)
 delay: 240s
-failure duration :600s
-test finished: 00:38.24s
+
+Target container found: 8f479a45c100 for service: api-gateway
+Injecting container failure: network-loss for 600 seconds...
+
+Tidying up ...    @ 2025 Apr 26 17:50:47 CST (1745661047202)
