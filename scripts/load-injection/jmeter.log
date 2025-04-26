@@ -101,3 +101,20 @@ java.util.zip.ZipException: zip file is empty
 2025-04-26 17:28:59,926 INFO k.a.j.t.AbstractSimpleThreadGroup: Starting thread group number 1 threads 30
 2025-04-26 17:28:59,961 INFO k.a.j.t.AbstractSimpleThreadGroup: Started thread group number 1
 2025-04-26 17:28:59,961 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-04-26 17:29:11,929 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-30
+2025-04-26 17:29:12,446 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = vbox
+2025-04-26 17:29:12,454 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-04-26 17:29:12,455 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-04-26 17:29:12,456 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-04-26 17:29:12,456 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-04-26 17:29:12,456 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-04-26 17:29:13,928 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-29
+2025-04-26 17:29:15,926 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-28
+2025-04-26 17:29:17,688 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2025-04-26 17:29:17,688 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2025-04-26 17:29:17,926 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-27
+2025-04-26 17:29:19,926 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-26
+2025-04-26 17:29:21,926 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-25
+2025-04-26 17:29:23,926 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-24
+2025-04-26 17:29:25,927 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-23
+2025-04-26 17:29:27,926 INFO o.a.j.t.JMeterThread: Thread started: jp@gc - Ultimate Thread Group 1-22
