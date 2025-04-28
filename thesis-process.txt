@@ -13,6 +13,9 @@ processo tesi:
  chaosblade overview per poi arrivare a cri
  failure injection plan, quali ho scelto, perchè, approccio di granularità (fai riferimento ai paper)
 
+ approccio network injection (non sul bridge ma sulla veth specifica del container che collega al bridge per isolare failure
+ per ottenere gray failure simile))
+
  perchè spostato su server usi (oltre 30 thread problemi risorse)
   
   
