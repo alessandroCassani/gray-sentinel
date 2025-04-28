@@ -15,10 +15,9 @@ docker inspect api-gateway | grep IPAddress
 
 -----------------------------------------------------------------------------------------
 for VETH 
-docker ps | grep api-gateway
-docker inspect --format '{{.State.Pid}}' 8f479a45c100
-sudo nsenter -t 13876 -n ip link
+docker ps | grep customers-service
+docker inspect --format '{{.State.Pid}}' a25feefa81a7 
+sudo nsenter -t 12781 -n ip link
 ip link show | grep -A 1 veth look at the match!!
-confirm the match with: ip neigh | grep 172.22.0.6
 
 veth interfaces are always created in pairs - one inside the container namespace and one on the host
