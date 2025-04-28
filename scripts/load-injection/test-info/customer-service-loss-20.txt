@@ -1,0 +1,8 @@
+Target Service: customers-service
+Chaos Type: network-loss
+Delay: 240 seconds
+Chaos Duration: 600 seconds
+
+Starting standalone test @ 2025 Apr 28 17:31:03 CST (1745832663857)
+
+end of run 2025 Apr 28 17:52:44 CST (1745833964107)
