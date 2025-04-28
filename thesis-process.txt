@@ -1,16 +1,29 @@
 processo tesi:
 
  lettura paper
+ 
  inizialmente legolas --> problema bias presenza della logica di controllo
+ 
  spostati su jvm fault specifici
+ 
  paper grayscope
+ 
  set up openEuler vm
+
  dettagli vm hw
+
  open euler struttura, funzionamento, e come interagito
+
  versione distirbuita di petclinic overview, perchè petclinic distribuito, jmeter load file configurazione (docker e docker compose) perchè rispetto a non container
+ 
  prometheus, grafana
+
  collegamento gala gopher e prometheus (stesso formato), metriche selezionate e perchè
+
  chaosblade overview per poi arrivare a cri
+
+ microservizi che ho scelto per iniettare failure e perchè
+ 
  failure injection plan, quali ho scelto, perchè, approccio di granularità (fai riferimento ai paper)
 
  approccio network injection (non sul bridge ma sulla veth specifica del container che collega al bridge per isolare failure
