@@ -1,0 +1,23 @@
+FINDING BRIDGE interface
+# First, find which network your container is connected to
+docker inspect api-gateway | grep NetworkMode
+
+# Now list all network interfaces to find the bridge
+ip link show | grep "br-"
+
+# To confirm this is the right bridge, inspect the Docker network
+docker network inspect petclinic_default
+# Look at the "Id" field - the first 12 characters should match your bridge interface
+
+
+FINDING CONTAINER IP
+docker inspect api-gateway | grep IPAddress
+
+-----------------------------------------------------------------------------------------
+for VETH 
+docker ps | grep discovery-server
+docker inspect --format '{{.State.Pid}}' a25feefa81a7 
+sudo nsenter -t 12781 -n ip link
+ip link show | grep -A 1 veth look at the match!!
+
+veth interfaces are always created in pairs - one inside the container namespace and one on the host
