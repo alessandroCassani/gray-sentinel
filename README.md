@@ -27,8 +27,7 @@ The system will comprehensively monitor:
 - Memory request patterns
 - I/O request frequencies
 - System call frequencies
-- Instruction per cycle (IPC) performance
-- Power consumption characteristics
+- CPU performance
 
 ### Methodology
 Inspired by side-channel attack techniques, the PGFDS derives insights from seemingly unrelated data points, providing a novel approach to system health monitoring.
@@ -52,4 +51,3 @@ By developing a proactive detection mechanism, the PGFDS aims to:
 The project will leverage advanced analytics and machine learning techniques to:
 - Establish baseline system performance metrics
 - Develop sophisticated anomaly detection algorithms
-- Create a robust predictive monitoring framework
