@@ -7,7 +7,6 @@ API_URL_IO="http://localhost:9999/io"
 API_URL_PROC="http://localhost:9999/proc"
 API_URL_THREAD="http://localhost:9999/tprofiling"
 
-# Function to enable a probe through the API
 enable_probe() {
     local URL=$1
     local config=$2
@@ -16,7 +15,6 @@ enable_probe() {
     echo ""
 }
 
-# Main script execution
 echo "=== Configuring gala-gopher probes ==="
 
 # 1. Enable system resource monitoring probes
@@ -34,7 +32,6 @@ enable_probe $API_URL_PROC '{"cmd":{"probe":["proc_syscall", "proc_io", "proc_fs
 # 5. Enable thread profiling
 enable_probe $API_URL_THREAD '{"cmd":{"probe":["oncpu", "syscall_file", "syscall_net", "syscall_lock", "syscall_sched"]}, "state": "running"}'
 
-# 6. Check what probes are currently running to see available options
 echo "Checking current probe configuration..."
 curl -s http://localhost:9999
 

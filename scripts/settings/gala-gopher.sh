@@ -1,5 +1,4 @@
 #!/bin/bash
-# Configures gala-gopher to monitor metrics 
 
 API_URL_BASE_INFO="http://localhost:9999/baseinfo"
 
@@ -13,7 +12,6 @@ API_URL_THREAD="http://localhost:9999/tprofiling"
 
 CONFIG_FILE="/etc/gala-gopher/probes.init"
 
-# Function to enable a probe through the API
 enable_probe() {
   local URL=$1
   local config=$2
@@ -23,7 +21,7 @@ enable_probe() {
 }
 
 
-# Main script execution
+
 echo "=== Configuring gala-gopher probes ==="
 
 # 1. Enable system resource monitoring probes
@@ -44,8 +42,5 @@ systemctl restart gala-gopher.service
 
 echo "=== gala gopher configuration complete ==="
 
-
-
-# Check if metrics are collected
-# echo "Checking if metrics are now available..."
+echo "Checking if metrics are now available..."
 curl -s http://localhost:9888/metrics | grep -E '(cpu|mem|tcp|disk|io)' | head -10
