@@ -30,7 +30,9 @@ processo tesi:
  per ottenere gray failure simile))
 
  perchè spostato su server usi (oltre 30 thread problemi risorse)
-  
+
+ spostato fa virtualbox a kvm kemu per misconfigurazione tra linux header del server e virtualbox. il kernel del server è specifico
+  (usato scp per VM transfer, installed qemu-kvm, convertito i file e startata la nuova vm)
   
   
   
