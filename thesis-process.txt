@@ -33,6 +33,7 @@ processo tesi:
 
  spostato fa virtualbox a kvm kemu per misconfigurazione tra linux header del server e virtualbox. il kernel del server è specifico
   (usato scp per VM transfer, installed qemu-kvm, convertito i file e startata la nuova vm)
+  creazione tunnel ssh per accedere alla visualizzazione della vm che gira sul server tramite SPICE
   
   
   
