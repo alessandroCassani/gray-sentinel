@@ -18,6 +18,8 @@ rule_files:
 scrape_configs:
   - job_name: "gala-gopher"
     static_configs:
-      - targets: ["localhost:9888"]
+      - targets: ["172.17.0.1:9888"]
         labels:
-          scenario: "eureka-service-netloss-20"
+          instance: "localhost:9888"
+          job: "gala-gopher"
+          scenario: "baseline1h"
