@@ -7,11 +7,12 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
 RESULTS_FILE="results.jtl" # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="discovery-server" # Service to inject failure into
+TARGET_SERVICE="api-gateway" # Service to inject failure into
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
 CHAOS_TYPE="network-loss" 
-DELAY_SECONDS=240 # Wait time before injecting failure
+DELAY_SECONDS1=600 # Wait time before injecting first failure
+DELAY_SECONDS2=1800 # Wait time before injecting second failure
 CHAOS_DURATION=600 # Duration of the chaos experiment in seconds
 
 if [ $# -ge 1 ]; then
@@ -35,7 +36,8 @@ echo "JMeter Path: $JMETER_BIN"
 echo "JMeter Test Plan: $JMETER_TEST_DIR/$JMX_FILE"
 echo "Target Service: $TARGET_SERVICE"
 echo "Chaos Type: $CHAOS_TYPE"
-echo "Delay: $DELAY_SECONDS seconds"
+echo "First injection delay: $DELAY_SECONDS1 seconds"
+echo "Second injection delay: $DELAY_SECONDS2 seconds"
 echo "Chaos Duration: $CHAOS_DURATION seconds"
 echo "=============================="
 
@@ -49,10 +51,16 @@ echo "Starting JMeter load test..."
 JMETER_PID=$!
 echo "JMeter started with PID: $JMETER_PID"
 
-echo "Waiting $DELAY_SECONDS seconds before injecting failure..."
-sleep $DELAY_SECONDS
+echo "Waiting $DELAY_SECONDS1 seconds before injecting first failure..."
+sleep $DELAY_SECONDS1
 
-echo "Executing chaos injection script..."
+echo "Executing first chaos injection script..."
+"$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
+
+echo "Waiting $DELAY_SECONDS2 seconds before injecting second failure..."
+sleep $DELAY_SECONDS2
+
+echo "Executing second chaos injection script..."
 "$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
 
 # Wait for JMeter to finish 
