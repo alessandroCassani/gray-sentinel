@@ -99,7 +99,7 @@ case $TYPE in
         ;;
     network-loss)
         # Drop 50% of all packets 
-        sudo blade create network loss --percent 20 --interface veth4edf33a
+        blade create network loss --percent 20 --interface vethb3c13bd
         # ATTENTION u need to specify running container ports to attach network loss
         # blade create cri network loss --percent 20 --interface eth0@if31 --local-port 8080 --container-id $CONTAINER_ID  --timeout $DURATION
         ;;
