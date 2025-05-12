@@ -1,3 +1,4 @@
+
 "Time","{__name__=""gala_gopher_mem_util"", infos=""/proc/meminfo"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""baseline1h""}"
 2025-05-12 15:53:00,27.4
 2025-05-12 15:53:15,27.4
