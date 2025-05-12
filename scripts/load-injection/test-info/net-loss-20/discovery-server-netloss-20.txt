@@ -1,7 +1,0 @@
-Target Service: discovery-server
-Chaos Type: network-loss
-Delay: 240 seconds
-Chaos Duration: 600 seconds
-
-Starting standalone test @ 2025 Apr 28 21:56:49 CST (1745848609535)
-Tidying up ...    @ 2025 Apr 28 22:18:29 CST (1745849909689)
