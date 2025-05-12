@@ -22,4 +22,4 @@ scrape_configs:
         labels:
           instance: "localhost:9888"
           job: "gala-gopher"
-          scenario: "baseline1h"
+          scenario: "api-gateway-net-loss-20"
