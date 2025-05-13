@@ -60,7 +60,7 @@ echo "Executing first chaos injection script..."
 (
     sleep $CHAOS_DURATION
     echo "Cleanup: Removing tc rules from container interface..."
-    tc qdisc del dev vethcb8ec13 root  # to change hardcoded veth
+    tc qdisc del dev vethd1d3260 root  # to change hardcoded veth
     
     echo "Chaos experiment completed and cleaned up."
 ) &
@@ -75,7 +75,7 @@ echo "Executing second chaos injection script..."
 (
     sleep $CHAOS_DURATION
     echo "Cleanup: Removing tc rules from container interface..."
-    tc qdisc del dev vethcb8ec13 root  # to change hardcoded veth
+    tc qdisc del dev vethd1d3260 root  # to change hardcoded veth
     
     echo "Chaos experiment completed and cleaned up."
 ) &
