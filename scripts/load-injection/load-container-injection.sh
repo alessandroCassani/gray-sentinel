@@ -7,7 +7,7 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
 RESULTS_FILE="results.jtl" # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="api-gateway" # Service to inject failure into
+TARGET_SERVICE="discovery-server" # Service to inject failure into
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
 CHAOS_TYPE="network-loss" 
@@ -60,7 +60,7 @@ echo "Executing first chaos injection script..."
 (
     sleep $CHAOS_DURATION
     echo "Cleanup: Removing tc rules from container interface..."
-    tc qdisc del dev vethb3c13bd root  # to change hardcoded veth
+    tc qdisc del dev vethd1d3260 root  # to change hardcoded veth
     
     echo "Chaos experiment completed and cleaned up."
 ) &
@@ -75,7 +75,7 @@ echo "Executing second chaos injection script..."
 (
     sleep $CHAOS_DURATION
     echo "Cleanup: Removing tc rules from container interface..."
-    tc qdisc del dev vethb3c13bd root  # to change hardcoded veth
+    tc qdisc del dev vethd1d3260 root  # to change hardcoded veth
     
     echo "Chaos experiment completed and cleaned up."
 ) &
