@@ -124,11 +124,6 @@ case $TYPE in
         METHOD="doDispatch"
         blade create cri jvm throwDeclaredException --container-id $CONTAINER_ID --classname $CLASS --methodname $METHOD --timeout $DURATION
         ;;
-    threadfull-running|tfl-running)
-        # Create many CPU-consuming threads   
-        echo "Creating CPU-consuming threads..."
-        blade create cri jvm threadfull --container-id $CONTAINER_ID --running --thread-count 20 --timeout $DURATION
-        ;;
     delay)
         # Introduce latency in method execution
         #ATTENTION u need to specify target class/method, he will interpetc method calls at runtime
