@@ -1,4 +1,4 @@
-"Time","openeuler-home_read_bytes", "openeuler-root_read_bytes", "sda_read_bytes"
+"Time","disk sda"
 2025-05-13 04:13:15,13
 2025-05-13 04:13:30,13
 2025-05-13 04:13:45,13
