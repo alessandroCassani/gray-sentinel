@@ -80,7 +80,6 @@ if [ -z "$TYPE" ]; then
     show_help
 fi
 
-# Get container ID
 CONTAINER_ID=$(docker ps | grep $SERVICE | awk '{print $1}')
 if [ -z "$CONTAINER_ID" ]; then
     echo "Error: Container for service '$SERVICE' not found. Is it running?"
@@ -98,7 +97,7 @@ case $TYPE in
         blade create cri mem --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
         ;;
     network-loss)
-        # Drop 50% of all packets 
+        # Drop 20% of all packets 
         blade create network loss --percent 20 --interface vethd1d3260
         # ATTENTION u need to specify running container ports to attach network loss
         # blade create cri network loss --percent 20 --interface eth0@if31 --local-port 8080 --container-id $CONTAINER_ID  --timeout $DURATION
@@ -106,20 +105,6 @@ case $TYPE in
     network-delay)
         # Access to native 8080 port is delayed by 0.5 seconds, and the delay time fluctuates by 0.2 second
         blade create cri network delay  --time 500 --offset 200 --interface eth0 --local-port 8080 --timeout $DURATION --container-id $CONTAINER_ID
-        ;;
-    network-corrupted)
-        # Corrupt 30% of packets    TODO check ip feasibility the cmd is wrong
-        blade create cri network corrupt --percent 30 --timeout $DURATION --container-id $CONTAINER_ID 
-        ;;
-    disk-read)
-        # Read-only disk IO burn in the root directory
-        # ATTENTION --size flag refers to block size
-        blade create cri disk burn --read --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
-        ;;
-    disk-write)
-        # write-only disk IO burn in the root directory
-        # ATTENTION --size flag refers to block size
-        blade create cri disk burn --write --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
         ;;
     disk-read-write)
         # Read and write disk IO burn in the root directory
