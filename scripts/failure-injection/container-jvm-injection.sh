@@ -124,14 +124,6 @@ case $TYPE in
         METHOD="doDispatch"
         blade create cri jvm throwDeclaredException --container-id $CONTAINER_ID --classname $CLASS --methodname $METHOD --timeout $DURATION
         ;;
-    delay)
-        # Introduce latency in method execution
-        #ATTENTION u need to specify target class/method, he will interpetc method calls at runtime
-        echo "Injecting method execution delay..."
-        CLASS="org.springframework.web.servlet.DispatcherServlet"
-        METHOD="doDispatch"
-        blade create cri jvm delay --container-id $CONTAINER_ID --class $CLASS --method $METHOD --time 3000 --timeout $DURATION
-        ;;
 esac
 
 echo "JVM chaos experiment started. It will run for $DURATION seconds."

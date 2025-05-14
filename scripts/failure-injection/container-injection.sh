@@ -102,10 +102,6 @@ case $TYPE in
         # ATTENTION u need to specify running container ports to attach network loss
         # blade create cri network loss --percent 20 --interface eth0@if31 --local-port 8080 --container-id $CONTAINER_ID  --timeout $DURATION
         ;;
-    network-delay)
-        # Access to native 8080 port is delayed by 0.5 seconds, and the delay time fluctuates by 0.2 second
-        blade create cri network delay  --time 500 --offset 200 --interface eth0 --local-port 8080 --timeout $DURATION --container-id $CONTAINER_ID
-        ;;
     disk-read-write)
         # Read and write disk IO burn in the root directory
         # ATTENTION --size flag refers to block size
