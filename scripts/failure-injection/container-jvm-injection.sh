@@ -109,11 +109,6 @@ case $TYPE in
         echo "Triggering frequent garbage collection..."
         blade create cri jvm full-gc --container-id $CONTAINER_ID --effect-count 100 --interval 1000 --timeout $DURATION
         ;;
-    codecachefilling)
-        # Fill code cache to cause JIT compilation issues
-        echo "Filling code cache in JVM..."
-        blade create cri jvm CodeCacheFilling --container-id $CONTAINER_ID --timeout $DURATION
-        ;;
     throwCustomException)
         # Throw custom exception in a specific class and method
         echo "Injecting custom exception..."
@@ -128,11 +123,6 @@ case $TYPE in
         CLASS="org.springframework.web.servlet.DispatcherServlet"
         METHOD="doDispatch"
         blade create cri jvm throwDeclaredException --container-id $CONTAINER_ID --classname $CLASS --methodname $METHOD --timeout $DURATION
-        ;;
-    threadfull-wait|tfl-wait)
-        # Create many threads in WAIT state
-        echo "Creating threads in WAIT state..."
-        blade create cri jvm threadfull --container-id $CONTAINER_ID --wait --thread-count 50 --timeout $DURATION
         ;;
     threadfull-running|tfl-running)
         # Create many CPU-consuming threads   
