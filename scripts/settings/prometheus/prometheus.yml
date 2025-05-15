@@ -22,4 +22,8 @@ scrape_configs:
         labels:
           instance: "localhost:9888"
           job: "gala-gopher"
+<<<<<<< HEAD
           scenario: "discovery-server-net-loss-20"
+=======
+          scenario: "api-gateway-net-loss-20"
+>>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e

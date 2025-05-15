@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ====== Test Configuration ======
 JMeter Path: /opt/apache-jmeter-5.6.3/bin/jmeter
 JMeter Test Plan: ../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter/petclinic_test_plan.jmx
@@ -282,3 +283,6 @@ summary =  83951 in 01:00:31 =   23.1/s Avg:  1323 Min:     1 Max: 110966 Err:  
 Tidying up ...    @ 2025 May 13 00:32:54 CST (1747067574078)
 ... end of run
 JMeter test completed.
+=======
+Starting standalone test @ 2025 May 15 01:12:31 CST (1747242751558)
+>>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e

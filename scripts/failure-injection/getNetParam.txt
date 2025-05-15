@@ -15,9 +15,15 @@ docker inspect api-gateway | grep IPAddress
 
 -----------------------------------------------------------------------------------------
 for VETH 
+<<<<<<< HEAD
 docker ps | grep discovery-server
 docker inspect --format '{{.State.Pid}}' a25feefa81a7 
 sudo nsenter -t 704654 -n ip link
+=======
+docker ps | grep api-gateway
+docker inspect --format '{{.State.Pid}}' a25feefa81a7 
+sudo nsenter -t 1426124 -n ip link
+>>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e
 ip link show | grep -A 1 veth look at the match!!
 
 veth interfaces are always created in pairs - one inside the container namespace and one on the host
