@@ -34,7 +34,9 @@ processo tesi:
  spostato fa virtualbox a kvm kemu per misconfigurazione tra linux header del server e virtualbox. il kernel del server è specifico
   (usato scp per VM transfer, installed libvm qemu-kvm, convertito i file e startata la nuova vm)
   creazione tunnel ssh per accedere alla visualizzazione della vm che gira sul server tramite SPICE usata con  Remote-Viewer/Virt-Viewer
+
+parla dello stress plan di jmeter, e come è basato. 
   
-  
-  
+partire test da 2h inizialmente con 40 threads, ma percentuale di errore sensibile. quindi abbassato a 35 threads per 2 ore.
+parla dei calcoli sul traffico stimato di stressload
   
