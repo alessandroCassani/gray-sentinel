@@ -1,2 +1,0 @@
-Starting standalone test @ 2025 May 12 15:54:05 CST (1747036445366)
-Tidying up ...    @ 2025 May 12 16:54:36 CST (1747040076310)
