@@ -78,3 +78,5 @@ dependency-reduced-pom.xml
 
 zookeeper_audit.log
 /outputReport*/
+scripts/load-injection/results.jtl
+scripts/load-injection/results.jtl
