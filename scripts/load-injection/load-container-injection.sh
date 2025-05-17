@@ -7,14 +7,10 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
 RESULTS_FILE="results.jtl" # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-<<<<<<< HEAD
-TARGET_SERVICE="discovery-server" # Service to inject failure into
-=======
 TARGET_SERVICE="api-gateway" # Service to inject failure into
->>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
-CHAOS_TYPE="network-loss" 
+CHAOS_TYPE="network-delay" 
 DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
 CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
@@ -53,8 +49,8 @@ echo "Starting JMeter load test..."
 JMETER_PID=$!
 echo "JMeter started with PID: $JMETER_PID"
 
-echo "Waiting $DELAY_SECONDS1 seconds before injecting first failure..."
-sleep $DELAY_SECONDS1
+echo "Waiting $DELAY_SECONDS seconds before injecting first failure..."
+sleep $DELAY_SECONDS
 
 echo "Executing chaos injection script..."
 "$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
@@ -62,7 +58,7 @@ echo "Executing chaos injection script..."
 sleep $CHAOS_DURATION
 
 echo "Cleanup: Removing tc rules from container interface..."
-tc qdisc del dev veth04f87fa root  # to change hardcoded veth
+tc qdisc del dev vethd9f5bc0 root  # to change hardcoded veth
 echo "Chaos experiment completed and cleaned up."
 
 

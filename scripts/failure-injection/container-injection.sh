@@ -104,16 +104,7 @@ case $TYPE in
         ;;
     network-delay)
         # Access to native 8080 port is delayed by 0.5 seconds, and the delay time fluctuates by 0.2 second
-        blade create cri network delay  --time 500 --offset 200 --interface eth0 --local-port 8080 --timeout $DURATION --container-id $CONTAINER_ID
-        ;;
-    network-corrupted)
-        # Corrupt 30% of packets    TODO check ip feasibility the cmd is wrong
-        blade create cri network corrupt --percent 30 --timeout $DURATION --container-id $CONTAINER_ID 
-        ;;
-    disk-read)
-        # Read-only disk IO burn in the root directory
-        # ATTENTION --size flag refers to block size
-        blade create cri disk burn --read --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
+        blade create cri network delay  --time 500 --offset 200 --interface vethd9f5bc0 --container-id b3943fadb1ad
         ;;
     disk-write)
         # write-only disk IO burn in the root directory

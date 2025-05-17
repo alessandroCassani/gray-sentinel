@@ -22,4 +22,4 @@ scrape_configs:
         labels:
           instance: "localhost:9888"
           job: "gala-gopher"
-          scenario: "gatewaynetLoss2h"
+          scenario: "apidelay2h"
