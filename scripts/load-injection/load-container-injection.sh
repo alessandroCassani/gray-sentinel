@@ -15,9 +15,8 @@ TARGET_SERVICE="api-gateway" # Service to inject failure into
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
 CHAOS_TYPE="network-loss" 
-DELAY_SECONDS1=600 # Wait time before injecting first failure
-DELAY_SECONDS2=1800 # Wait time before injecting second failure
-CHAOS_DURATION=600 # Duration of the chaos experiment in seconds
+DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
+CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
 if [ $# -ge 1 ]; then
     JMX_FILE=$1
@@ -40,8 +39,7 @@ echo "JMeter Path: $JMETER_BIN"
 echo "JMeter Test Plan: $JMETER_TEST_DIR/$JMX_FILE"
 echo "Target Service: $TARGET_SERVICE"
 echo "Chaos Type: $CHAOS_TYPE"
-echo "First injection delay: $DELAY_SECONDS1 seconds"
-echo "Second injection delay: $DELAY_SECONDS2 seconds"
+echo "injection delay: $DELAY_SECONDS seconds"
 echo "Chaos Duration: $CHAOS_DURATION seconds"
 echo "=============================="
 
@@ -55,42 +53,18 @@ echo "Starting JMeter load test..."
 JMETER_PID=$!
 echo "JMeter started with PID: $JMETER_PID"
 
-echo "Waiting $DELAY_SECONDS1 seconds before injecting first failure..."
-sleep $DELAY_SECONDS1
+echo "Waiting $DELAY_SECONDS seconds before injecting failure..."
+sleep $DELAY_SECONDS
 
-echo "Executing first chaos injection script..."
+echo "Executing chaos injection script..."
 "$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
 
-(
-    sleep $CHAOS_DURATION
-    echo "Cleanup: Removing tc rules from container interface..."
-<<<<<<< HEAD
-    tc qdisc del dev vethd1d3260 root  # to change hardcoded veth
-=======
-    tc qdisc del dev veth85dec64 root  # to change hardcoded veth
->>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e
-    
-    echo "Chaos experiment completed and cleaned up."
-) &
+sleep $CHAOS_DURATION
 
+echo "Cleanup: Removing tc rules from container interface..."
+tc qdisc del dev veth04f87fa root  # to change hardcoded veth
+echo "Chaos experiment completed and cleaned up."
 
-echo "Waiting $DELAY_SECONDS2 seconds before injecting second failure..."
-sleep $DELAY_SECONDS2
-
-echo "Executing second chaos injection script..."
-"$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
-
-(
-    sleep $CHAOS_DURATION
-    echo "Cleanup: Removing tc rules from container interface..."
-<<<<<<< HEAD
-    tc qdisc del dev vethd1d3260 root  # to change hardcoded veth
-=======
-    tc qdisc del dev veth85dec64 root  # to change hardcoded veth
->>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e
-    
-    echo "Chaos experiment completed and cleaned up."
-) &
 
 # Wait for JMeter to finish 
 echo "Waiting for JMeter test to complete..."

@@ -97,8 +97,8 @@ case $TYPE in
         blade create cri mem --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
         ;;
     network-loss)
-        # Drop 50% of all packets 
-        blade create network loss --percent 20 --interface veth85dec64
+        # Drop 20% of all packets 
+        blade create network loss --percent 40 --interface veth04f87fa
         # ATTENTION u need to specify running container ports to attach network loss
         # blade create cri network loss --percent 20 --interface eth0@if31 --local-port 8080 --container-id $CONTAINER_ID  --timeout $DURATION
         ;;
