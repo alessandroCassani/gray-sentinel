@@ -7,11 +7,7 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
 RESULTS_FILE="results.jtl" # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-<<<<<<< HEAD
-TARGET_SERVICE="discovery-server" # Service to inject failure into
-=======
 TARGET_SERVICE="api-gateway" # Service to inject failure into
->>>>>>> 2fd0da2c1aa6acd6272b7d9a3a2d84770274835e
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
 CHAOS_TYPE="network-loss" 

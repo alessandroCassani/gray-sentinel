@@ -91,7 +91,7 @@ echo "Injecting container failure: $TYPE for $DURATION seconds..."
 
 case $TYPE in
     cpu)
-        blade create cri cpu fullload --container-id $CONTAINER_ID --cpu-percent 50 --timeout $DURATION
+        blade create cri cpu load --container-id 34739680121a --cpu-percent 90 --timeout 20
         ;;
     mem)
         blade create cri mem --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION

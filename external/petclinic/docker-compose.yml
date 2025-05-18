@@ -79,7 +79,7 @@ services:
 
 
   api-gateway:
-    image: springcommunity/spring-petclinic-api-gateway
+    image: petclinic-api-gateway-chaos:latest
     container_name: api-gateway
     depends_on:
       config-server:
