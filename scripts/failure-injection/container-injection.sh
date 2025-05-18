@@ -94,7 +94,7 @@ case $TYPE in
         docker exec 8537dedffab4 /opt/chaosblade-1.7.2/blade create cpu fullload --cpu-percent 80 --timeout 300
         ;;
     mem)
-        blade create cri mem --container-id $CONTAINER_ID --mem-percent 80 --timeout $DURATION
+        docker exec e6c809bdf4f6 /opt/chaosblade-1.7.2/blade create mem load --mode ram --mem-percent 80 
         ;;
     network-loss)
         # Drop 20% of all packets 
