@@ -7,10 +7,10 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
 RESULTS_FILE="results.jtl" # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="api-gateway" # Service to inject failure into
+TARGET_SERVICE="customers-service" # Service to inject failure into
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
-CHAOS_TYPE="cpu" 
+CHAOS_TYPE="DISK IO" 
 DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
 CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
@@ -53,14 +53,14 @@ echo "Waiting $DELAY_SECONDS seconds before injecting first failure..."
 sleep $DELAY_SECONDS
 
 echo "Executing chaos injection script..."
-EXPERIMENT_RESULT=$(docker exec 33cde5ba8a89 /opt/chaosblade-1.7.2/blade create mem load --mode ram --mem-percent 80)
+EXPERIMENT_RESULT=$(docker exec 2a07aa2ab2a9 /opt/chaosblade-1.7.2/blade create disk burn --read --write --path "/" --size 20)
 echo "ChaosBlade result: $EXPERIMENT_RESULT"
 EXPERIMENT_ID=$(echo $EXPERIMENT_RESULT | grep -o '"result":"[^"]*"' | awk -F'"' '{print $4}')
 
 sleep $CHAOS_DURATION
 
 echo "Cleaning up: Destroying CPU stress experiment with ID: $EXPERIMENT_ID"
-DESTROY_RESULT=$(docker exec 33cde5ba8a89 /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
+DESTROY_RESULT=$(docker exec 2a07aa2ab2a9 /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
 echo "Destroy result: $DESTROY_RESULT"
 
 

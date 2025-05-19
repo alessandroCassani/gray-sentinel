@@ -39,4 +39,6 @@ parla dello stress plan di jmeter, e come è basato.
   
 partire test da 2h inizialmente con 40 threads, ma percentuale di errore sensibile. quindi abbassato a 35 threads per 2 ore.
 parla dei calcoli sul traffico stimato di stressload
+
+per mem e cpu stress modifica docker file per runnare chaosblade all-interno del container
   
