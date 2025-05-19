@@ -98,7 +98,7 @@ case $TYPE in
         ;;
     network-loss)
         # Drop 20% of all packets 
-        blade create network loss --percent 40 --interface veth04f87fa
+        blade create network loss --percent 40 --interface veth2c9f03f
         # ATTENTION u need to specify running container ports to attach network loss
         # blade create cri network loss --percent 20 --interface eth0@if31 --local-port 8080 --container-id $CONTAINER_ID  --timeout $DURATION
         ;;

@@ -7,12 +7,12 @@ JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/
 JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
 RESULTS_FILE="results.jtl" # JMeter results file
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="api-gateway" # Service to inject failure into
+TARGET_SERVICE="customers-service" # Service to inject failure into
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
-CHAOS_TYPE="cpu" 
-DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
-CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
+CHAOS_TYPE="network-loss" 
+DELAY_SECONDS=1800 # Wait time before injecting first failure
+CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds
 
 if [ $# -ge 1 ]; then
     JMX_FILE=$1
@@ -35,7 +35,7 @@ echo "JMeter Path: $JMETER_BIN"
 echo "JMeter Test Plan: $JMETER_TEST_DIR/$JMX_FILE"
 echo "Target Service: $TARGET_SERVICE"
 echo "Chaos Type: $CHAOS_TYPE"
-echo "injection delay: $DELAY_SECONDS seconds"
+echo "First injection delay: $DELAY_SECONDS seconds"
 echo "Chaos Duration: $CHAOS_DURATION seconds"
 echo "=============================="
 
@@ -52,17 +52,14 @@ echo "JMeter started with PID: $JMETER_PID"
 echo "Waiting $DELAY_SECONDS seconds before injecting first failure..."
 sleep $DELAY_SECONDS
 
-echo "Executing chaos injection script..."
-EXPERIMENT_RESULT=$(docker exec 33cde5ba8a89 /opt/chaosblade-1.7.2/blade create mem load --mode ram --mem-percent 80)
-echo "ChaosBlade result: $EXPERIMENT_RESULT"
-EXPERIMENT_ID=$(echo $EXPERIMENT_RESULT | grep -o '"result":"[^"]*"' | awk -F'"' '{print $4}')
+echo "Executing first chaos injection script..."
+"$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
+
 
 sleep $CHAOS_DURATION
-
-echo "Cleaning up: Destroying CPU stress experiment with ID: $EXPERIMENT_ID"
-DESTROY_RESULT=$(docker exec 33cde5ba8a89 /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
-echo "Destroy result: $DESTROY_RESULT"
-
+echo "Cleanup: Removing tc rules from container interface..."
+tc qdisc del dev veth2c9f03f root  # to change hardcoded veth
+echo "Chaos experiment completed and cleaned up."
 
 # Wait for JMeter to finish 
 echo "Waiting for JMeter test to complete..."
