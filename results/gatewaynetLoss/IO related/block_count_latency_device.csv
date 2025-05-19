@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_block_count_latency_device"", blk_name=""sda"", disk_name=""sda"", first_minor=""0"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", major=""8"", scenario=""gatewaynetLoss2h""}"
+"Time","disk sda"
 2025-05-16 20:30:45,12
 2025-05-16 20:31:00,12
 2025-05-16 20:31:15,13
