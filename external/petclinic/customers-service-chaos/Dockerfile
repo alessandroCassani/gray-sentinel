@@ -1,4 +1,4 @@
-FROM springcommunity/spring-petclinic-api-gateway
+FROM springcommunity/spring-petclinic-customers-service
 
 RUN apt-get update && apt-get install -y wget tar
 
