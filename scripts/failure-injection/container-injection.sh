@@ -104,12 +104,12 @@ case $TYPE in
         ;;
     network-delay)
         # Access to native 8080 port is delayed by 0.5 seconds, and the delay time fluctuates by 0.2 second
-        blade create cri network delay  --time 500 --offset 200 --interface eth0 --local-port 8080 --timeout $DURATION --container-id $CONTAINER_ID
+        blade create cri network delay  --time 500 --offset 200 --interface veth38c6ce6 
         ;;
     disk-read-write)
         # Read and write disk IO burn in the root directory
         # ATTENTION --size flag refers to block size
-        blade create cri disk burn --read --write --path "/" --size 10 --container-id $CONTAINER_ID --timeout $DURATION
+        blade create cri disk burn --read --write --path "/" --size 20 --container-id 73a8c7bb20c7
         ;;
     *)
         echo "Error: Unsupported failure type: $TYPE"

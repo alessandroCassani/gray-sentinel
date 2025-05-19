@@ -25,7 +25,7 @@ services:
      - 8761:8761
 
   customers-service:
-    image: springcommunity/spring-petclinic-customers-service
+    image: petclinic-customers-service-chaos:latest 
     container_name: customers-service
     depends_on:
       config-server:
