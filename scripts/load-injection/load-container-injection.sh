@@ -53,14 +53,14 @@ echo "Waiting $DELAY_SECONDS seconds before injecting first failure..."
 sleep $DELAY_SECONDS
 
 echo "Executing chaos injection script..."
-EXPERIMENT_RESULT=$(docker exec 2a07aa2ab2a9 /opt/chaosblade-1.7.2/blade create disk burn --read --write --path "/" --size 20)
+EXPERIMENT_RESULT=$(docker exec cfb27712026f /opt/chaosblade-1.7.2/blade create mem load --mode ram --mem-percent 80)
 echo "ChaosBlade result: $EXPERIMENT_RESULT"
 EXPERIMENT_ID=$(echo $EXPERIMENT_RESULT | grep -o '"result":"[^"]*"' | awk -F'"' '{print $4}')
 
 sleep $CHAOS_DURATION
 
-echo "Cleaning up: Destroying CPU stress experiment with ID: $EXPERIMENT_ID"
-DESTROY_RESULT=$(docker exec 2a07aa2ab2a9 /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
+echo "Cleaning up: Destroying mem stress experiment with ID: $EXPERIMENT_ID"
+DESTROY_RESULT=$(docker exec cfb27712026f /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
 echo "Destroy result: $DESTROY_RESULT"
 
 
