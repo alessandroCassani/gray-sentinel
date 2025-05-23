@@ -1,13 +1,12 @@
 #!/bin/bash
 # Script to run JMeter load test and then call chaos injection script after a delay
 
-# Use the full absolute path with leading slash
 JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter" 
 JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter"
-JMX_FILE="petclinic_test_plan.jmx" # JMeter test plan file
-RESULTS_FILE="results.jtl" # JMeter results file
+JMX_FILE="petclinic_test_plan.jmx"
+RESULTS_FILE="results.jtl" 
 CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="customers-service" # Service to inject failure into
+TARGET_SERVICE="customers-service" 
 # Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
 # disk-read, disk-write, disk-read-write)
 CHAOS_TYPE="DISK IO" 
