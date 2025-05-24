@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""0"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""1"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""2"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""3"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""4"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""5"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""6"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""7"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""8"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}","{__name__=""gala_gopher_cpu_iowait_msec"", cpu=""9"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewayMemStress""}"
+Time,"cpu 0","cpu 1","cpu 2","cpu 3","cpu 4","cpu 5","cpu 6","cpu 7","cpu 8","cpu 9"
 2025-05-19 01:53:30,10,60,80,170,10,30,10,0,0,0
 2025-05-19 01:53:45,10,60,80,170,10,30,10,0,0,0
 2025-05-19 01:54:00,10,60,80,170,10,30,10,0,0,0
@@ -443,10 +443,10 @@
 2025-05-19 03:43:45,10,0,0,10,10,10,10,0,0,0
 2025-05-19 03:44:00,10,0,0,10,10,10,10,0,0,0
 2025-05-19 03:44:15,10,0,0,10,10,10,10,0,0,0
-2025-05-19 03:44:30,130,130,110,160,130,140,120,170,0,0
-2025-05-19 03:44:45,130,130,110,160,130,140,120,170,0,0
-2025-05-19 03:45:00,130,130,110,160,130,140,120,170,0,0
-2025-05-19 03:45:15,130,130,110,160,130,140,120,170,0,0
+2025-05-19 03:44:30,10,0,0,10,10,10,10,0,0,0
+2025-05-19 03:44:45,10,0,0,10,10,10,10,0,0,0
+2025-05-19 03:45:00,10,0,0,10,10,10,10,0,0,0
+2025-05-19 03:45:15,10,0,0,10,10,10,10,0,0,0
 2025-05-19 03:45:30,30,20,10,20,20,20,20,20,0,0
 2025-05-19 03:45:45,30,20,10,20,20,20,20,20,0,0
 2025-05-19 03:46:00,30,20,10,20,20,20,20,20,0,0
@@ -471,10 +471,10 @@
 2025-05-19 03:50:45,10,10,20,10,0,0,0,10,0,0
 2025-05-19 03:51:00,10,10,20,10,0,0,0,10,0,0
 2025-05-19 03:51:15,10,10,20,10,0,0,0,10,0,0
-2025-05-19 03:51:30,1670,2030,1580,2260,1920,1610,1640,1820,0,0
-2025-05-19 03:51:45,1670,2030,1580,2260,1920,1610,1640,1820,0,0
-2025-05-19 03:52:00,1670,2030,1580,2260,1920,1610,1640,1820,0,0
-2025-05-19 03:52:15,1670,2030,1580,2260,1920,1610,1640,1820,0,0
+2025-05-19 03:51:30,10,10,20,10,0,0,0,10,0,0
+2025-05-19 03:51:45,10,10,10,0,0,10,0,0,0,0
+2025-05-19 03:52:00,10,10,10,0,0,10,0,0,0,0
+2025-05-19 03:52:15,10,0,10,0,20,0,0,10,0,0
 2025-05-19 03:52:30,10,0,0,10,0,10,10,0,0,0
 2025-05-19 03:52:45,10,0,0,10,0,10,10,0,0,0
 2025-05-19 03:53:00,10,0,0,10,0,10,10,0,0,0

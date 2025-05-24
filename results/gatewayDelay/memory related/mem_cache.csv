@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_mem_cache_kB"", infos=""/proc/meminfo"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""apidelay2h""}"
+Time,mem_cache
 2025-05-18 00:01:00,6034324
 2025-05-18 00:01:15,6034324
 2025-05-18 00:01:30,6033612

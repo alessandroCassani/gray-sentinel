@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_mem_available_kB"", infos=""/proc/meminfo"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""gatewaycpustress""}"
+Time,mem_available
 2025-05-18 23:08:45,17877160
 2025-05-18 23:09:00,17877160
 2025-05-18 23:09:15,18297500
