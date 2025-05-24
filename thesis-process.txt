@@ -27,7 +27,7 @@ processo tesi:
  failure injection plan, quali ho scelto, perchè, approccio di granularità (fai riferimento ai paper)
 
  approccio network injection (non sul bridge ma sulla veth specifica del container che collega al bridge per isolare failure
- per ottenere gray failure simile))
+ per ottenere gray failure simile)
 
  perchè spostato su server usi (oltre 30 thread problemi risorse)
 
@@ -41,4 +41,8 @@ partire test da 2h inizialmente con 40 threads, ma percentuale di errore sensibi
 parla dei calcoli sul traffico stimato di stressload
 
 per mem e cpu stress modifica docker file per runnare chaosblade all-interno del container
+
+plot per visualizzazione dati comparativa con baseline, poi rimozione outlier e fase di data preprocessing
+
+suddivisione prima durante e dopo in fasi di iniezione di fault, per analisi descrivvitiva approfondita.
   
