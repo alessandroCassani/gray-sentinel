@@ -45,4 +45,6 @@ per mem e cpu stress modifica docker file per runnare chaosblade all-interno del
 plot per visualizzazione dati comparativa con baseline, poi rimozione outlier e fase di data preprocessing
 
 suddivisione prima durante e dopo in fasi di iniezione di fault, per analisi descrivvitiva approfondita.
+
+feature engineering: outliers and nois reduction through TUNA, added features for trends
   
