@@ -1,17 +1,15 @@
 #!/bin/bash
-# Script to run JMeter load test and then call chaos JVM injection script after a delay
-
-JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter" 
+# Script to run JMeter load test and then call JVM chaos injection script after a delay
+JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter"
 JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter"
-JMX_FILE="petclinic_test_plan.jmx"            # JMeter test plan file
-RESULTS_FILE="results.jtl"                    # JMeter results file
-CHAOS_SCRIPT="../failure-injection/container-jvm-injection.sh"
-TARGET_SERVICE="api-gateway"                  # Service to inject failure into
-# Type of failure (cpufulload, oom, codecachefilling, delay, full-gc, 
-# throwCustomException, throwDeclaredException,tfl-running, tfl-wait)
-CHAOS_TYPE="cpufulload"                        
-DELAY_SECONDS=60                              # Wait time before injecting failure
-CHAOS_DURATION=420                            # Duration of the chaos experiment in seconds
+JMX_FILE="petclinic_test_plan.jmx"
+RESULTS_FILE="results.jtl"
+CHAOS_SCRIPT="../failure-injection/jvm-injection.sh"
+TARGET_SERVICE="api-gateway"
+# Type of JVM failure (oom, cpufulload, gc, throwCustomException, tde)
+CHAOS_TYPE="throwCustomException"
+DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
+CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
 if [ $# -ge 1 ]; then
     JMX_FILE=$1
@@ -33,28 +31,82 @@ echo "====== Test Configuration ======"
 echo "JMeter Path: $JMETER_BIN"
 echo "JMeter Test Plan: $JMETER_TEST_DIR/$JMX_FILE"
 echo "Target Service: $TARGET_SERVICE"
-echo "Chaos Type: $CHAOS_TYPE"
-echo "Delay: $DELAY_SECONDS seconds"
+echo "JVM Chaos Type: $CHAOS_TYPE"
+echo "Injection delay: $DELAY_SECONDS seconds"
 echo "Chaos Duration: $CHAOS_DURATION seconds"
 echo "=============================="
 
 if [ ! -f "$CHAOS_SCRIPT" ]; then
-    echo "Chaos script not found at $CHAOS_SCRIPT"
+    echo "Error: Chaos script not found at $CHAOS_SCRIPT"
     exit 1
 fi
 
-echo "starting jmeter load test..."
+echo "Starting JMeter load test..."
 "$JMETER_BIN" -n -t "$JMETER_TEST_DIR/$JMX_FILE" -l $RESULTS_FILE &
 JMETER_PID=$!
-echo "Jmeter started with PID $JMETER_PID"
+echo "JMeter started with PID: $JMETER_PID"
 
-echo "injection delay of $DELAY_SECONDS"
+echo "Waiting $DELAY_SECONDS seconds before injecting first failure..."
 sleep $DELAY_SECONDS
 
-echo "It is time for failure injection"
-"$CHAOS_SCRIPT" -s $TARGET_SERVICE -t $CHAOS_TYPE -d $CHAOS_DURATION
+echo "Executing JVM chaos injection script..."
 
-# Wait for JMeter to finish 
+# Get container ID for target service
+CONTAINER_ID=$(docker ps | grep $TARGET_SERVICE | awk '{print $1}')
+if [ -z "$CONTAINER_ID" ]; then
+    echo "Error: Container for service '$TARGET_SERVICE' not found"
+    exit 1
+fi
+
+echo "Found container: $CONTAINER_ID for service: $TARGET_SERVICE"
+
+# Execute JVM chaos injection based on type
+case $CHAOS_TYPE in
+    "oom")
+        echo "Injecting OutOfMemoryError..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm oom --area HEAP --timeout $CHAOS_DURATION)
+        ;;
+    "cpufulload")
+        echo "Injecting high CPU load in JVM..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm cpufull --timeout $CHAOS_DURATION)
+        ;;
+    "gc")
+        echo "Triggering frequent garbage collection..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm full-gc --effect-count 100 --interval 1000 --timeout $CHAOS_DURATION)
+        ;;
+    "throwCustomException")
+        echo "Injecting custom exception in Gateway filter..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm throwCustomException \
+            --classname "org.springframework.cloud.gateway.filter.GatewayFilterChain" \
+            --methodname "filter" \
+            --exception "java.lang.RuntimeException" \
+            --exception-message "PetClinic Gateway chaos failure" \
+            --timeout $CHAOS_DURATION)
+        ;;
+    "tde")
+        echo "Injecting declared exception in service discovery..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm throwDeclaredException \
+            --classname "org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient" \
+            --methodname "getServices" \
+            --timeout $CHAOS_DURATION)
+        ;;
+    *)
+        echo "Unknown JVM chaos type: $CHAOS_TYPE"
+        echo "Available types: oom, cpufulload, gc, throwCustomException, tde"
+        kill $JMETER_PID
+        exit 1
+        ;;
+esac
+
+echo "ChaosBlade JVM result: $EXPERIMENT_RESULT"
+EXPERIMENT_ID=$(echo $EXPERIMENT_RESULT | grep -o '"result":"[^"]*"' | awk -F'"' '{print $4}')
+
+sleep $CHAOS_DURATION
+
+echo "Cleaning up: Destroying JVM chaos experiment with ID: $EXPERIMENT_ID"
+DESTROY_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
+echo "Destroy result: $DESTROY_RESULT"
+
 echo "Waiting for JMeter test to complete..."
 wait $JMETER_PID
 echo "JMeter test completed."
