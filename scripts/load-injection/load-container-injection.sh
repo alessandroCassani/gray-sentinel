@@ -9,8 +9,8 @@ TARGET_SERVICE="api-gateway"
 # 1. loadbalancer-filter-delay - 3-second delay in service selection (slow but working)
 # 2. response-filter-delay - 2-second delay in response writing (slow responses)
 # 3. gc-stress - Memory pressure causing intermittent slowness (performance degradation)
-# 4. route-predicate-delay - 1-second delay in route matching (slower routing decisions)
-CHAOS_TYPE="gc-stress"
+# 4. route-predicate-delay - 1.5 -second delay in route matching (slower routing decisions)
+CHAOS_TYPE="route-predicate-delay"
 DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
 CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
@@ -102,7 +102,7 @@ case $CHAOS_TYPE in
             --pid $JAVA_PID \
             --classname "org.springframework.cloud.gateway.handler.RoutePredicateHandlerMapping" \
             --methodname "getHandlerInternal" \
-            --time 1000 \
+            --time 1500 \
             --timeout $CHAOS_DURATION)
         ;;
     *)
