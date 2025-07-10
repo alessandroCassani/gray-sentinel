@@ -1,0 +1,129 @@
+TUNA CSV Export Summary Report
+==================================================
+
+Total files created: 25
+Export timestamp: 2025-07-09 14:59:13.391957
+
+
+IOWait:
+------------------------------
+  baseline:
+    Outliers: 2459
+    Noise reduction: 36.0%
+    Correlation: 0.962
+  cpu_stress:
+    Outliers: 2159
+    Noise reduction: 44.4%
+    Correlation: 0.984
+  delay:
+    Outliers: 2551
+    Noise reduction: 39.5%
+    Correlation: 0.968
+  mem_stress:
+    Outliers: 2404
+    Noise reduction: 30.4%
+    Correlation: 0.935
+  net_loss:
+    Outliers: 1920
+    Noise reduction: 40.7%
+    Correlation: 0.951
+
+IRQ:
+------------------------------
+  baseline:
+    Outliers: 346
+    Noise reduction: 49.6%
+    Correlation: 0.996
+  cpu_stress:
+    Outliers: 28
+    Noise reduction: 6.3%
+    Correlation: 0.980
+  delay:
+    Outliers: 206
+    Noise reduction: 42.1%
+    Correlation: 0.958
+  mem_stress:
+    Outliers: 40
+    Noise reduction: 21.4%
+    Correlation: 0.950
+  net_loss:
+    Outliers: 262
+    Noise reduction: 1.7%
+    Correlation: 0.997
+
+System:
+------------------------------
+  baseline:
+    Outliers: 77
+    Noise reduction: 7.3%
+    Correlation: 0.980
+  cpu_stress:
+    Outliers: 65
+    Noise reduction: 5.7%
+    Correlation: 0.980
+  delay:
+    Outliers: 104
+    Noise reduction: 8.0%
+    Correlation: 0.976
+  mem_stress:
+    Outliers: 109
+    Noise reduction: 31.8%
+    Correlation: 0.934
+  net_loss:
+    Outliers: 187
+    Noise reduction: 6.6%
+    Correlation: 0.981
+
+User:
+------------------------------
+  baseline:
+    Outliers: 59
+    Noise reduction: 28.4%
+    Correlation: 0.942
+  cpu_stress:
+    Outliers: 32
+    Noise reduction: 2.4%
+    Correlation: 0.992
+  delay:
+    Outliers: 45
+    Noise reduction: 6.7%
+    Correlation: 0.978
+  mem_stress:
+    Outliers: 35
+    Noise reduction: 5.2%
+    Correlation: 0.981
+  net_loss:
+    Outliers: 406
+    Noise reduction: 1.3%
+    Correlation: 0.997
+
+Utilization:
+------------------------------
+  baseline:
+    Outliers: 50
+    Noise reduction: 30.2%
+    Correlation: 0.961
+  cpu_stress:
+    Outliers: 32
+    Noise reduction: 2.5%
+    Correlation: 0.991
+  delay:
+    Outliers: 68
+    Noise reduction: 4.3%
+    Correlation: 0.984
+  mem_stress:
+    Outliers: 35
+    Noise reduction: 5.5%
+    Correlation: 0.980
+  net_loss:
+    Outliers: 385
+    Noise reduction: 1.2%
+    Correlation: 0.996
+
+Overall Statistics:
+------------------------------
+Total data points: 12141
+Total outliers removed: 14064
+Overall outlier percentage: 115.8%
+Average noise reduction: 18.4%
+Average correlation: 0.973
