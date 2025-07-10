@@ -41,14 +41,7 @@ print(f"Grouped into {len(grouped_files)} metric types:")
 for group, files in grouped_files.items():
     print(f"  {group}: {len(files)} files")
 
-# Crea output_dir se non esiste
-output_dir = os.path.dirname(output_file)
-if output_dir:
-    os.makedirs(output_dir, exist_ok=True)
-
-# Processa ciascun gruppo
-merged_data = {}
-
+# Processa ciascun gruppo e crea un file separato per metrica
 for metric_group, files in grouped_files.items():
     print(f"\nProcessing {metric_group} group with {len(files)} files:")
     
@@ -86,49 +79,11 @@ for metric_group, files in grouped_files.items():
         if time_column is not None:
             merged.insert(0, 'time', time_column)
         
-        merged_data[metric_group] = merged
-        print(f"  Merged shape: {merged.shape}")
+        # Salva il file per questa metrica
+        output_file = os.path.join(target_dir, f"all_{metric_group}.csv")
+        merged.to_csv(output_file, index=False)
+        
+        print(f"  Saved: {output_file}")
+        print(f"  Shape: {merged.shape}")
 
-# Ora unisci tutti i gruppi in un singolo DataFrame
-print(f"\nCombining all {len(merged_data)} metric groups...")
-
-all_dfs = []
-final_time_column = None
-
-for group_name, group_df in merged_data.items():
-    print(f"  Adding {group_name} group with {group_df.shape[1]} columns")
-    
-    # Gestione della colonna time
-    if "time" in group_df.columns:
-        if final_time_column is None:
-            final_time_column = group_df["time"].copy()
-        # Rimuovi la colonna time da questo gruppo
-        group_df = group_df.drop(columns=["time"])
-    
-    # Aggiungi prefisso del gruppo alle colonne
-    group_df = group_df.add_prefix(f"{group_name}_")
-    all_dfs.append(group_df)
-
-# Unisci tutti i gruppi
-if all_dfs:
-    final_merged = pd.concat(all_dfs, axis=1)
-    
-    # Aggiungi la colonna time all'inizio
-    if final_time_column is not None:
-        final_merged.insert(0, 'time', final_time_column)
-    
-    # Salva il file finale
-    final_merged.to_csv(output_file, index=False)
-    
-    print(f"\n✅ File finale salvato: {output_file}")
-    print(f"   Dimensioni finali: {final_merged.shape}")
-    print(f"   Colonne per gruppo:")
-    
-    # Mostra statistiche finali
-    for group in merged_data.keys():
-        group_cols = [col for col in final_merged.columns if col.startswith(f"{group}_")]
-        print(f"     {group}: {len(group_cols)} colonne")
-else:
-    print("❌ Nessun dato da unire")
-
-print("\n✅ Unione completata.")
+print(f"\n✅ Creati file separati per ogni metrica in: {target_dir}")
