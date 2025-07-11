@@ -44,15 +44,18 @@ for metric_group, files in grouped_files.items():
         try:
             df = pd.read_csv(file)
             
+            # Prendi solo la colonna 'minutes' se esiste
             if time_column is None:
-                time_cols = [col for col in df.columns if col.lower() in ['time', 'timestamp', 'minutes']]
-                if time_cols:
-                    time_column = df[time_cols[0]].copy()
+                minutes_cols = [col for col in df.columns if col.lower() == 'minutes']
+                if minutes_cols:
+                    time_column = df[minutes_cols[0]].copy()
             
+            # Rimuovi solo colonne temporali diverse da 'minutes'
             cols_to_drop = []
             for col in df.columns:
-                if col.lower() in ['source', 'minutes', 'timestamp', 'time']:
+                if col.lower() in ['source', 'time', 'timestamp']:
                     cols_to_drop.append(col)
+                # NON rimuovere 'minutes'
             df = df.drop(columns=cols_to_drop, errors='ignore')
             
             filename_base = os.path.splitext(os.path.basename(file))[0]
@@ -75,8 +78,9 @@ for metric_group, files in grouped_files.items():
     if dfs:
         merged = pd.concat(dfs, axis=1)
         
+        # Inserisci la colonna minutes (se trovata)
         if time_column is not None:
-            merged.insert(0, 'time', time_column)
+            merged.insert(0, 'minutes', time_column)
         
         output_file = os.path.join(target_dir, f"all_{metric_group}.csv")
         merged.to_csv(output_file, index=False)
@@ -93,11 +97,11 @@ if all_files:
         try:
             df = pd.read_csv(file)
             
-            if final_time_column is None and 'time' in df.columns:
-                final_time_column = df['time'].copy()
+            if final_time_column is None and 'minutes' in df.columns:
+                final_time_column = df['minutes'].copy()
             
-            if 'time' in df.columns:
-                df = df.drop(columns=['time'])
+            if 'minutes' in df.columns:
+                df = df.drop(columns=['minutes'])
             
             metric_type = filename.replace("all_", "").replace(".csv", "")
             df = df.add_prefix(f"{metric_type}_")
@@ -111,15 +115,9 @@ if all_files:
         final_merged = pd.concat(final_dfs, axis=1)
         
         if final_time_column is not None:
-            final_merged.insert(0, 'time', final_time_column)
+            final_merged.insert(0, 'minutes', final_time_column)
         
         experiment_name = os.path.basename(target_dir)
         final_output = os.path.join(target_dir, f"all_metrics_combined_{experiment_name}.csv")
         
         final_merged.to_csv(final_output, index=False)
-        
-        files_to_remove = [f for f in glob.glob(os.path.join(target_dir, "*.csv")) 
-                          if not (os.path.basename(f).startswith("all_") or "combined" in os.path.basename(f))]
-        
-        for file_to_remove in files_to_remove:
-            os.remove(file_to_remove)
