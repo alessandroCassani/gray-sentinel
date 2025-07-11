@@ -55,9 +55,7 @@ for metric_group, files in grouped_files.items():
     print(f"\nProcessing {metric_group} group with {len(files)} files:")
     
     dfs = []
-    source_column = None
-    minutes_column = None
-    timestamp_column = None
+    time_column = None
     
     for file in sorted(files):
         print(f"  Reading: {os.path.basename(file)}")
@@ -65,27 +63,37 @@ for metric_group, files in grouped_files.items():
         try:
             df = pd.read_csv(file)
             
-            # Salva le colonne comuni (solo dal primo file)
-            if source_column is None and 'source' in df.columns:
-                source_column = df['source'].copy()
-            if minutes_column is None and 'minutes' in df.columns:
-                minutes_column = df['minutes'].copy()
-            if timestamp_column is None and 'Timestamp' in df.columns:
-                timestamp_column = df['Timestamp'].copy()
+            # Salva la colonna time (solo dal primo file)
+            if time_column is None:
+                # Cerca colonne temporali con nomi diversi
+                time_cols = [col for col in df.columns if col.lower() in ['time', 'timestamp', 'minutes']]
+                if time_cols:
+                    time_column = df[time_cols[0]].copy()
             
-            # Rimuovi le colonne comuni da questo DataFrame
+            # Rimuovi tutte le colonne temporali e source da questo DataFrame
             cols_to_drop = []
             for col in df.columns:
-                if col.lower() in ['source', 'minutes', 'timestamp']:
+                if col.lower() in ['source', 'minutes', 'timestamp', 'time']:
                     cols_to_drop.append(col)
             df = df.drop(columns=cols_to_drop, errors='ignore')
             
             # Estrai il nome della metrica dal nome del file
             filename_base = os.path.splitext(os.path.basename(file))[0]
             
-            # Aggiungi il prefisso della metrica a tutte le colonne
-            metric_name = filename_base.split('_')[0]
-            df = df.add_prefix(f"{metric_name}_")
+            # Per le metriche memory, usa nomi semplici senza prefisso
+            if metric_group == 'memory':
+                metric_name = filename_base.split('_')[0]  # es. "memavailable"
+                # Rinomina le colonne semplicemente con il nome della metrica
+                if len(df.columns) == 1:
+                    # Se c'è una sola colonna, rinominala con il nome della metrica
+                    df.columns = [metric_name]
+                else:
+                    # Se ci sono più colonne, aggiungi il prefisso della metrica
+                    df = df.add_prefix(f"{metric_name}_")
+            else:
+                # Per altre metriche, usa il prefisso della metrica a tutte le colonne
+                metric_name = filename_base.split('_')[0]
+                df = df.add_prefix(f"{metric_name}_")
             
             dfs.append(df)
             
@@ -97,16 +105,9 @@ for metric_group, files in grouped_files.items():
         # Unisci tutti i DataFrame del gruppo
         merged = pd.concat(dfs, axis=1)
         
-        # Aggiungi le colonne comuni all'inizio
-        col_index = 0
-        if source_column is not None:
-            merged.insert(col_index, 'source', source_column)
-            col_index += 1
-        if minutes_column is not None:
-            merged.insert(col_index, 'minutes', minutes_column)
-            col_index += 1
-        if timestamp_column is not None:
-            merged.insert(col_index, 'Timestamp', timestamp_column)
+        # Aggiungi la colonna time all'inizio se presente
+        if time_column is not None:
+            merged.insert(0, 'time', time_column)
         
         # Salva il file per questa metrica
         output_file = os.path.join(target_dir, f"all_{metric_group}.csv")
