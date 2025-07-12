@@ -44,18 +44,16 @@ for metric_group, files in grouped_files.items():
         try:
             df = pd.read_csv(file)
             
-            # Prendi solo la colonna 'minutes' se esiste
             if time_column is None:
                 minutes_cols = [col for col in df.columns if col.lower() == 'minutes']
                 if minutes_cols:
                     time_column = df[minutes_cols[0]].copy()
             
-            # Rimuovi solo colonne temporali diverse da 'minutes'
             cols_to_drop = []
             for col in df.columns:
-                if col.lower() in ['source', 'time', 'timestamp']:
+                if col.lower() in ['time', 'timestamp']:
                     cols_to_drop.append(col)
-                # NON rimuovere 'minutes'
+
             df = df.drop(columns=cols_to_drop, errors='ignore')
             
             filename_base = os.path.splitext(os.path.basename(file))[0]
@@ -78,7 +76,6 @@ for metric_group, files in grouped_files.items():
     if dfs:
         merged = pd.concat(dfs, axis=1)
         
-        # Inserisci la colonna minutes (se trovata)
         if time_column is not None:
             merged.insert(0, 'minutes', time_column)
         
