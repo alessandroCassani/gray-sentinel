@@ -1,0 +1,26 @@
+experiment_name,metric,noise_reduction_pct,correlation,outliers_removed
+baseline,ApiGateway,0.0,1.0,0
+cpu_stress,ApiGateway,0.0,1.0,0
+IO pressure,ApiGateway,0.0,1.0,0
+mem_stress,ApiGateway,0.0,1.0,0
+net_loss,ApiGateway,0.0,1.0,0
+baseline,CustomersService,0.0,1.0,0
+cpu_stress,CustomersService,0.0,1.0,0
+IO pressure,CustomersService,0.0,1.0,0
+mem_stress,CustomersService,0.0,1.0,0
+net_loss,CustomersService,0.0,1.0,0
+baseline,VetsService,0.0,1.0,0
+cpu_stress,VetsService,0.0,1.0,0
+IO pressure,VetsService,0.0,1.0,0
+mem_stress,VetsService,0.0,1.0,0
+net_loss,VetsService,0.0,1.0,0
+baseline,VisitsService,0.0,1.0,0
+cpu_stress,VisitsService,0.0,1.0,0
+IO pressure,VisitsService,0.0,1.0,0
+mem_stress,VisitsService,0.0,1.0,0
+net_loss,VisitsService,0.0,1.0,0
+baseline,SRTT,11.023329099219216,0.9663847385482269,14
+cpu_stress,SRTT,6.571821124428784,0.9445042463645813,10
+IO pressure,SRTT,6.416854597941149,0.9455046820409803,10
+mem_stress,SRTT,5.714034006014244,0.9505623544935541,10
+net_loss,SRTT,0.26366327936051764,0.9785844188915543,10

@@ -2,7 +2,7 @@ TUNA CSV Export Summary Report
 ==================================================
 
 Total files created: 25
-Export timestamp: 2025-07-15 00:35:52.612928
+Export timestamp: 2025-07-15 11:32:13.197968
 
 
 IOWait:
@@ -61,7 +61,7 @@ System:
     Outliers: 18
     Noise reduction: 3.3%
     Correlation: 0.988
-  IIO pressureO:
+  IO pressure:
     Outliers: 49
     Noise reduction: 1.7%
     Correlation: 0.996

@@ -1,0 +1,16 @@
+experiment_name,metric,noise_reduction_pct,correlation,outliers_removed
+baseline,BlockLatency,0.0,1.0,0
+cpu_stress,BlockLatency,0.0,1.0,0
+IO pressure,BlockLatency,0.0,0.9999999999999999,0
+mem_stress,BlockLatency,0.0,1.0,0
+net_loss,BlockLatency,0.0,1.0,0
+baseline,ReadBytes,0.0,1.0,0
+cpu_stress,ReadBytes,25.00768999410619,0.999978434395178,349
+IO pressure,ReadBytes,0.76558372295095,0.99787541063067,52
+mem_stress,ReadBytes,-133.78635648808722,0.3865127098101238,535
+net_loss,ReadBytes,25.005538737254295,0.9999917731042866,138
+baseline,WriteBytes,19.46087929025516,0.9703523033042903,83
+cpu_stress,WriteBytes,21.058797389013023,0.9565383214959039,148
+IO pressure,WriteBytes,0.7688135715253264,0.9977448405292513,114
+mem_stress,WriteBytes,8.06551678549617,0.9880223735229557,188
+net_loss,WriteBytes,25.005538737254295,0.9999917731042866,138
