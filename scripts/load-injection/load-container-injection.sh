@@ -4,13 +4,8 @@ JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter"
 JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter"
 JMX_FILE="petclinic_test_plan.jmx"
 RESULTS_FILE="results.jtl"
-TARGET_SERVICE="api-gateway"
-# Type of JVM failure :
-# 1. loadbalancer-filter-delay - 3-second delay in service selection (slow but working)
-# 2. response-filter-delay - 2-second delay in response writing (slow responses)
-# 3. gc-stress - Memory pressure causing intermittent slowness (performance degradation)
-# 4. route-predicate-delay - 1.5 -second delay in route matching (slower routing decisions)
-CHAOS_TYPE="route-predicate-delay"
+TARGET_SERVICE="customers-service"
+CHAOS_TYPE="gc-stress"
 DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
 CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
@@ -59,7 +54,6 @@ fi
 
 echo "Found container: $CONTAINER_ID for service: $TARGET_SERVICE"
 
-# Get Java process PID (should be 1 in containerized apps)
 JAVA_PID=$(docker exec $CONTAINER_ID ps aux | grep java | grep -v grep | awk '{print $2}' | head -1)
 if [ -z "$JAVA_PID" ]; then
     echo "Error: No Java process found in container $CONTAINER_ID"
@@ -68,43 +62,43 @@ if [ -z "$JAVA_PID" ]; then
 fi
 echo "Found Java process with PID: $JAVA_PID"
 
+docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade prepare jvm --pid 1
+
 # Execute specific JVM chaos injection based on type
 case $CHAOS_TYPE in
-    "loadbalancer-filter-delay")
-        echo "Injecting 3-second delay in load balancer filter..."
-        EXPERIMENT_RESULT=$(docker exec f05816e1a75d /opt/chaosblade-1.7.2/blade create jvm delay \
+    "memory-leak")
+        echo "Injecting gradual memory leak..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm oom \
             --pid $JAVA_PID \
-            --classname "org.springframework.cloud.gateway.filter.LoadBalancerClientFilter" \
-            --methodname "filter" \
-            --time 3000 \
+            --area heap \
+            --interval 10000 \
             --timeout $CHAOS_DURATION)
         ;;
-    "response-filter-delay")
-        echo "Injecting 2-second delay in response filter..."
-        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm delay \
+
+    
+    "thread-exhaustion")
+        echo "Exhausting thread pool..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm threadfull \
             --pid $JAVA_PID \
-            --classname "org.springframework.cloud.gateway.filter.NettyWriteResponseFilter" \
-            --methodname "filter" \
-            --time 2000 \
+            --running \
+            --thread-count 90 \
             --timeout $CHAOS_DURATION)
         ;;
+    
+    "code-cache-fill")
+        echo "Filling up JVM code cache..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm CodeCacheFilling \
+            --timeout $CHAOS_DURATION)
+        ;;
+    
     "gc-stress")
-        echo "Triggering moderate garbage collection stress..."
-        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm full-gc \
-            --pid $JAVA_PID \
-            --effect-count 30 \
-            --interval 2000 \
-            --timeout $CHAOS_DURATION)
-        ;;
-    "route-predicate-delay")
-        echo "Injecting 1-second delay in route predicate matching..."
-        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm delay \
-            --pid $JAVA_PID \
-            --classname "org.springframework.cloud.gateway.handler.RoutePredicateHandlerMapping" \
-            --methodname "getHandlerInternal" \
-            --time 1500 \
-            --timeout $CHAOS_DURATION)
-        ;;
+    echo "Triggering full GC stress in customers service..."
+    EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm full-gc \
+        --pid $JAVA_PID \
+        --effect-count 50 \
+        --interval 1500 \
+        --timeout $CHAOS_DURATION)
+    ;;
     *)
         echo "Unknown JVM chaos type: $CHAOS_TYPE"
         echo "Available types: loadbalancer-filter-delay, response-filter-delay, gc-stress, route-predicate-delay"
@@ -113,7 +107,6 @@ case $CHAOS_TYPE in
         ;;
 esac
 
-echo "ChaosBlade JVM result: $EXPERIMENT_RESULT"
 EXPERIMENT_ID=$(echo $EXPERIMENT_RESULT | grep -o '"result":"[^"]*"' | awk -F'"' '{print $4}')
 
 if [ -z "$EXPERIMENT_ID" ]; then
