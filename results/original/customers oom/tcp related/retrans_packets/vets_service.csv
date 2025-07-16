@@ -1,0 +1,11 @@
+"Time","{__name__=""gala_gopher_tcp_link_retran_packets"", client_ip=""172.26.0.4"", comm=""java"", container_id=""b5bcb7d2f3eb"", container_image=""springcommunity/spring-petclinic-vets-service"", container_name=""/vets-service"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", protocol=""10"", role=""client"", scenario=""customers oom"", server_ip=""172.26.0.2"", server_port=""8888"", tgid=""2772831""}"
+2025-07-15 22:35:00,0
+2025-07-15 22:35:15,0
+2025-07-15 22:35:30,0
+2025-07-15 22:35:45,0
+2025-07-15 22:36:00,0
+2025-07-15 22:36:15,0
+2025-07-15 22:36:30,0
+2025-07-15 22:36:45,0
+2025-07-15 22:37:00,0
+2025-07-15 22:37:15,0

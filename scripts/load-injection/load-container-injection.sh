@@ -1,15 +1,11 @@
 #!/bin/bash
-# Script to run JMeter load test and then call chaos injection script after a delay
-
-JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter" 
+# Script to run JMeter load test and then call JVM chaos injection script after a delay
+JMETER_BIN="/opt/apache-jmeter-5.6.3/bin/jmeter"
 JMETER_TEST_DIR="../../external/petclinic/spring-petclinic-api-gateway/src/test/jmeter"
 JMX_FILE="petclinic_test_plan.jmx"
-RESULTS_FILE="results.jtl" 
-CHAOS_SCRIPT="../failure-injection/container-injection.sh"
-TARGET_SERVICE="customers-service" 
-# Type of failure (cpu, mem, network-loss, network-delay, network-corrupted, 
-# disk-read, disk-write, disk-read-write)
-CHAOS_TYPE="DISK IO" 
+RESULTS_FILE="results.jtl"
+TARGET_SERVICE="customers-service"
+CHAOS_TYPE="gc-stress"
 DELAY_SECONDS=1800 # Wait time before injecting first failure 30m
 CHAOS_DURATION=3000 # Duration of the chaos experiment in seconds 50m
 
@@ -33,15 +29,10 @@ echo "====== Test Configuration ======"
 echo "JMeter Path: $JMETER_BIN"
 echo "JMeter Test Plan: $JMETER_TEST_DIR/$JMX_FILE"
 echo "Target Service: $TARGET_SERVICE"
-echo "Chaos Type: $CHAOS_TYPE"
-echo "injection delay: $DELAY_SECONDS seconds"
+echo "JVM Chaos Type: $CHAOS_TYPE"
+echo "Injection delay: $DELAY_SECONDS seconds"
 echo "Chaos Duration: $CHAOS_DURATION seconds"
 echo "=============================="
-
-if [ ! -f "$CHAOS_SCRIPT" ]; then
-    echo "Error: Chaos script not found at $CHAOS_SCRIPT"
-    exit 1
-fi
 
 echo "Starting JMeter load test..."
 "$JMETER_BIN" -n -t "$JMETER_TEST_DIR/$JMX_FILE" -l $RESULTS_FILE &
@@ -51,17 +42,89 @@ echo "JMeter started with PID: $JMETER_PID"
 echo "Waiting $DELAY_SECONDS seconds before injecting first failure..."
 sleep $DELAY_SECONDS
 
-echo "Executing chaos injection script..."
-EXPERIMENT_RESULT=$(docker exec b32f20864b81 /opt/chaosblade-1.7.2/blade create cpu fullload --cpu-percent 80 )
-echo "ChaosBlade result: $EXPERIMENT_RESULT"
+echo "Executing JVM chaos injection script..."
+
+# Get container ID for the target service
+CONTAINER_ID=$(docker ps | grep $TARGET_SERVICE | awk '{print $1}')
+if [ -z "$CONTAINER_ID" ]; then
+    echo "Error: Container for service '$TARGET_SERVICE' not found"
+    kill $JMETER_PID
+    exit 1
+fi
+
+echo "Found container: $CONTAINER_ID for service: $TARGET_SERVICE"
+
+JAVA_PID=$(docker exec $CONTAINER_ID ps aux | grep java | grep -v grep | awk '{print $2}' | head -1)
+if [ -z "$JAVA_PID" ]; then
+    echo "Error: No Java process found in container $CONTAINER_ID"
+    kill $JMETER_PID
+    exit 1
+fi
+echo "Found Java process with PID: $JAVA_PID"
+
+docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade prepare jvm --pid 1
+
+# Execute specific JVM chaos injection based on type
+case $CHAOS_TYPE in
+    "memory-leak")
+        echo "Injecting gradual memory leak..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm oom \
+            --pid $JAVA_PID \
+            --area heap \
+            --interval 10000 \
+            --timeout $CHAOS_DURATION)
+        ;;
+
+    
+    "thread-exhaustion")
+        echo "Exhausting thread pool..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm threadfull \
+            --pid $JAVA_PID \
+            --running \
+            --thread-count 90 \
+            --timeout $CHAOS_DURATION)
+        ;;
+    
+    "code-cache-fill")
+        echo "Filling up JVM code cache..."
+        EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm CodeCacheFilling \
+            --timeout $CHAOS_DURATION)
+        ;;
+    
+    "gc-stress")
+    echo "Triggering full GC stress in customers service..."
+    EXPERIMENT_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade create jvm full-gc \
+        --pid $JAVA_PID \
+        --effect-count 50 \
+        --interval 1500 \
+        --timeout $CHAOS_DURATION)
+    ;;
+    *)
+        echo "Unknown JVM chaos type: $CHAOS_TYPE"
+        echo "Available types: loadbalancer-filter-delay, response-filter-delay, gc-stress, route-predicate-delay"
+        kill $JMETER_PID
+        exit 1
+        ;;
+esac
+
 EXPERIMENT_ID=$(echo $EXPERIMENT_RESULT | grep -o '"result":"[^"]*"' | awk -F'"' '{print $4}')
+
+if [ -z "$EXPERIMENT_ID" ]; then
+    echo "Warning: Could not extract experiment ID from result"
+    echo "Full result: $EXPERIMENT_RESULT"
+else
+    echo "JVM experiment started with ID: $EXPERIMENT_ID"
+fi
 
 sleep $CHAOS_DURATION
 
-echo "Cleaning up: Destroying mem stress experiment with ID: $EXPERIMENT_ID"
-DESTROY_RESULT=$(docker exec b32f20864b81 /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
-echo "Destroy result: $DESTROY_RESULT"
-
+if [ ! -z "$EXPERIMENT_ID" ]; then
+    echo "Cleaning up: Destroying JVM chaos experiment with ID: $EXPERIMENT_ID"
+    DESTROY_RESULT=$(docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade destroy $EXPERIMENT_ID)
+    echo "Destroy result: $DESTROY_RESULT"
+else
+    echo "Warning: No experiment ID available for cleanup"
+fi
 
 echo "Waiting for JMeter test to complete..."
 wait $JMETER_PID
