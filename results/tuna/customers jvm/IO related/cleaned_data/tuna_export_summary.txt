@@ -1,0 +1,56 @@
+TUNA CSV Export Summary Report
+==================================================
+
+Total files created: 9
+Export timestamp: 2025-07-17 20:07:23.968106
+
+
+ReadBytes:
+------------------------------
+  cache_filling:
+    Outliers: 102
+    Noise reduction: 42.8%
+    Correlation: 0.965
+  gc_stress:
+    Outliers: 109
+    Noise reduction: 45.1%
+    Correlation: 0.977
+  oom:
+    Outliers: 241
+    Noise reduction: 50.0%
+    Correlation: 1.000
+  threadfull:
+    Outliers: 70
+    Noise reduction: 49.1%
+    Correlation: 0.995
+
+WriteBytes:
+------------------------------
+  baseline:
+    Outliers: 39
+    Noise reduction: 29.0%
+    Correlation: 0.946
+  cache_filling:
+    Outliers: 126
+    Noise reduction: 43.4%
+    Correlation: 0.969
+  gc_stress:
+    Outliers: 129
+    Noise reduction: 45.3%
+    Correlation: 0.978
+  oom:
+    Outliers: 145
+    Noise reduction: 44.3%
+    Correlation: 0.968
+  threadfull:
+    Outliers: 78
+    Noise reduction: 49.1%
+    Correlation: 0.995
+
+Overall Statistics:
+------------------------------
+Total data points: 4330
+Total outliers removed: 1039
+Overall outlier percentage: 24.0%
+Average noise reduction: 44.2%
+Average correlation: 0.977
