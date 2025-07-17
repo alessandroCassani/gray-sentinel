@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_tcp_link_retran_packets"", client_ip=""127.0.0.1"", comm=""java"", container_id=""59a93603207d"", container_image=""petclinic-api-gateway-chaos:latest"", container_name=""/api-gateway"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", protocol=""10"", role=""server"", scenario=""jvmoom"", server_ip=""127.0.0.1"", server_port=""36431"", tgid=""2256255""}"
+Time,api_gateway
 2025-07-15 06:13:15,0
 2025-07-15 06:13:30,0
 2025-07-15 06:13:45,0

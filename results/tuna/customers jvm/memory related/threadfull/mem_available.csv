@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_mem_available_kB"", infos=""/proc/meminfo"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", scenario=""customers threadfull""}"
+Time,mem_available
 2025-07-16 06:07:30,16937400
 2025-07-16 06:07:45,16314144
 2025-07-16 06:08:00,16314144

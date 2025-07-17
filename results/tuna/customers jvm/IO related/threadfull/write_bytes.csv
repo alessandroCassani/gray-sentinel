@@ -1,4 +1,4 @@
-"Time","{__name__=""gala_gopher_block_write_bytes"", blk_name=""openeuler-home"", disk_name=""sda"", first_minor=""2"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", major=""253"", scenario=""customers threadfull""}","{__name__=""gala_gopher_block_write_bytes"", blk_name=""openeuler-root"", disk_name=""sda"", first_minor=""0"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", major=""253"", scenario=""customers threadfull""}","{__name__=""gala_gopher_block_write_bytes"", blk_name=""sda"", disk_name=""sda"", first_minor=""0"", instance=""localhost:9888"", job=""gala-gopher"", machine_id=""e519aef0-09d0-4de2-b55b-e83d5d003f30-192.168.122.86"", major=""8"", scenario=""customers threadfull""}"
+Time,openeuler-home,openeuler-root,openeuler-swap,sda
 2025-07-16 06:07:30,1175552,3002368,4546560
 2025-07-16 06:07:45,1175552,3002368,4546560
 2025-07-16 06:08:00,1175552,3366912,4300800
