@@ -1,0 +1,16 @@
+experiment_name,metric,noise_reduction_pct,correlation,outliers_removed
+baseline,CustomersService,0.0,1.0,0
+cpu_stress,CustomersService,0.0,1.0,0
+delay,CustomersService,0.0,1.0,0
+mem_stress,CustomersService,0.0,1.0,0
+net_loss,CustomersService,0.0,1.0,0
+baseline,VisitsService,0.0,1.0,0
+cpu_stress,VisitsService,0.0,1.0,0
+delay,VisitsService,0.0,1.0,0
+mem_stress,VisitsService,0.0,1.0,0
+net_loss,VisitsService,0.0,1.0,0
+baseline,SRTT,12.571000898140191,0.9520584302869081,0
+cpu_stress,SRTT,8.365294674844652,0.9608576298625918,0
+delay,SRTT,4.344932673141825,0.9699524597760798,0
+mem_stress,SRTT,9.161468252251256,0.9575375262140153,0
+net_loss,SRTT,3.088377811756253,0.9805600747607881,0
