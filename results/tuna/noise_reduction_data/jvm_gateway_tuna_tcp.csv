@@ -1,4 +1,9 @@
 experiment_name,metric,noise_reduction_pct,correlation,outliers_removed
+baseline,ApiGateway,0.0,1.0,0
+cache_filling,ApiGateway,0.0,1.0,0
+gc_stress,ApiGateway,0.0,1.0,0
+oom,ApiGateway,0.0,1.0,0
+threadfull,ApiGateway,0.0,1.0,0
 baseline,CustomersService,0.0,1.0,0
 cache_filling,CustomersService,0.0,1.0,0
 gc_stress,CustomersService,0.0,1.0,0
