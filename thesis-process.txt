@@ -51,7 +51,7 @@ TUNA nel dettaglio. tutto l'algoritmo, come è stato adattato. ogni singola funz
 rapporto tra window, threshold, e oscillazione e variabilità della serie temporale (ricorda che il goal è denoising e  effettuare outlier removal). In OS ci sta che si abbiano diversi burst. 
 quindi i parametri li adotti in base alla singola time series e gli spike presenti. nornali osccilazioni tramite ML denoising
 per serie altamente variabili, window + piccole e threshold alte in modo da evitare over smoothing.
-per serie pressoche costanti. window alte e threshold basse
+per serie pressoche costanti. window alte e threshold basse. se ho segnali stbaili con oscillazioni stabili le reputo normale comportamento di sistema. altrimenti spike
 
 feature engineering: outliers and nois reduction through TUNA, added features for trends
   
