@@ -64,7 +64,6 @@ echo "Found Java process with PID: $JAVA_PID"
 
 docker exec $CONTAINER_ID /opt/chaosblade-1.7.2/blade prepare jvm --pid 1
 
-# Execute specific JVM chaos injection based on type
 case $CHAOS_TYPE in
     "memory-leak")
         echo "Injecting gradual memory leak..."
@@ -101,7 +100,6 @@ case $CHAOS_TYPE in
     ;;
     *)
         echo "Unknown JVM chaos type: $CHAOS_TYPE"
-        echo "Available types: loadbalancer-filter-delay, response-filter-delay, gc-stress, route-predicate-delay"
         kill $JMETER_PID
         exit 1
         ;;
