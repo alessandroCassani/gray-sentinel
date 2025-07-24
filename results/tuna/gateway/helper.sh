@@ -14,15 +14,15 @@ for TARGET_EXPERIMENT in "${EXPERIMENTS[@]}"; do
     find $TARGET_EXPERIMENT -type f -exec cp -f {} ../../unified/$TARGET_EXPERIMENT \;
     cd ../..
 
-    cd "IO related/cleaned_disk_data"
+    cd "IO related/cleaned_data"
     find $TARGET_EXPERIMENT -type f -exec cp -f {} ../../unified/$TARGET_EXPERIMENT \;
     cd ../..
 
-    cd "memory related/cleaned_memory_data"
+    cd "memory related/cleaned_data"
     find $TARGET_EXPERIMENT -type f -exec cp -f {} ../../unified/$TARGET_EXPERIMENT \;
     cd ../..
 
-    cd "tcp related/cleaned_tcp_data"
+    cd "tcp related/cleaned_data"
     find $TARGET_EXPERIMENT -type f -exec cp -f {} ../../unified/$TARGET_EXPERIMENT \;
     cd ../..
 
