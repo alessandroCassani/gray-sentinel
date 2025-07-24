@@ -1,7 +1,7 @@
 #!/bin/bash
 echo $(pwd)
 
-EXPERIMENTS=("cache filling" "oom" "threadfull")
+EXPERIMENTS=("cache_filling" "oom" "threadfull" "gc_stress")
 
 for TARGET_EXPERIMENT in "${EXPERIMENTS[@]}"; do
     # Clean up any existing directory first
