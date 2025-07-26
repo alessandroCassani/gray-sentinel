@@ -5,7 +5,6 @@ echo "====================="
 echo "Current directory: $(pwd)"
 echo ""
 
-# Your experiments
 EXPERIMENTS=("baseline" "cache_filling" "gc_stress" "oom" "threadfull")
 
 # Metric source directories (the main directories in your structure)
