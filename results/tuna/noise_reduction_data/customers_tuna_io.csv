@@ -1,4 +1,9 @@
 experiment_name,metric,noise_reduction_pct,correlation,outliers_removed
+baseline,BlockLatency,0.0,1.0,0
+cpu_stress,BlockLatency,0.0,1.0,0
+IO pressure,BlockLatency,0.0,1.0,0
+mem_stress,BlockLatency,0.0,1.0,0
+net_loss,BlockLatency,0.0,1.0,0
 baseline,ReadBytes,0.0,1.0,0
 cpu_stress,ReadBytes,50.087572738247786,0.9995644614383131,170
 IO pressure,ReadBytes,1.1683320358443285,0.9911590155296472,73
