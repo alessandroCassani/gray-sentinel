@@ -63,10 +63,9 @@ scelta del numero di feature ottimali, pro e contro.
 
 implementazione lstm, prima autoencoder ma gray failure sovrapponibili a baseline.
 
-approccio compatto, gestione e comparazione tra layer obiettivo ottimizzare recall. cuatom funzione di perdita? utilizo class weights.
+approccio compatto, gestione e comparazione tra layer obiettivo ottimizzare recall. cuatom funzione di perdita? utilizo class weights. A_Supervised_Deep_Learning_Framework_for_Proactive_Anomaly_Detection_in_Cloud_Workloads
  fase di threshold tuning per ottimizzare recall 
 print("Thresh | Prec | Rec  | F1   | Acc")
-
 for t in thresholds:
     y_pred = (y_prob >= t).astype(int)
     f1 = f1_score(y_test, y_pred)
