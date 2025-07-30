@@ -1,0 +1,47 @@
+{
+  "timestamp": "20250730_154446",
+  "parameters": {
+    "experiment_name": "final_optimized",
+    "method": "robust_anomaly",
+    "n_runs": 7,
+    "seq_len": 8,
+    "lstm1_units": 56,
+    "lstm2_units": 28,
+    "dropout_rate": 0.35,
+    "learning_rate": 8e-05,
+    "focal_alpha": 0.75,
+    "focal_gamma": 2.3,
+    "break_temporal_pattern": true,
+    "add_noise": true,
+    "batch_size": 128
+  },
+  "metrics": {
+    "f1_score_mean": 0.6569440951238449,
+    "f1_score_std": 0.12708336342071655,
+    "recall_mean": 0.7874339229955917,
+    "recall_std": 0.10291161551254588,
+    "precision_mean": 0.6168138951791377,
+    "precision_std": 0.23430255372857917,
+    "roc_auc_mean": 0.7567006881915272,
+    "roc_auc_std": 0.11128179453619941,
+    "total_false_negatives": 699,
+    "miss_rate": 0.21246200607902735,
+    "stability_cv_f1": 0.1934462374561099,
+    "stability_cv_auc": 0.14706183868043882
+  },
+  "training_history": {
+    "loss": [
+      0.05
+    ],
+    "val_loss": [
+      0.06
+    ],
+    "accuracy": [
+      0.75
+    ],
+    "val_accuracy": [
+      0.73
+    ]
+  },
+  "plots_path": null
+}

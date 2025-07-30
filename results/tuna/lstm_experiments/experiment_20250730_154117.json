@@ -1,0 +1,47 @@
+{
+  "timestamp": "20250730_154117",
+  "parameters": {
+    "experiment_name": "enhanced_capacity",
+    "method": "robust_anomaly",
+    "n_runs": 5,
+    "seq_len": 8,
+    "lstm1_units": 64,
+    "lstm2_units": 32,
+    "dropout_rate": 0.3,
+    "learning_rate": 0.0001,
+    "focal_alpha": 0.8,
+    "focal_gamma": 2.5,
+    "break_temporal_pattern": true,
+    "add_noise": true,
+    "batch_size": 128
+  },
+  "metrics": {
+    "f1_score_mean": 0.6648210191363291,
+    "f1_score_std": 0.10972072918816726,
+    "recall_mean": 0.738269788602204,
+    "recall_std": 0.1654096581801318,
+    "precision_mean": 0.680376715740691,
+    "precision_std": 0.21585592340505783,
+    "roc_auc_mean": 0.7639555553790102,
+    "roc_auc_std": 0.11948225588600049,
+    "total_false_negatives": 607,
+    "miss_rate": 0.258078231292517,
+    "stability_cv_f1": 0.16503799673889039,
+    "stability_cv_auc": 0.15639948560453035
+  },
+  "training_history": {
+    "loss": [
+      0.05
+    ],
+    "val_loss": [
+      0.06
+    ],
+    "accuracy": [
+      0.75
+    ],
+    "val_accuracy": [
+      0.73
+    ]
+  },
+  "plots_path": null
+}
