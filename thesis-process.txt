@@ -55,7 +55,7 @@ per serie pressoche costanti. window alte e threshold basse. se ho segnali stbai
 
 feature engineering: outliers and nois reduction through TUNA, added features for trends
 
-aggiunta feature di trend e cross feature
+aggiunta feature di trend, accelerazione momentum.
 
 riduzione delle feature tramitemax relevance less redundancy dal paper.
 
@@ -63,16 +63,11 @@ scelta del numero di feature ottimali, pro e contro.
 
 implementazione lstm, prima autoencoder ma gray failure sovrapponibili a baseline.
 
-approccio compatto, gestione e comparazione tra layer obiettivo ottimizzare recall. cuatom funzione di perdita? utilizo class weights. A_Supervised_Deep_Learning_Framework_for_Proactive_Anomaly_Detection_in_Cloud_Workloads
- fase di threshold tuning per ottimizzare recall 
-print("Thresh | Prec | Rec  | F1   | Acc")
-for t in thresholds:
-    y_pred = (y_prob >= t).astype(int)
-    f1 = f1_score(y_test, y_pred)
-    recall = recall_score(y_test, y_pred)
-    prec = precision_score(y_test, y_pred)
-    acc = np.mean(y_pred == y_test)
-    print(f"{t:.2f}   | {prec:.2f} | {recall:.2f} | {f1:.2f} | {acc:.2f}")
-    if f1 > best_f1:
-        best_f1, best_thresh = f1, t
+implemntazione di feature selction con algoritmo: A_Supervised_Deep_Learning_Framework_for_Proactive_Anomaly_Detection_in_Cloud_Workloads
+Malhotra et al. (2015) - "Long Short Term Memory Networks for Anomaly Detection in Time Series" - usa 6-12 features
+Su et al. (2019) - "Robust Anomaly Detection for Multivariate Time Series through Stochastic Recurrent Neural Network" - raccomanda <15 features
+Audibert et al. (2020) - "USAD: UnSupervised Anomaly Detection on Multivariate Time Series" - usa 8-25 features con performance migliori sui numeri più bassi
+
+tronato su autoencoder.
+
   
