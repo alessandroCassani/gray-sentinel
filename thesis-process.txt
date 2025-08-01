@@ -70,4 +70,24 @@ Audibert et al. (2020) - "USAD: UnSupervised Anomaly Detection on Multivariate T
 
 tronato su autoencoder.
 
+logica di split del paper, no shuffle.
+def build_autoencoder(seq_len, n_features):
+    input_layer = Input(shape=(seq_len, n_features))
+    
+    # Encoder
+    encoded = LSTM(32, activation='relu', return_sequences=True)(input_layer)
+    encoded = Dropout(0.2)(encoded)
+    encoded = LSTM(16, activation='relu', return_sequences=False)(encoded)
+    encoded = Dense(8, activation='relu')(encoded)
+    
+    # Decoder
+    decoded = RepeatVector(seq_len)(encoded)
+    decoded = LSTM(16, activation='relu', return_sequences=True)(decoded)
+    decoded = Dropout(0.2)(decoded)
+    decoded = LSTM(32, activation='relu', return_sequences=True)(decoded)
+    decoded = TimeDistributed(Dense(n_features, activation='sigmoid'))(decoded)
+    
+    autoencoder = Model(input_layer, decoded)
+    return autoencoder
+  architettura originale, con bottleneck a 4 recall + alta per failure ma recall no failire del 50%. modello non generalizza bene e non cattura pattern
   
