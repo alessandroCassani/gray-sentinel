@@ -1,19 +1,3 @@
-"""
-LSTM AUTOENCODER CON DATASET SPLIT DEL PAPER
-===========================================
-
-Mantiene il codice originale (architettura, threshold semplice) ma utilizza
-la suddivisione del dataset esattamente come descritto nel paper Malhotra et al. 2015
-
-Split del paper:
-- sN: normal train (60%) - per training del modello
-- vN1: normal validation-1 (15%) - per early stopping
-- vN2: normal validation-2 (15%) - per stima distribuzione/threshold
-- tN: normal test (10%) - per test finale
-- vA: anomalous validation (50%) - per ottimizzazione threshold
-- tA: anomalous test (50%) - per test finale
-"""
-
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
@@ -27,60 +11,46 @@ from tensorflow.keras.layers import LSTM, Dense, Dropout, RepeatVector, TimeDist
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
 
-# ================================================================
-# 1. DATASET PREPARATION CON SPLIT DEL PAPER
-# ================================================================
-
-def create_paper_splits_simple(df_engineered, selected_features, sequence_length=20, random_state=42):
-    """
-    Crea splits seguendo il paper ma per uso con codice originale
-    """
-    print("🔄 CREAZIONE DATASET SPLITS SEGUENDO IL PAPER...")
-    print("=" * 60)
-    
-    # Separazione dati normali e anomali
+def create_splits(df_engineered, selected_features, sequence_length=20, random_state=42):    
     normal_data = df_engineered[df_engineered['Failure'] == 0]
     anomalous_data = df_engineered[df_engineered['Failure'] == 1]
     
-    print(f"📊 Dataset Overview:")
-    print(f"   Totale campioni: {len(df_engineered):,}")
-    print(f"   Campioni normali: {len(normal_data):,} ({len(normal_data)/len(df_engineered)*100:.1f}%)")
-    print(f"   Campioni anomali: {len(anomalous_data):,} ({len(anomalous_data)/len(df_engineered)*100:.1f}%)")
-    print(f"   Features selezionate: {len(selected_features)}")
-    
-    # === SPLIT DATI NORMALI ===
     normal_features = normal_data[selected_features].values
+    n_normal = len(normal_features)
     
-    # Prima divisione: 60% train, 40% resto
-    sN_data, temp_normal = train_test_split(
-        normal_features, test_size=0.4, random_state=random_state, shuffle=True
-    )
+    idx_60 = int(0.6 * n_normal)  
+    idx_75 = int(0.75 * n_normal)  
+    idx_90 = int(0.9 * n_normal)   
     
-    # Seconda divisione: 15% vN1, 25% resto
-    vN1_data, temp_normal2 = train_test_split(
-        temp_normal, test_size=0.625, random_state=random_state  # 25/40 = 0.625
-    )
+
+    sN_data = normal_features[:idx_60]                    # 0% → 60%
+    vN1_data = normal_features[idx_60:idx_75]             # 60% → 75%
+    vN2_data = normal_features[idx_75:idx_90]             # 75% → 90% 
+    tN_data = normal_features[idx_90:]                    # 90% → 100%
     
-    # Terza divisione: 15% vN2, 10% tN
-    vN2_data, tN_data = train_test_split(
-        temp_normal2, test_size=0.4, random_state=random_state  # 10/25 = 0.4
-    )
-    
-    # === SPLIT DATI ANOMALI ===
     anomalous_features = anomalous_data[selected_features].values
-    vA_data, tA_data = train_test_split(
-        anomalous_features, test_size=0.5, random_state=random_state
-    )
+    n_anomalous = len(anomalous_features)
+    idx_50_anom = int(0.5 * n_anomalous)
     
-    # Statistiche
-    total_normal = len(normal_features)
-    print(f"\\n📋 SPLITS CREATI:")
-    print(f"   sN  (normal train):     {len(sN_data):,} ({len(sN_data)/total_normal*100:.1f}%)")
-    print(f"   vN1 (normal val-1):     {len(vN1_data):,} ({len(vN1_data)/total_normal*100:.1f}%)")
-    print(f"   vN2 (normal val-2):     {len(vN2_data):,} ({len(vN2_data)/total_normal*100:.1f}%)")
-    print(f"   tN  (normal test):      {len(tN_data):,} ({len(tN_data)/total_normal*100:.1f}%)")
-    print(f"   vA  (anomalous val):    {len(vA_data):,} (50.0%)")
-    print(f"   tA  (anomalous test):   {len(tA_data):,} (50.0%)")
+    vA_data = anomalous_features[:idx_50_anom]            
+    tA_data = anomalous_features[idx_50_anom:]            
+    
+    print(f"\n📋 TIME-AWARE SPLITS CREATI:")
+    print(f"   sN  (normal train):     {len(sN_data):,} ({len(sN_data)/n_normal*100:.1f}%) - Early period")
+    print(f"   vN1 (normal val-1):     {len(vN1_data):,} ({len(vN1_data)/n_normal*100:.1f}%) - Mid-early period") 
+    print(f"   vN2 (normal val-2):     {len(vN2_data):,} ({len(vN2_data)/n_normal*100:.1f}%) - Mid-late period")
+    print(f"   tN  (normal test):      {len(tN_data):,} ({len(tN_data)/n_normal*100:.1f}%) - Late period")
+    print(f"   vA  (anomalous val):    {len(vA_data):,} (50.0%) - Early anomalies")
+    print(f"   tA  (anomalous test):   {len(tA_data):,} (50.0%) - Late anomalies")
+    
+    if len(sN_data) >= sequence_length and len(vN1_data) >= sequence_length:
+        time_gap = idx_60 - sequence_length
+        print(f"\n🔍 ANALISI TEMPORALE:")
+        print(f"   Gap between train end and val start: {time_gap * 15}s ({time_gap * 15/60:.1f}min)")
+        if time_gap < 0:
+            print(f"  Potential temporal overlap due to sequence length!")
+        else:
+            print(f"   Clean temporal separation maintained")
     
     return {
         'sN': sN_data,
@@ -91,62 +61,36 @@ def create_paper_splits_simple(df_engineered, selected_features, sequence_length
         'tA': tA_data
     }
 
-def prepare_data_with_paper_splits(df_engineered, selected_features, sequence_length=20):
-    """
-    Prepara i dati usando la suddivisione del paper ma mantenendo
-    compatibilità con il codice originale
-    """
-    print("\\n🔧 PREPARAZIONE DATI CON PAPER SPLITS...")
-    
-    # Crea splits
-    splits = create_paper_splits_simple(df_engineered, selected_features, sequence_length)
-    
-    # Normalizzazione (fit solo su sN)
-    print("\\n   Normalizzazione dati...")
-    scaler = MinMaxScaler()
-    
-    # Fit scaler solo sui dati di training normali
-    splits['sN'] = scaler.fit_transform(splits['sN'])
-    
-    # Transform tutti gli altri
-    for key in ['vN1', 'vN2', 'tN', 'vA', 'tA']:
-        if len(splits[key]) > 0:
-            splits[key] = scaler.transform(splits[key])
-    
-    # Funzione per creare sequenze
-    def create_sequences(X, seq_length):
+def create_sequences(X, seq_length):
         if len(X) < seq_length:
             return np.array([])
         X_seq = []
         for i in range(seq_length, len(X)):
             X_seq.append(X[i-seq_length:i])
         return np.array(X_seq)
+
+def prepare_data(df_engineered, selected_features, sequence_length=20):
     
-    # Crea sequenze per ogni split
-    print("\\n   Creazione sequenze temporali...")
+    splits = create_splits(df_engineered, selected_features)
+    scaler = MinMaxScaler()
+    splits['sN'] = scaler.fit_transform(splits['sN'])
+    
+    for key in ['vN1', 'vN2', 'tN', 'vA', 'tA']:                    #TODO move the scaler before to fit on all normal data not only subset
+        splits[key] = scaler.transform(splits[key])
+
     sequences = {}
     for split_name, data in splits.items():
         sequences[split_name] = create_sequences(data, sequence_length)
-        if len(sequences[split_name]) > 0:
-            print(f"     {split_name}: {len(sequences[split_name]):,} sequenze")
-        else:
-            print(f"     {split_name}: ⚠️ dati insufficienti")
     
-    # Prepara dati per compatibilità con codice originale
-    print("\\n   Preparazione dati compatibili...")
-    
-    # Training e validation (come nel codice originale)
     X_train = sequences['sN']
     X_val = sequences['vN1']
     
-    # Per threshold optimization: combina vN2 (normale) + vA (anomalo)
     threshold_sequences = np.concatenate([sequences['vN2'], sequences['vA']])
     threshold_labels = np.concatenate([
-        np.zeros(len(sequences['vN2'])),  # normale = 0
-        np.ones(len(sequences['vA']))     # anomalo = 1
+        np.zeros(len(sequences['vN2'])),
+        np.ones(len(sequences['vA']))
     ])
     
-    # Per test finale: combina tN (normale) + tA (anomalo) 
     test_sequences = np.concatenate([sequences['tN'], sequences['tA']])
     test_labels = np.concatenate([
         np.zeros(len(sequences['tN'])),
@@ -166,17 +110,10 @@ def prepare_data_with_paper_splits(df_engineered, selected_features, sequence_le
         'test_sequences': test_sequences,
         'test_labels': test_labels,
         'scaler': scaler,
-        'sequences': sequences  # Per analisi dettagliate
+        'sequences': sequences
     }
 
-# ================================================================
-# 2. MODELLO LSTM AUTOENCODER (CODICE ORIGINALE)
-# ================================================================
-
-def build_autoencoder_original(seq_len, n_features):
-    """
-    Stesso modello del codice originale
-    """
+def build_autoencoder(seq_len, n_features):
     input_layer = Input(shape=(seq_len, n_features))
     
     # Encoder
@@ -195,14 +132,7 @@ def build_autoencoder_original(seq_len, n_features):
     autoencoder = Model(input_layer, decoded)
     return autoencoder
 
-# ================================================================
-# 3. THRESHOLD OPTIMIZATION (CODICE ORIGINALE)
-# ================================================================
-
-def find_balanced_threshold_original(normal_err, all_err, all_labels):
-    """
-    Stessa funzione del codice originale per threshold optimization
-    """
+def find_threshold(normal_err, all_err, all_labels):
     percentiles = np.arange(75, 88, 0.5)
     
     best_score = 0
@@ -210,7 +140,7 @@ def find_balanced_threshold_original(normal_err, all_err, all_labels):
     best_metrics = {}
     results = []
     
-    print("\\nThreshold optimization for balanced anomaly detection:")
+    print("\nThreshold optimization for balanced anomaly detection:")
     print("Percentile | Threshold  | Precision | Recall | FPR    | Score")
     print("-" * 65)
     
@@ -227,7 +157,6 @@ def find_balanced_threshold_original(normal_err, all_err, all_labels):
             tn, fp, fn, tp = cm.ravel()
             fpr = fp / (fp + tn) if (fp + tn) > 0 else 0
             
-            # Score bilanciato (stesso del codice originale)
             if fpr > 0.25:
                 score = 0.1
             elif recall < 0.70:
@@ -261,23 +190,8 @@ def find_balanced_threshold_original(normal_err, all_err, all_labels):
     
     return best_threshold, best_metrics, results
 
-# ================================================================
-# 4. FUNZIONE PRINCIPALE
-# ================================================================
-
-def run_original_code_with_paper_splits(df_engineered, selected_features, sequence_length=20):
-    """
-    Esegue il codice originale ma con la suddivisione del dataset del paper
-    """
-    print("🚀 LSTM AUTOENCODER - CODICE ORIGINALE CON PAPER SPLITS")
-    print("=" * 80)
-    print("   Architettura: ORIGINALE (LSTM Autoencoder)")
-    print("   Dataset Split: PAPER (Malhotra et al. 2015)")
-    print("   Threshold: BALANCED (Precision/Recall trade-off)")
-    print("=" * 80)
-    
-    # === STEP 1: Preparazione Dati ===
-    data_splits = prepare_data_with_paper_splits(df_engineered, selected_features, sequence_length)
+def train_and_evaluate(df_engineered, selected_features, sequence_length=20):
+    data_splits = prepare_data(df_engineered, selected_features, sequence_length)
     
     X_train = data_splits['X_train']
     X_val = data_splits['X_val']
@@ -286,21 +200,17 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
     test_sequences = data_splits['test_sequences']
     test_labels = data_splits['test_labels']
     
-    # === STEP 2: Costruzione e Training Modello ===
-    print("\\n🏗️ COSTRUZIONE E TRAINING MODELLO...")
-    
-    autoencoder = build_autoencoder_original(sequence_length, len(selected_features))
+    autoencoder = build_autoencoder(sequence_length, len(selected_features))
     autoencoder.compile(optimizer=Adam(learning_rate=0.001), loss='mse', metrics=['mae'])
     
     print(f"   Parametri modello: {autoencoder.count_params():,}")
+    print(f"   Training set: {X_train.shape}")
+    print(f"   Validation set: {X_val.shape}")
     
     callbacks = [
         EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True),
         ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=5, min_lr=1e-6)
     ]
-    
-    print(f"   Training set: {X_train.shape}")
-    print(f"   Validation set: {X_val.shape}")
     
     history = autoencoder.fit(
         X_train, X_train,
@@ -312,16 +222,11 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
     )
     
     print(f"   ✅ Training completato in {len(history.history['loss'])} epoche")
-    
-    # === STEP 3: Threshold Optimization ===
-    print("\\n🎯 OTTIMIZZAZIONE THRESHOLD SU VALIDATION SETS...")
     print(f"   Usando vN2 + vA: {len(threshold_sequences):,} campioni")
     
-    # Calcola reconstruction errors sui dati di threshold optimization
     threshold_predictions = autoencoder.predict(threshold_sequences, verbose=0)
     threshold_errors = np.mean(np.abs(threshold_predictions - threshold_sequences), axis=(1, 2))
     
-    # Separa errori normali e anomali per analisi
     normal_mask_thresh = threshold_labels == 0
     normal_errors_thresh = threshold_errors[normal_mask_thresh]
     anomaly_errors_thresh = threshold_errors[~normal_mask_thresh]
@@ -330,30 +235,25 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
     print(f"   Errori anomali (vA): μ={np.mean(anomaly_errors_thresh):.4f}, σ={np.std(anomaly_errors_thresh):.4f}")
     print(f"   Separazione: {np.mean(anomaly_errors_thresh)/np.mean(normal_errors_thresh):.2f}x")
     
-    # Trova threshold ottimale
-    best_threshold, best_metrics, threshold_results = find_balanced_threshold_original(
+    best_threshold, best_metrics, threshold_results = find_threshold(
         normal_errors_thresh, threshold_errors, threshold_labels
     )
     
-    # === STEP 4: Test Finale ===
-    print("\\n🏁 TEST FINALE SU DATI INDIPENDENTI...")
+    # Test finale
+    print("\n🏁 TEST FINALE SU DATI INDIPENDENTI...")
     print(f"   Test set: {test_sequences.shape}")
     print(f"   Normale (tN): {np.sum(test_labels == 0):,}")
     print(f"   Anomalo (tA): {np.sum(test_labels == 1):,}")
     
-    # Predizioni su test set
     test_predictions = autoencoder.predict(test_sequences, verbose=0)
     test_errors = np.mean(np.abs(test_predictions - test_sequences), axis=(1, 2))
-    
-    # Classificazione finale
     final_predictions = (test_errors > best_threshold).astype(int)
     
-    # === RISULTATI FINALI ===
-    print("\\n" + "=" * 80)
+    # Risultati finali
+    print("\n" + "=" * 80)
     print("📊 RISULTATI FINALI - CODICE ORIGINALE CON PAPER SPLITS")
     print("=" * 80)
     
-    # Metriche principali
     final_precision = precision_score(test_labels, final_predictions)
     final_recall = recall_score(test_labels, final_predictions)
     final_f1 = f1_score(test_labels, final_predictions)
@@ -370,31 +270,28 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
     print(f"   Features: {len(selected_features)}")
     print(f"   Training samples: {len(X_train):,}")
     
-    print(f"\\n📈 PERFORMANCE (Test Indipendente):")
+    print(f"\n📈 PERFORMANCE (Test Indipendente):")
     print(f"   Threshold: {best_threshold:.6f}")
     print(f"   Precision: {final_precision:.3f}")
     print(f"   Recall: {final_recall:.3f}")
     print(f"   F1-Score: {final_f1:.3f}")
     print(f"   ROC AUC: {final_auc:.3f}")
     
-    # Confusion Matrix
     cm = confusion_matrix(test_labels, final_predictions)
     tn, fp, fn, tp = cm.ravel()
     
-    print(f"\\n📋 CONFUSION MATRIX:")
+    print(f"\n📋 CONFUSION MATRIX:")
     print(f"   TN: {tn:,}, FP: {fp:,}")
     print(f"   FN: {fn:,}, TP: {tp:,}")
     
-    # Metriche pratiche
     missed_failures = fn / (tp + fn) * 100 if (tp + fn) > 0 else 0
     false_alarm_rate = fp / (tn + fp) * 100 if (tn + fp) > 0 else 0
     
-    print(f"\\n⚡ METRICHE PRATICHE:")
+    print(f"\n⚡ METRICHE PRATICHE:")
     print(f"   Detection rate: {tp/(tp+fn)*100:.1f}%")
     print(f"   Missed failures: {missed_failures:.1f}%")
     print(f"   False alarm rate: {false_alarm_rate:.1f}%")
     
-    # Valutazione
     if missed_failures <= 30 and false_alarm_rate <= 25:
         status = "✅ EXCELLENT: Both metrics in acceptable range"
     elif missed_failures <= 35 and false_alarm_rate <= 30:
@@ -404,10 +301,9 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
     else:
         status = "❌ NEEDS IMPROVEMENT: Too many missed failures or false alarms"
     
-    print(f"\\n{status}")
+    print(f"\n{status}")
     
-    # Confronto threshold vs validation optimization
-    print(f"\\n🔍 ANALISI THRESHOLD OPTIMIZATION:")
+    print(f"\n🔍 ANALISI THRESHOLD OPTIMIZATION:")
     print(f"   Validation metrics (vN2+vA):")
     print(f"     Precision: {best_metrics['precision']:.3f}")
     print(f"     Recall: {best_metrics['recall']:.3f}")
@@ -421,11 +317,10 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
     generalization_gap = abs(best_metrics['f1'] - final_f1)
     print(f"   Generalization gap: {generalization_gap:.3f} ({'✅ Good' if generalization_gap < 0.1 else '⚠️ High' if generalization_gap < 0.2 else '❌ Poor'})")
     
-    print("\\n" + "=" * 80)
+    print("\n" + "=" * 80)
     print("✅ ANALISI COMPLETATA")
     print("=" * 80)
     
-    # Ritorna risultati per visualizzazioni
     return {
         'model': autoencoder,
         'history': history,
@@ -448,14 +343,7 @@ def run_original_code_with_paper_splits(df_engineered, selected_features, sequen
         'threshold_labels': threshold_labels
     }
 
-# ================================================================
-# 5. VISUALIZZAZIONI (OPZIONALI)
-# ================================================================
-
-def plot_results_with_paper_splits(results):
-    """
-    Crea visualizzazioni per i risultati con paper splits
-    """
+def plot_results(results):
     fig, axes = plt.subplots(2, 3, figsize=(18, 12))
     
     # Training curves
@@ -477,7 +365,7 @@ def plot_results_with_paper_splits(results):
     axes[0,1].legend()
     axes[0,1].grid(True, alpha=0.3)
     
-    # Error distributions (threshold optimization data)
+    # Error distributions (threshold optimization)
     threshold_errors = results['threshold_errors']
     threshold_labels = results['threshold_labels'] 
     
@@ -489,7 +377,7 @@ def plot_results_with_paper_splits(results):
     axes[0,2].hist(anomaly_errors, bins=50, alpha=0.7, label=f'Anomaly vA (μ={np.mean(anomaly_errors):.4f})', 
                    density=True, color='red')
     axes[0,2].axvline(results['threshold'], color='green', linestyle='--', linewidth=2, label='Optimal Threshold')
-    axes[0,2].set_title('Reconstruction Error Distribution\\n(Threshold Optimization: vN2 + vA)')
+    axes[0,2].set_title('Reconstruction Error Distribution\n(Threshold Optimization: vN2 + vA)')
     axes[0,2].set_xlabel('MAE Error')
     axes[0,2].set_ylabel('Density')
     axes[0,2].legend()
@@ -522,13 +410,13 @@ def plot_results_with_paper_splits(results):
     axes[1,1].hist(test_anomaly_errors, bins=50, alpha=0.7, label=f'Anomaly tA (μ={np.mean(test_anomaly_errors):.4f})', 
                    density=True, color='lightcoral')
     axes[1,1].axvline(results['threshold'], color='green', linestyle='--', linewidth=2, label='Threshold')
-    axes[1,1].set_title('Test Set Error Distribution\\n(Final Test: tN + tA)')
+    axes[1,1].set_title('Test Set Error Distribution\n(Final Test: tN + tA)')
     axes[1,1].set_xlabel('MAE Error')
     axes[1,1].set_ylabel('Density')
     axes[1,1].legend()
     axes[1,1].grid(True, alpha=0.3)
     
-    # Confusion Matrix (test results)
+    # Confusion Matrix
     test_predictions = results['test_results']['predictions']
     cm = confusion_matrix(test_labels, test_predictions)
     
@@ -536,35 +424,28 @@ def plot_results_with_paper_splits(results):
                 xticklabels=['Normal', 'Failure'],
                 yticklabels=['Normal', 'Failure'],
                 ax=axes[1,2])
-    axes[1,2].set_title('Test Results Confusion Matrix\\n(Independent Test Set)')
+    axes[1,2].set_title('Test Results Confusion Matrix\n(Independent Test Set)')
     axes[1,2].set_xlabel('Predicted')
     axes[1,2].set_ylabel('Actual')
     
     plt.tight_layout()
     plt.show()
     
-    # Summary
     test_metrics = results['test_results']['metrics']
-    print(f"\\n📊 SUMMARY:")
+    print(f"\n📊 SUMMARY:")
     print(f"   Paper splits utilizzati: ✅")
     print(f"   Codice originale mantenuto: ✅")
     print(f"   Test finale F1: {test_metrics['f1']:.3f}")
     print(f"   Test finale AUC: {test_metrics['auc']:.3f}")
 
-# ================================================================
-# 6. ESEMPIO DI UTILIZZO
-# ================================================================
-
-
-results = run_original_code_with_paper_splits(
+# Esecuzione
+results = train_and_evaluate(
     df_engineered=df_engineered,
     selected_features=selected_features,
     sequence_length=20
 )
 
-# Opzionale: visualizzazioni
-plot_results_with_paper_splits(results)
+plot_results(results)
 
-# Accesso ai risultati
 final_f1 = results['test_results']['metrics']['f1']
 print(f"F1-Score finale: {final_f1:.3f}")
