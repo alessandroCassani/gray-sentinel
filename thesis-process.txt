@@ -89,5 +89,8 @@ def build_autoencoder(seq_len, n_features):
     
     autoencoder = Model(input_layer, decoded)
     return autoencoder
-  architettura originale, con bottleneck a 4 recall + alta per failure ma recall no failire del 50%. modello non generalizza bene e non cattura pattern
+  architettura originale, con bottleneck a 4 recall + alta per failure ma recall no failire del 50%. modello non generalizza bene e non cattura pattern.
+  giocato con il numero di feature. scelte 10.
+  voglio ottimizzare recall
+  modifica metodo di scoring.
   
